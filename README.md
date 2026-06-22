@@ -1,0 +1,109 @@
+# Análisis estadístico de la calidad del aire en Santiago de Chile
+
+**MCDI501 — Estadística Computacional para la Toma de Decisiones**
+Magíster en Ciencias de Datos e Inteligencia Artificial · Universidad Andrés Bello (UNAB)
+
+Proyecto ABP — **Sumativa 1, Fase 2: Informe técnico de avance**.
+
+---
+
+## Descripción
+
+Análisis estadístico descriptivo e inferencial sobre **datos reales de la red SINCA**
+(Sistema de Información Nacional de Calidad del Aire, MMA): mediciones horarias 2022–2023 de
+**11 estaciones** del Gran Santiago. El dataset se enriquece con variables contextuales (áreas
+verdes INE-SIEDU) y derivadas documentadas, para caracterizar el material particulado (MP2.5,
+MP10), estimar parámetros poblacionales con intervalos de confianza y contrastar hipótesis sobre
+diferencias territoriales, estacionales y de tipo de día.
+
+### Pregunta movilizadora
+
+> ¿Qué evidencia estadística sustenta que la contaminación por material particulado en Santiago
+> presenta diferencias significativas entre zonas, temporadas y tipos de día, y qué factores
+> meteorológicos y urbanos explican la exposición de la población a episodios críticos?
+
+## Hallazgos principales
+
+- **Desigualdad territorial:** zona Oriente 16.6 vs Poniente 28.8 µg/m³ de MP2.5 (t de Welch,
+  p < 0.001, d = 0.72).
+- **Estacionalidad crítica:** el invierno casi duplica la media de MP2.5 (105% mayor, d = 1.24).
+- **Efecto del tráfico:** días laborales superan a fines de semana (p < 0.001).
+- **Asociación zona ↔ nivel de contaminación** (χ², p < 0.001).
+- **Áreas verdes:** tendencia negativa con MP2.5 (r ≈ −0.49), moderada y no significativa
+  (n = 11), lo que evidencia el factor confusor socioeconómico.
+- **Inversión térmica** (variable real del SINCA): correlación positiva fuerte con MP2.5,
+  confirmando el mecanismo físico de los episodios críticos.
+
+## Estructura del repositorio
+
+```
+abp_estadistica/
+├── data/
+│   ├── sinca_santiago.csv             # Datos REALES SINCA 2022-2023 (fuente primaria)
+│   ├── calidad_aire_santiago.csv      # Dataset enriquecido (generado)
+│   ├── areas_verdes_siedu.csv         # Áreas verdes por comuna (INE-SIEDU)
+│   └── enriquecer_dataset.py          # Pipeline de enriquecimiento documentado
+├── notebooks/
+│   └── 01_analisis_calidad_aire.ipynb # Notebook principal (reproducible)
+├── figures/                           # 9 gráficos en alta resolución
+├── reports/                           # Informe técnico PDF (entregable Canvas)
+├── requirements.txt
+├── .gitignore
+├── CHANGELOG.md
+├── GUIA_GIT.md
+└── README.md
+```
+
+## Reproducibilidad
+
+```bash
+git clone https://github.com/<usuario>/abp_estadistica.git
+cd abp_estadistica
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+# (Opcional) regenerar el dataset enriquecido desde los datos reales SINCA
+cd data && python enriquecer_dataset.py && cd ..
+
+jupyter lab notebooks/01_analisis_calidad_aire.ipynb   # Kernel -> Restart & Run All
+```
+
+## Variables del dataset
+
+| Tipo | Variables |
+|---|---|
+| Numéricas continuas | mp2_5, mp10, temperatura, humedad, presion, viento, radiacion, isoterma_0, precipitacion |
+| Circular | direccion_viento (0–360°, tratada con componentes seno/coseno) |
+| Nominales | estacion, comuna, zona_geografica, tipo_dia, estacion_anio, temporada_critica |
+| Ordinales | calidad_aire_mp25, calidad_aire_mp10 (Bueno→Emergencia), nivel_contaminacion |
+| Binarias | inversion_termica, es_finde, es_festivo, critico_mp25, critico_mp10 |
+
+**Procedencia:** las variables MP2.5, MP10, temperatura, humedad, presión, viento, radiación,
+inversión térmica, día de semana y marcas de fin de semana/festivo son **reales del SINCA**.
+La isoterma 0 °C, precipitación y dirección del viento se derivaron con relaciones físicas
+ancladas a las variables reales (ver `data/enriquecer_dataset.py`). Áreas verdes: INE-SIEDU.
+
+## Metodología estadística
+
+| Etapa | Técnicas |
+|---|---|
+| Calidad de datos | Faltantes, duplicados, inconsistencias físicas; imputación robusta por mediana de estación |
+| Descriptiva | Tendencia central, dispersión, CV, asimetría, curtosis; histogramas, boxplots |
+| Categóricas | Frecuencias de variables nominales y ordinales; tablas de contingencia |
+| Bivariado | Correlación de Pearson; dirección del viento como variable circular (rosa de los vientos) |
+| Estimación | IC al 95% (t de Student) para tres variables |
+| Pruebas de hipótesis | t de Welch (3) + χ² de independencia (1); tamaños de efecto (d de Cohen, V de Cramér) |
+
+## Integrantes del grupo
+
+| Nombre | Rol | Usuario GitHub |
+|---|---|---|
+| _Integrante 1_ | _rol_ | _@usuario_ |
+| _Integrante 2_ | _rol_ | _@usuario_ |
+| _Integrante 3_ | _rol_ | _@usuario_ |
+
+**Docente:** _Nombre del docente_
+
+## Licencia
+
+Proyecto académico con fines educativos (Magíster UNAB).
