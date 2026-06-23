@@ -1,0 +1,12 @@
+comuna,areas_verdes_m2hab,nivel_area_verde,fuente
+Las Condes,5.6,Alto,SIEDU/CNDU - Mesa Areas Verdes UC (acceso 5.6)
+Providencia,8.5,Alto,SIEDU/CNDU - cumple estandar (brecha baja)
+Cerrillos,10.2,Alto,SIEDU/CNDU - cumple estandar 10 m2/hab
+La Florida,4.2,Medio,SIEDU/CNDU - SINIM
+Quilicura,3.8,Medio,SIEDU/CNDU - SINIM
+Talagante,4.0,Medio,SIEDU/CNDU - SINIM estimado
+Pudahuel,3.6,Bajo,SIEDU/CNDU - SINIM
+Independencia,1.6,Bajo,SIEDU/CNDU - 1.6 m2/hab (brecha alta)
+Cerro Navia,2.1,Muy bajo,Mesa Areas Verdes UC - 2.1 m2/hab
+El Bosque,1.9,Muy bajo,Mesa Areas Verdes UC - 1.9 m2/hab
+Puente Alto,1.5,Muy bajo,Mesa Areas Verdes UC - 1.5 m2/hab (menor acceso)
