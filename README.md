@@ -97,11 +97,11 @@ ancladas a las variables reales (ver `data/enriquecer_dataset.py`). Áreas verde
 
 ## Integrantes del grupo
 
-| Nombre | Rol | Usuario GitHub |
-|---|---|---|
-| _Integrante 1_ | _rol_ | _@usuario_ |
-| _Integrante 2_ | _rol_ | _@usuario_ |
-| _Integrante 3_ | _rol_ | _@usuario_ |
+| Nombre          |        Rol    | Usuario GitHub |
+|-----------------|---------------|----------------|  
+|Rodrigo chinchon | Colaborador 1 | @Rfcha         |
+|Sergio Fernandez | Colaborador 2 | _@usuario_     |
+|Pablo Villalobos | Colaborador 3 | _@usuario_     |
 
 **Docente:** _Nombre del docente_
 
