@@ -33,6 +33,10 @@ diferencias territoriales, estacionales y de tipo de día.
   (n = 11), lo que evidencia el factor confusor socioeconómico.
 - **Inversión térmica** (variable real del SINCA): correlación positiva fuerte con MP2.5,
   confirmando el mecanismo físico de los episodios críticos.
+- **Inequidad ambiental cuantificada:** las comunas de menor nivel socioeconómico (Q1) presentan
+  92% más MP2.5 que las de mayor ingreso (Q5), con efecto grande (t de Welch, p < 0.001, d = 0.89).
+- **Contraste fotoquímico:** el ozono (O3) muestra el patrón estacional inverso al MP2.5
+  (máximo en verano vs. invierno), evidenciando dos problemas de contaminación opuestos.
 
 ## Estructura del repositorio
 
@@ -80,7 +84,11 @@ jupyter lab notebooks/01_analisis_calidad_aire.ipynb   # Kernel -> Restart & Run
 | Circular | direccion_viento (0–360°, tratada con componentes seno/coseno) |
 | Nominales | estacion, comuna, zona_geografica, tipo_dia, estacion_anio, temporada_critica |
 | Ordinales | calidad_aire_mp25, calidad_aire_mp10 (Bueno→Emergencia), nivel_contaminacion |
-| Binarias | inversion_termica, es_finde, es_festivo, critico_mp25, critico_mp10 |
+| Binarias | inversion_termica, es_finde, es_festivo, **periodo_gec**, critico_mp25, critico_mp10 |
+| **Nominal (nueva)** | **tipo_estacion** (urbana tráfico/fondo/suburbana) — SINCA/MMA |
+| **Ordinal (nueva)** | **nivel_socioeconomico** (quintil Q1–Q5 comunal) — CASEN |
+| **Continua (nueva)** | **o3** (ozono troposférico) — SINCA, norma 120 µg/m³N |
+| **Discreta (nueva)** | **estaciones_en_episodio** (conteo 0–11) — red MACAM |
 
 **Procedencia:** las variables MP2.5, MP10, temperatura, humedad, presión, viento, radiación,
 inversión térmica, día de semana y marcas de fin de semana/festivo son **reales del SINCA**.

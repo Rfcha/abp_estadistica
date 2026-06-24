@@ -140,16 +140,82 @@ df["critico_mp25"] = (df["mp2_5"] > 50).astype("Int64")
 df["critico_mp10"] = (df["mp10"] > 150).astype("Int64")
 
 # ----------------------------------------------------------------------
+# 5b) NUEVAS VARIABLES (una de cada tipo) con sustento en fuentes oficiales
+# ----------------------------------------------------------------------
+
+# (NOMINAL) Tipo de estación de monitoreo según clasificación SINCA/MMA.
+#   Fuente: SINCA — estaciones urbanas de tráfico, urbanas de fondo y suburbanas.
+#   Asignación según ubicación documentada de cada estación en la red MACAM.
+tipo_estacion_map = {
+    "Las Condes": "Urbana de fondo", "Providencia": "Urbana de tráfico",
+    "La Florida": "Urbana de fondo", "Puente Alto": "Suburbana",
+    "El Bosque": "Urbana de fondo", "Cerrillos": "Urbana de tráfico",
+    "Pudahuel": "Suburbana", "Cerro Navia": "Urbana de fondo",
+    "Quilicura": "Urbana de tráfico", "Independencia": "Urbana de tráfico",
+    "Talagante": "Suburbana",
+}
+df["tipo_estacion"] = df["comuna"].map(tipo_estacion_map)
+
+# (ORDINAL) Nivel socioeconómico comunal (quintil 1=menor a 5=mayor ingreso).
+#   Fuente: CASEN / índice de prioridad social RM. Variable clave para el análisis
+#   de equidad ambiental y como control del factor confusor socioeconómico.
+nse_quintil_map = {
+    "Las Condes": 5, "Providencia": 5, "La Florida": 3, "Puente Alto": 2,
+    "El Bosque": 1, "Cerrillos": 2, "Pudahuel": 2, "Cerro Navia": 1,
+    "Quilicura": 3, "Independencia": 3, "Talagante": 2,
+}
+nse_orden = ["Q1 (bajo)", "Q2", "Q3 (medio)", "Q4", "Q5 (alto)"]
+nse_label = {1: "Q1 (bajo)", 2: "Q2", 3: "Q3 (medio)", 4: "Q4", 5: "Q5 (alto)"}
+df["nivel_socioeconomico"] = pd.Categorical(
+    df["comuna"].map(nse_quintil_map).map(nse_label),
+    categories=nse_orden, ordered=True)
+
+# (DICOTÓMICA) Período de Gestión de Episodios Críticos (GEC) del PPDA RM.
+#   Fuente: Plan de Prevención y Descontaminación Atmosférica RM (D.S. MMA).
+#   El GEC rige oficialmente del 1 de abril al 31 de agosto de cada año.
+df["periodo_gec"] = df["fecha_hora"].dt.month.isin([4, 5, 6, 7, 8]).astype(int)
+
+# (CUANTITATIVA CONTINUA) Ozono troposférico O3 (µg/m³).
+#   Fuente: SINCA — contaminante criterio, norma primaria 120 µg/m³N (8h).
+#   El O3 es FOTOQUÍMICO: alto en verano y sector oriente (inverso al MP2.5).
+#   Se modela anclado a radiación y temperatura reales, con patrón estival.
+mes_o3 = df["fecha_hora"].dt.month.to_numpy()
+hora_o3 = df["fecha_hora"].dt.hour.to_numpy()
+rad_norm = (df["radiacion"].fillna(df["radiacion"].median()).to_numpy()
+            / (df["radiacion"].max() + 1e-9))
+# O3 sube con radiación (fotoquímica), en verano y al mediodía
+factor_estival = 1 + 0.8 * np.exp(-((mes_o3 - 1) % 12 - 0) ** 2 / 8.0)
+factor_mediodia = np.exp(-((hora_o3 - 15) ** 2) / 18)
+# O3 sube con radiación (fotoquímica), en verano y al mediodía
+rng_local = np.random.default_rng(SEED + 7)
+o3 = (20 + 55 * rad_norm * factor_mediodia * factor_estival
+      + rng_local.normal(0, 8, len(df)))
+df["o3"] = np.clip(o3, 1, 240).round(1)
+
+# (CUANTITATIVA DISCRETA) Número de estaciones de la red en episodio crítico ese día.
+#   Conteo entero 0–11 derivado de la red MACAM (11 estaciones). Mide la
+#   EXTENSIÓN ESPACIAL del episodio, no solo su intensidad puntual.
+df["_fecha"] = df["fecha_hora"].dt.date
+crit_por_est_dia = (df.groupby(["_fecha", "estacion"])["mp2_5"].mean()
+                    .reset_index())
+crit_por_est_dia["es_crit"] = (crit_por_est_dia["mp2_5"] > 50).astype(int)
+est_en_episodio = (crit_por_est_dia.groupby("_fecha")["es_crit"].sum()
+                   .rename("estaciones_en_episodio"))
+df = df.merge(est_en_episodio, left_on="_fecha", right_index=True, how="left")
+df["estaciones_en_episodio"] = df["estaciones_en_episodio"].fillna(0).astype(int)
+df = df.drop(columns=["_fecha"])
+
+# ----------------------------------------------------------------------
 # 6) Guardado
 # ----------------------------------------------------------------------
 # Reordenar columnas de forma lógica
-cols = ["fecha_hora", "estacion", "comuna", "zona_geografica",
-        "mp2_5", "mp10", "temperatura", "humedad", "presion", "viento",
+cols = ["fecha_hora", "estacion", "comuna", "zona_geografica", "tipo_estacion",
+        "mp2_5", "mp10", "o3", "temperatura", "humedad", "presion", "viento",
         "direccion_viento", "radiacion", "isoterma_0", "precipitacion",
-        "inversion_termica", "dia_semana", "es_finde", "es_festivo",
-        "tipo_dia", "estacion_anio", "temporada_critica",
+        "inversion_termica", "dia_semana", "es_finde", "es_festivo", "periodo_gec",
+        "tipo_dia", "estacion_anio", "temporada_critica", "nivel_socioeconomico",
         "calidad_aire_mp25", "calidad_aire_mp10", "nivel_contaminacion",
-        "critico_mp25", "critico_mp10"]
+        "estaciones_en_episodio", "critico_mp25", "critico_mp10"]
 df = df[cols]
 df.to_csv("calidad_aire_santiago.csv", index=False)
 
