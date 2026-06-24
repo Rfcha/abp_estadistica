@@ -7,6 +7,20 @@ Proyecto ABP — **Sumativa 1, Fase 2: Informe técnico de avance**.
 
 ---
 
+
+## ⚠️ Ajuste metodológico (retroalimentación docente)
+
+El análisis se realiza a **escala diaria** (una fila por estación y día), no horaria. Las
+mediciones horarias no son independientes (autocorrelación temporal), lo que invalidaría los
+intervalos de confianza y las pruebas de hipótesis. La agregación diaria coincide con la escala
+normativa del MMA. El dataset pasó de 192.720 filas horarias a **8.030 diarias**.
+
+El componente socioeconómico se mantiene como **motivación del problema**; el producto evaluado
+es estadístico (descriptiva, inferencia, validación por remuestreo y modelo de clasificación),
+no un proyecto de inversión con VAN.
+
+---
+
 ## Descripción
 
 Análisis estadístico descriptivo e inferencial sobre **datos reales de la red SINCA**
@@ -46,11 +60,12 @@ abp_estadistica/
 │   ├── sinca_santiago.csv             # Datos REALES SINCA 2022-2023 (fuente primaria)
 │   ├── calidad_aire_santiago.csv      # Dataset enriquecido (generado)
 │   ├── areas_verdes_siedu.csv         # Áreas verdes por comuna (INE-SIEDU)
-│   ├── enriquecer_dataset.py          # Pipeline de enriquecimiento documentado
-│   └── modelo_economico.py            # Modelo económico (VAN/TIR, parámetros oficiales)
+│   ├── enriquecer_dataset.py          # Pipeline de enriquecimiento (horario)
+│   ├── agregar_diario.py              # Agregación a escala diaria (corrección docente)
+│   └── calidad_aire_diario.csv        # Dataset DIARIO (8.030 filas) — el que se analiza
 ├── notebooks/
-│   ├── 01_analisis_calidad_aire.ipynb # Notebook Fase 2 (estadística)
-│   └── 02_evaluacion_economica.ipynb   # Notebook Fase 3 (modelo predictivo + economía)
+│   ├── 01_analisis_estadistico_diario.ipynb  # Notebook principal (escala diaria, válido)
+│   └── _version_horaria_obsoleta/            # Versiones anteriores (no entregar)
 ├── figures/                           # 9 gráficos en alta resolución
 ├── reports/
 │   ├── Informe_Tecnico_Sumativa1.pdf  # Informe Fase 2 (PDF, 8 páginas)
