@@ -20,3 +20,14 @@ Formato basado en Keep a Changelog.
 - Regresión lineal múltiple y logística.
 - Simulación Monte Carlo y block bootstrap.
 - Análisis de sensibilidad.
+
+## [3.0.0] - Fase 3 · Evaluación económica
+
+### Agregado
+- Reorientación a evaluación social de inversiones: sistema predictivo de episodios críticos.
+- Modelo predictivo (regresión logística) con AUC 0.898 para anticipar episodios MP2.5.
+- Módulo económico (modelo_economico.py) con parámetros oficiales (VSL-SNI, FONASA, DEIS).
+- Flujo de caja a 10 años, VAN, TIR y razón B/C en perspectivas fiscal y social.
+- Análisis de sensibilidad univariado y simulación de Monte Carlo (5.000 iteraciones).
+- Notebook Fase 3 (02_evaluacion_economica.ipynb) ejecutable sin errores.
+- Documentación de Fase 3 en formato Word (DOCX): Informe_Fase3_Evaluacion_Economica.docx.
