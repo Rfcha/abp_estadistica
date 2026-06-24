@@ -46,7 +46,8 @@ abp_estadistica/
 ├── notebooks/
 │   └── 01_analisis_calidad_aire.ipynb # Notebook principal (reproducible)
 ├── figures/                           # 9 gráficos en alta resolución
-├── reports/                           # Informe técnico PDF (entregable Canvas)
+├── reports/
+│   └── Informe_Tecnico_Sumativa1.pdf  # Informe técnico 8 páginas (entregable Canvas)
 ├── requirements.txt
 ├── .gitignore
 ├── CHANGELOG.md
