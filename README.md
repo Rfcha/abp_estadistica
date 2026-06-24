@@ -42,12 +42,15 @@ abp_estadistica/
 │   ├── sinca_santiago.csv             # Datos REALES SINCA 2022-2023 (fuente primaria)
 │   ├── calidad_aire_santiago.csv      # Dataset enriquecido (generado)
 │   ├── areas_verdes_siedu.csv         # Áreas verdes por comuna (INE-SIEDU)
-│   └── enriquecer_dataset.py          # Pipeline de enriquecimiento documentado
+│   ├── enriquecer_dataset.py          # Pipeline de enriquecimiento documentado
+│   └── modelo_economico.py            # Modelo económico (VAN/TIR, parámetros oficiales)
 ├── notebooks/
-│   └── 01_analisis_calidad_aire.ipynb # Notebook principal (reproducible)
+│   ├── 01_analisis_calidad_aire.ipynb # Notebook Fase 2 (estadística)
+│   └── 02_evaluacion_economica.ipynb   # Notebook Fase 3 (modelo predictivo + economía)
 ├── figures/                           # 9 gráficos en alta resolución
 ├── reports/
-│   └── Informe_Tecnico_Sumativa1.pdf  # Informe técnico 8 páginas (entregable Canvas)
+│   ├── Informe_Tecnico_Sumativa1.pdf  # Informe Fase 2 (PDF, 8 páginas)
+│   └── Informe_Fase3_Evaluacion_Economica.docx  # Informe Fase 3 (Word)
 ├── requirements.txt
 ├── .gitignore
 ├── CHANGELOG.md
