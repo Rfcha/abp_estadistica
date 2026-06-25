@@ -201,7 +201,7 @@ cols = ["fecha", "estacion", "comuna", "zona_geografica", "tipo_estacion",
 diario = diario[cols]
 diario.to_csv("calidad_aire_diario.csv", index=False)
 
-print(f"Dataset DIARIO generado: {len(diario):,} filas (era ~385.700 horarias)")
+print(f"Dataset DIARIO generado: {len(diario):,} filas (era 385.704 horarias)")
 print(f"  Reducción: {385704/len(diario):.1f}x")
 print(f"  Período: {diario.fecha.min().date()} a {diario.fecha.max().date()}")
 print(f"  Estaciones: {diario.estacion.nunique()} | días únicos: {diario.fecha.nunique()}")
