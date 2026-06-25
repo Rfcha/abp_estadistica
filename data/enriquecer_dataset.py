@@ -29,7 +29,7 @@ rng = np.random.default_rng(SEED)
 # ----------------------------------------------------------------------
 # 1) Carga del dataset real
 # ----------------------------------------------------------------------
-df = pd.read_csv("sinca_santiago.csv", sep=";", decimal=",")
+df = pd.read_csv("sinca_santiago_2022_2025.csv", sep=";", decimal=",")
 df = df.rename(columns={"MP2.5": "mp2_5", "MP10": "mp10", "fecha": "fecha_hora"})
 df["fecha_hora"] = pd.to_datetime(df["fecha_hora"], format="%d-%m-%Y %H:%M")
 df = df.sort_values("fecha_hora").reset_index(drop=True)

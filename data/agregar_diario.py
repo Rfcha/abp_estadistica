@@ -201,8 +201,8 @@ cols = ["fecha", "estacion", "comuna", "zona_geografica", "tipo_estacion",
 diario = diario[cols]
 diario.to_csv("calidad_aire_diario.csv", index=False)
 
-print(f"Dataset DIARIO generado: {len(diario):,} filas (era 192.720 horarias)")
-print(f"  Reducción: {192720/len(diario):.1f}x")
+print(f"Dataset DIARIO generado: {len(diario):,} filas (era ~385.700 horarias)")
+print(f"  Reducción: {385704/len(diario):.1f}x")
 print(f"  Período: {diario.fecha.min().date()} a {diario.fecha.max().date()}")
 print(f"  Estaciones: {diario.estacion.nunique()} | días únicos: {diario.fecha.nunique()}")
 print(f"\nPrevalencia episodio crítico MP2.5 (diario): {diario.critico_mp25_dia.mean()*100:.1f}%")
