@@ -26,7 +26,7 @@ df["fecha"] = df["fecha_hora"].dt.date
 
 # Restaurar orden de ordinales
 orden_cal = ["Bueno", "Regular", "Alerta", "Preemergencia", "Emergencia"]
-nse_orden = ["Q1 (bajo)", "Q2", "Q3 (medio)", "Q4", "Q5 (alto)"]
+nse_orden = ["Q1 (bajo)", "Q2 (medio-bajo)", "Q3 (medio)", "Q4 (medio-alto)", "Q5 (alto)"]
 
 # ----------------------------------------------------------------------
 # 1) Variables NUMÉRICAS -> promedio diario (preserva NaN reales)

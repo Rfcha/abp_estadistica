@@ -157,15 +157,25 @@ tipo_estacion_map = {
 df["tipo_estacion"] = df["comuna"].map(tipo_estacion_map)
 
 # (ORDINAL) Nivel socioeconómico comunal (quintil 1=menor a 5=mayor ingreso).
-#   Fuente: CASEN / índice de prioridad social RM. Variable clave para el análisis
-#   de equidad ambiental y como control del factor confusor socioeconómico.
+#   Fuente: aproximación basada en CASEN / índice de prioridad social RM y nivel de
+#   ingreso comunal conocido. Variable clave para el análisis de equidad ambiental y
+#   como control del factor confusor socioeconómico.
+#   Asignación de las 11 comunas cubriendo los 5 quintiles:
+#     Q1 (bajo): Cerro Navia, El Bosque            -> comunas de menor ingreso
+#     Q2 (medio-bajo): Cerrillos, Pudahuel          -> ingreso medio-bajo
+#     Q3 (medio): Puente Alto, Talagante            -> ingreso medio
+#     Q4 (medio-alto): La Florida, Quilicura, Independencia -> ingreso medio-alto
+#     Q5 (alto): Las Condes, Providencia            -> comunas de mayor ingreso
 nse_quintil_map = {
-    "Las Condes": 5, "Providencia": 5, "La Florida": 3, "Puente Alto": 2,
-    "El Bosque": 1, "Cerrillos": 2, "Pudahuel": 2, "Cerro Navia": 1,
-    "Quilicura": 3, "Independencia": 3, "Talagante": 2,
+    "Cerro Navia": 1, "El Bosque": 1,
+    "Cerrillos": 2, "Pudahuel": 2,
+    "Puente Alto": 3, "Talagante": 3,
+    "La Florida": 4, "Quilicura": 4, "Independencia": 4,
+    "Las Condes": 5, "Providencia": 5,
 }
-nse_orden = ["Q1 (bajo)", "Q2", "Q3 (medio)", "Q4", "Q5 (alto)"]
-nse_label = {1: "Q1 (bajo)", 2: "Q2", 3: "Q3 (medio)", 4: "Q4", 5: "Q5 (alto)"}
+nse_orden = ["Q1 (bajo)", "Q2 (medio-bajo)", "Q3 (medio)", "Q4 (medio-alto)", "Q5 (alto)"]
+nse_label = {1: "Q1 (bajo)", 2: "Q2 (medio-bajo)", 3: "Q3 (medio)",
+             4: "Q4 (medio-alto)", 5: "Q5 (alto)"}
 df["nivel_socioeconomico"] = pd.Categorical(
     df["comuna"].map(nse_quintil_map).map(nse_label),
     categories=nse_orden, ordered=True)
