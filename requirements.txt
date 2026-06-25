@@ -1,3 +1,4 @@
+# Stack para Sumativa 1 (análisis estadístico a escala diaria)
 numpy>=1.26
 pandas>=2.0
 scipy>=1.11
@@ -6,4 +7,6 @@ matplotlib>=3.7
 seaborn>=0.13
 jupyterlab>=4.0
 notebook>=7.0
+
+# Para Sumativa 3 (modelo de clasificación) — se usará más adelante:
 scikit-learn>=1.3

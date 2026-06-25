@@ -39,7 +39,7 @@ git push -u origin main
 
 ```bash
 git checkout -b feat/pruebas-hipotesis
-git add notebooks/01_analisis_calidad_aire.ipynb
+git add notebooks/01_analisis_estadistico_diario.ipynb
 git commit -m "feat: agregar prueba chi-cuadrado zona vs nivel"
 git push -u origin feat/pruebas-hipotesis
 # En GitHub: abrir PR -> revisión de un compañero -> merge a main
@@ -50,11 +50,11 @@ git checkout main && git pull origin main
 
 ```bash
 # Limpiar salidas durante el desarrollo (menos conflictos)
-jupyter nbconvert --clear-output --inplace notebooks/01_analisis_calidad_aire.ipynb
+jupyter nbconvert --clear-output --inplace notebooks/01_analisis_estadistico_diario.ipynb
 
 # Para la ENTREGA: ejecutar todo y commitear CON salidas visibles
-jupyter nbconvert --to notebook --execute --inplace notebooks/01_analisis_calidad_aire.ipynb
-git add notebooks/01_analisis_calidad_aire.ipynb
+jupyter nbconvert --to notebook --execute --inplace notebooks/01_analisis_estadistico_diario.ipynb
+git add notebooks/01_analisis_estadistico_diario.ipynb
 git commit -m "feat: notebook ejecutado de extremo a extremo sin errores"
 ```
 

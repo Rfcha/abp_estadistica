@@ -62,14 +62,18 @@ abp_estadistica/
 │   ├── areas_verdes_siedu.csv         # Áreas verdes por comuna (INE-SIEDU)
 │   ├── enriquecer_dataset.py          # Pipeline de enriquecimiento (horario)
 │   ├── agregar_diario.py              # Agregación a escala diaria (corrección docente)
+│   ├── modelo_economico.py            # (obsoleto: enfoque VAN descartado por el docente)
 │   └── calidad_aire_diario.csv        # Dataset DIARIO (8.030 filas) — el que se analiza
 ├── notebooks/
 │   ├── 01_analisis_estadistico_diario.ipynb  # Notebook principal (escala diaria, válido)
 │   └── _version_horaria_obsoleta/            # Versiones anteriores (no entregar)
 ├── figures/                           # 9 gráficos en alta resolución
 ├── reports/
-│   ├── Informe_Tecnico_Sumativa1.pdf  # Informe Fase 2 (PDF, 8 páginas)
-│   └── Informe_Fase3_Evaluacion_Economica.docx  # Informe Fase 3 (Word)
+│   └── (informes generados por sumativa)
+├── notebooks/_version_horaria_obsoleta/   # versiones previas archivadas (NO entregar):
+│       ├── 01_analisis_calidad_aire.ipynb       (escala horaria, inválida)
+│       ├── 02_evaluacion_economica.ipynb        (enfoque VAN, descartado)
+│       └── Informe_Fase3_Evaluacion_Economica.docx
 ├── requirements.txt
 ├── .gitignore
 ├── CHANGELOG.md
