@@ -13,7 +13,7 @@ Proyecto ABP — **Sumativa 1, Fase 2: Informe técnico de avance**.
 El análisis se realiza a **escala diaria** (una fila por estación y día), no horaria. Las
 mediciones horarias no son independientes (autocorrelación temporal), lo que invalidaría los
 intervalos de confianza y las pruebas de hipótesis. La agregación diaria coincide con la escala
-normativa del MMA. El dataset pasó de 192.720 filas horarias a **8.030 diarias**.
+normativa del MMA. El dataset pasó de 385.704 filas horarias a **16.071 diarias**.
 
 El componente socioeconómico se mantiene como **motivación del problema**; el producto evaluado
 es estadístico (descriptiva, inferencia, validación por remuestreo y modelo de clasificación),
@@ -24,8 +24,8 @@ no un proyecto de inversión con VAN.
 ## Descripción
 
 Análisis estadístico descriptivo e inferencial sobre **datos reales de la red SINCA**
-(Sistema de Información Nacional de Calidad del Aire, MMA): mediciones horarias 2022–2023 de
-**11 estaciones** del Gran Santiago. El dataset se enriquece con variables contextuales (áreas
+(Sistema de Información Nacional de Calidad del Aire, MMA): mediciones horarias 2022–2025 de
+**11 estaciones** del Gran Santiago (4 años). El dataset se enriquece con variables contextuales (áreas
 verdes INE-SIEDU) y derivadas documentadas, para caracterizar el material particulado (MP2.5,
 MP10), estimar parámetros poblacionales con intervalos de confianza y contrastar hipótesis sobre
 diferencias territoriales, estacionales y de tipo de día.
@@ -57,7 +57,7 @@ diferencias territoriales, estacionales y de tipo de día.
 ```
 abp_estadistica/
 ├── data/
-│   ├── sinca_santiago.csv             # Datos REALES SINCA 2022-2023 (fuente primaria)
+│   ├── sinca_santiago.csv             # Datos REALES SINCA 2022-2025 (fuente primaria)
 │   ├── calidad_aire_santiago.csv      # Dataset enriquecido (generado)
 │   ├── areas_verdes_siedu.csv         # Áreas verdes por comuna (INE-SIEDU)
 │   ├── enriquecer_dataset.py          # Pipeline de enriquecimiento (horario)
