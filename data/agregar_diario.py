@@ -34,8 +34,6 @@ nse_orden = ["Q1 (bajo)", "Q2", "Q3 (medio)", "Q4", "Q5 (alto)"]
 # ----------------------------------------------------------------------
 num_cols = ["mp2_5", "mp10", "o3", "temperatura", "humedad", "presion",
             "viento", "radiacion", "isoterma_0", "precipitacion"]
-agg_num = {c: "mean" for c in num_cols}
-agg_num["precipitacion"] = "sum"
 
 # Marcar días-estación con cobertura insuficiente como faltantes.
 # Criterio estándar de calidad del aire: se requiere >=75% de horas válidas (>=18 de 24)
@@ -47,22 +45,42 @@ def pocas_horas(s):
 cobertura = (df.groupby(["fecha", "estacion"])[num_cols]
              .agg(pocas_horas).reset_index())
 
-# Inversión térmica: proporción de horas con inversión en el día (0 a 1)
-# direccion_viento: media circular se omite a nivel diario por simplicidad;
-#   se usa la componente predominante vía promedio vectorial.
-
 # ----------------------------------------------------------------------
-# 2) Construcción del dataset diario
+# 2) Construcción del dataset diario con sufijos explícitos _mean/_max/_sum
+#    (siguiendo la especificación de variables del proyecto)
 # ----------------------------------------------------------------------
-diario = (df.groupby(["fecha", "estacion"])
-          .agg(**{c: (c, agg_num[c]) for c in num_cols})
-          .reset_index())
+diario = df.groupby(["fecha", "estacion"]).agg(
+    # Promedios diarios (escala normativa MMA)
+    mp2_5_mean=("mp2_5", "mean"),
+    mp2_5_max=("mp2_5", "max"),        # pico diario: captura el peor momento
+    mp10_mean=("mp10", "mean"),
+    mp10_max=("mp10", "max"),
+    o3_mean=("o3", "mean"),
+    o3_max=("o3", "max"),
+    temperatura_mean=("temperatura", "mean"),
+    humedad_mean=("humedad", "mean"),
+    presion_mean=("presion", "mean"),
+    viento_mean=("viento", "mean"),
+    radiacion_mean=("radiacion", "mean"),
+    isoterma_0_mean=("isoterma_0", "mean"),
+    precipitacion_sum=("precipitacion", "sum"),
+    precipitacion_max=("precipitacion", "max"),
+).reset_index()
 
-# Reinyectar NaN reales: días-estación con cobertura horaria insuficiente (<75%)
+# Mapa de columna original -> columna(s) agregada(s) para reinyectar NaN
+reinyectar = {
+    "mp2_5": ["mp2_5_mean", "mp2_5_max"], "mp10": ["mp10_mean", "mp10_max"],
+    "o3": ["o3_mean", "o3_max"], "temperatura": ["temperatura_mean"],
+    "humedad": ["humedad_mean"], "presion": ["presion_mean"],
+    "viento": ["viento_mean"], "radiacion": ["radiacion_mean"],
+    "isoterma_0": ["isoterma_0_mean"],
+    "precipitacion": ["precipitacion_sum", "precipitacion_max"],
+}
 cobertura = cobertura.rename(columns={c: f"_fn_{c}" for c in num_cols})
 diario = diario.merge(cobertura, on=["fecha", "estacion"])
-for c in num_cols:
-    diario.loc[diario[f"_fn_{c}"], c] = np.nan
+for orig, derivadas in reinyectar.items():
+    for d in derivadas:
+        diario.loc[diario[f"_fn_{orig}"], d] = np.nan
 diario = diario.drop(columns=[f"_fn_{c}" for c in num_cols])
 
 # Inversión térmica como proporción de horas
@@ -128,11 +146,11 @@ def nivel_cont(v):
     return "Alto"
 
 diario["calidad_aire_mp25"] = pd.Categorical(
-    diario["mp2_5"].apply(cat_mp25), categories=orden_cal, ordered=True)
+    diario["mp2_5_mean"].apply(cat_mp25), categories=orden_cal, ordered=True)
 diario["calidad_aire_mp10"] = pd.Categorical(
-    diario["mp10"].apply(cat_mp10), categories=orden_cal, ordered=True)
+    diario["mp10_mean"].apply(cat_mp10), categories=orden_cal, ordered=True)
 diario["nivel_contaminacion"] = pd.Categorical(
-    diario["mp2_5"].apply(nivel_cont), categories=["Bajo", "Medio", "Alto"], ordered=True)
+    diario["mp2_5_mean"].apply(nivel_cont), categories=["Bajo", "Medio", "Alto"], ordered=True)
 diario["nivel_socioeconomico"] = pd.Categorical(
     diario["nivel_socioeconomico"], categories=nse_orden, ordered=True)
 
@@ -143,15 +161,17 @@ diario["nivel_socioeconomico"] = pd.Categorical(
 # calidad del aire" con el umbral del percentil que la autoridad asocia a alerta
 # preventiva, manteniendo una prevalencia entrenable (~12%, equivalente a la
 # proporción horaria que indicó la retroalimentación docente).
-diario["critico_mp25"] = (diario["mp2_5"] > 50).astype("Int64")   # norma estricta
-diario["critico_mp10"] = (diario["mp10"] > 150).astype("Int64")   # norma estricta
+# OBJETIVO PRINCIPAL: critico_mp25_dia = episodio según norma MMA (promedio 24h > 50)
+diario["critico_mp25_dia"] = (diario["mp2_5_mean"] > 50).astype("Int64")
+diario["critico_mp10_dia"] = (diario["mp10_mean"] > 150).astype("Int64")
 
-# Objetivo de clasificación calibrado (día de mala calidad del aire MP2.5)
-UMBRAL_MALA_CALIDAD = diario["mp2_5"].quantile(0.88)   # ~12% positivos
-diario["mala_calidad_mp25"] = (diario["mp2_5"] > UMBRAL_MALA_CALIDAD).astype("Int64")
+# OBJETIVO ALTERNATIVO calibrado (~12% positivos) para entrenar el clasificador
+# si el docente prefiere mayor prevalencia. Umbral = percentil 88 de mp2_5_mean.
+UMBRAL_MALA_CALIDAD = diario["mp2_5_mean"].quantile(0.88)
+diario["mala_calidad_mp25"] = (diario["mp2_5_mean"] > UMBRAL_MALA_CALIDAD).astype("Int64")
 
 # Nº de estaciones de la red en episodio ese día (discreta, recalculada)
-est_ep = (diario.groupby("fecha")["critico_mp25"].sum()
+est_ep = (diario.groupby("fecha")["critico_mp25_dia"].sum()
           .rename("estaciones_en_episodio").reset_index())
 diario = diario.merge(est_ep, on="fecha")
 
@@ -162,16 +182,22 @@ diario["fecha"] = pd.to_datetime(diario["fecha"])
 diario = diario.sort_values(["fecha", "estacion"]).reset_index(drop=True)
 
 # Redondeo de numéricas
-for c in num_cols + ["prop_inversion", "direccion_viento"]:
+num_derivadas = ["mp2_5_mean","mp2_5_max","mp10_mean","mp10_max","o3_mean","o3_max",
+                 "temperatura_mean","humedad_mean","presion_mean","viento_mean",
+                 "radiacion_mean","isoterma_0_mean","precipitacion_sum","precipitacion_max",
+                 "prop_inversion","direccion_viento"]
+for c in num_derivadas:
     diario[c] = diario[c].round(2)
 
 cols = ["fecha", "estacion", "comuna", "zona_geografica", "tipo_estacion",
-        "mp2_5", "mp10", "o3", "temperatura", "humedad", "presion", "viento",
-        "direccion_viento", "radiacion", "isoterma_0", "precipitacion",
-        "prop_inversion", "dia_semana", "es_finde", "es_festivo", "periodo_gec",
+        "mp2_5_mean", "mp2_5_max", "mp10_mean", "mp10_max", "o3_mean", "o3_max",
+        "temperatura_mean", "humedad_mean", "presion_mean", "viento_mean",
+        "direccion_viento", "radiacion_mean", "isoterma_0_mean",
+        "precipitacion_sum", "precipitacion_max", "prop_inversion",
+        "dia_semana", "es_finde", "es_festivo", "periodo_gec",
         "tipo_dia", "estacion_anio", "temporada_critica", "nivel_socioeconomico",
         "calidad_aire_mp25", "calidad_aire_mp10", "nivel_contaminacion",
-        "estaciones_en_episodio", "critico_mp25", "critico_mp10", "mala_calidad_mp25"]
+        "estaciones_en_episodio", "critico_mp25_dia", "critico_mp10_dia", "mala_calidad_mp25"]
 diario = diario[cols]
 diario.to_csv("calidad_aire_diario.csv", index=False)
 
@@ -179,8 +205,8 @@ print(f"Dataset DIARIO generado: {len(diario):,} filas (era 192.720 horarias)")
 print(f"  Reducción: {192720/len(diario):.1f}x")
 print(f"  Período: {diario.fecha.min().date()} a {diario.fecha.max().date()}")
 print(f"  Estaciones: {diario.estacion.nunique()} | días únicos: {diario.fecha.nunique()}")
-print(f"\nPrevalencia episodio crítico MP2.5 (diario): {diario.critico_mp25.mean()*100:.1f}%")
-print(f"  Episodio norma MP2.5: {diario.critico_mp25.sum()} | MP10: {diario.critico_mp10.sum()}")
+print(f"\nPrevalencia episodio crítico MP2.5 (diario): {diario.critico_mp25_dia.mean()*100:.1f}%")
+print(f"  Episodio norma MP2.5: {diario.critico_mp25_dia.sum()} | MP10: {diario.critico_mp10_dia.sum()}")
 print(f"  Objetivo clasificacion (mala_calidad_mp25): {diario.mala_calidad_mp25.sum()} ({diario.mala_calidad_mp25.mean()*100:.1f}%)")
 print(f"\nFaltantes reales preservados (para imputación Sumativa 3):")
-print(diario[num_cols].isna().sum()[lambda s: s > 0])
+print(diario[["mp2_5_mean","mp10_mean","humedad_mean","presion_mean","radiacion_mean"]].isna().sum()[lambda s: s > 0])
