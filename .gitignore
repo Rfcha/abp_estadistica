@@ -1,13 +1,55 @@
+# ============================================================================
+# .gitignore — Proyecto MCDI501 Análisis Calidad del Aire (Grupo 3)
+# ============================================================================
+
+# --- Entornos virtuales ---
 .venv/
 venv/
 env/
+ENV/
+
+# --- Caché de Python ---
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+.Python
+
+# --- Jupyter ---
 .ipynb_checkpoints/
 */.ipynb_checkpoints/*
+profile_default/
+ipython_config.py
+
+# --- Figuras generadas al ejecutar el notebook ---
+# La carpeta figures/ es 100% salida regenerable: guardar_figura() la crea
+# y la puebla con D1–D7 en cada ejecución. No se versiona.
+figures/
+
+# --- Exportaciones del notebook ---
+notebooks/*.html
+*.nbconvert.ipynb
+
+# --- Sistemas operativos ---
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# --- Editores / IDE ---
 .vscode/
 .idea/
 *.swp
-*.log
+*~
+
+# --- Datos pesados o intermedios (descomentar si aplica) ---
+# data/raw/
+# data/processed/
+# *.parquet
+
+# --- Distribución / build ---
+build/
+dist/
+*.egg-info/
+
+# Dataset horario crudo (pesado, no usado por el notebook)
+data/calidad_aire_santiago.csv
