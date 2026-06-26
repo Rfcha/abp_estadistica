@@ -1,140 +1,109 @@
-# Análisis estadístico de la calidad del aire en Santiago de Chile
+# Análisis Estadístico de la Calidad del Aire en Santiago
 
-**MCDI501 — Estadística Computacional para la Toma de Decisiones**
-Magíster en Ciencias de Datos e Inteligencia Artificial · Universidad Andrés Bello (UNAB)
+**Inequidad ambiental y episodios críticos de material particulado**
 
-Proyecto ABP — **Sumativa 1, Fase 2: Informe técnico de avance**.
+Proyecto del curso **MCDI501 — Estadística Computacional para la Toma de Decisiones**, Magíster en Ciencia de Datos e Inteligencia Artificial, Universidad Andrés Bello.
 
----
-
-
-## ⚠️ Ajuste metodológico (retroalimentación docente)
-
-El análisis se realiza a **escala diaria** (una fila por estación y día), no horaria. Las
-mediciones horarias no son independientes (autocorrelación temporal), lo que invalidaría los
-intervalos de confianza y las pruebas de hipótesis. La agregación diaria coincide con la escala
-normativa del MMA. El dataset pasó de 385.704 filas horarias a **16.071 diarias**.
-
-El componente socioeconómico se mantiene como **motivación del problema**; el producto evaluado
-es estadístico (descriptiva, inferencia, validación por remuestreo y modelo de clasificación),
-no un proyecto de inversión con VAN.
+| | |
+|---|---|
+| **Grupo** | Grupo 3 |
+| **Integrantes** | Rodrigo Chinchón Ayala · Sergio Fernández Almonacid · Pablo Villalobos González |
+| **Docente** | Jean Paul Maidana González |
+| **Dataset** | Red SINCA (Ministerio del Medio Ambiente), Santiago RM |
+| **Escala** | Estación-día · 2022–2025 · 16.071 observaciones · 11 estaciones · 36 variables |
 
 ---
 
-## Descripción
+## Objetivo
 
-Análisis estadístico descriptivo e inferencial sobre **datos reales de la red SINCA**
-(Sistema de Información Nacional de Calidad del Aire, MMA): mediciones horarias 2022–2025 de
-**11 estaciones** del Gran Santiago (4 años). El dataset se enriquece con variables contextuales (áreas
-verdes INE-SIEDU) y derivadas documentadas, para caracterizar el material particulado (MP2.5,
-MP10), estimar parámetros poblacionales con intervalos de confianza y contrastar hipótesis sobre
-diferencias territoriales, estacionales y de tipo de día.
+Caracterizar estadísticamente la contaminación por material particulado (MP2.5 y MP10) en Santiago y evaluar, mediante inferencia estadística rigurosa, si la exposición se distribuye de forma desigual entre **zonas geográficas**, **niveles socioeconómicos** y **temporadas**, como base técnica para una eventual gestión sanitaria proactiva.
 
-### Pregunta movilizadora
+## Pregunta movilizadora
 
-> ¿Qué evidencia estadística sustenta que la contaminación por material particulado en Santiago
-> presenta diferencias significativas entre zonas, temporadas y tipos de día, y qué factores
-> meteorológicos y urbanos explican la exposición de la población a episodios críticos?
+> ¿Qué evidencia estadística sustenta que la contaminación por material particulado en Santiago presenta diferencias significativas entre zonas, niveles socioeconómicos y temporadas?
+
+---
 
 ## Hallazgos principales
 
-- **Desigualdad territorial:** zona Oriente 16.6 vs Poniente 28.8 µg/m³ de MP2.5 (t de Welch,
-  p < 0.001, d = 0.72).
-- **Estacionalidad crítica:** el invierno casi duplica la media de MP2.5 (105% mayor, d = 1.24).
-- **Efecto del tráfico:** días laborales superan a fines de semana (p < 0.001).
-- **Asociación zona ↔ nivel de contaminación** (χ², p < 0.001).
-- **Áreas verdes:** tendencia negativa con MP2.5 (r ≈ −0.49), moderada y no significativa
-  (n = 11), lo que evidencia el factor confusor socioeconómico.
-- **Inversión térmica** (variable real del SINCA): correlación positiva fuerte con MP2.5,
-  confirmando el mecanismo físico de los episodios críticos.
-- **Inequidad ambiental cuantificada:** las comunas de menor nivel socioeconómico (Q1) presentan
-  92% más MP2.5 que las de mayor ingreso (Q5), con efecto grande (t de Welch, p < 0.001, d = 0.89).
-- **Contraste fotoquímico:** el ozono (O3) muestra el patrón estacional inverso al MP2.5
-  (máximo en verano vs. invierno), evidenciando dos problemas de contaminación opuestos.
+El análisis se realiza a **escala estación-día**, garantizando observaciones independientes y, por tanto, la validez de la inferencia estadística (a diferencia de la escala horaria, donde la autocorrelación invalida los supuestos).
+
+- **Inequidad ambiental:** el quintil socioeconómico de menor ingreso (Q1) promedia **29,40 µg/m³** de MP2.5 frente a **16,61 µg/m³** del de mayor ingreso (Q5): una diferencia de **+12,8 µg/m³ (77 % mayor)**, con efecto grande (*d* de Cohen = 0,97; *p* = 2,1×10⁻¹⁸⁰).
+- **Desigualdad territorial:** el Poniente está significativamente más expuesto que el Oriente (*d* = −0,76; *p* = 6,0×10⁻¹⁷⁶).
+- **Mecanismo físico:** los días con mayor proporción de inversión térmica concentran más MP2.5 (*d* = 0,85), confirmando el motor de los episodios críticos invernales.
+- **Magnitud del fenómeno:** el **95,25 %** de los días-estación se clasifican como «Bueno»; **551 días (4,75 %)** superan la norma diaria, constituyendo los episodios críticos.
+
+Todas las conclusiones se sustentan en pruebas con **tamaño de efecto reportado**, no solo en significancia estadística.
+
+---
+
+## Metodología
+
+| Etapa | Procedimiento |
+|---|---|
+| **Calidad de datos** | Auditoría de faltantes (MP2.5: 27,8 %), duplicados (0) e inconsistencias físicas (0); criterio de cobertura ≥75 % de horas/día |
+| **Descriptiva** | Tendencia central, dispersión, CV %, asimetría, curtosis; frecuencias de categóricas; correlación de Pearson |
+| **Estimación** | Intervalos de confianza al 95 % (*t* de Student) sobre MP2.5, MP10 y temperatura |
+| **Inferencia** | 4 pruebas de hipótesis: 3× *t* de Welch (con verificación de supuestos vía Levene) + 1× χ² de independencia |
+
+---
 
 ## Estructura del repositorio
 
-```
+```text
 abp_estadistica/
 ├── data/
-│   ├── sinca_santiago.csv             # Datos REALES SINCA 2022-2025 (fuente primaria)
-│   ├── calidad_aire_santiago.csv      # Dataset enriquecido (generado)
-│   ├── areas_verdes_siedu.csv         # Áreas verdes por comuna (INE-SIEDU)
-│   ├── enriquecer_dataset.py          # Pipeline de enriquecimiento (horario)
-│   ├── agregar_diario.py              # Agregación a escala diaria (corrección docente)
-│   ├── modelo_economico.py            # (obsoleto: enfoque VAN descartado por el docente)
-│   └── calidad_aire_diario.csv        # Dataset DIARIO (8.030 filas) — el que se analiza
+│   └── calidad_aire_diario.csv        # dataset estación-día (2022–2025)
 ├── notebooks/
-│   ├── 01_analisis_estadistico_diario.ipynb  # Notebook principal (escala diaria, válido)
-│   └── _version_horaria_obsoleta/            # Versiones anteriores (no entregar)
-├── figures/                           # 9 gráficos en alta resolución
-├── reports/
-│   └── (informes generados por sumativa)
-├── notebooks/_version_horaria_obsoleta/   # versiones previas archivadas (NO entregar):
-│       ├── 01_analisis_calidad_aire.ipynb       (escala horaria, inválida)
-│       ├── 02_evaluacion_economica.ipynb        (enfoque VAN, descartado)
-│       └── Informe_Fase3_Evaluacion_Economica.docx
-├── requirements.txt
-├── .gitignore
-├── CHANGELOG.md
-├── GUIA_GIT.md
-└── README.md
+│   └── 01_analisis_estadistico_diario.ipynb   # análisis completo
+├── figures/                            # SALIDA regenerable (no versionada): D1–D7 al ejecutar
+├── requirements.txt                    # dependencias con versiones fijadas
+├── README.md
+├── changelog.md
+├── LICENSE
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+└── SECURITY.md
 ```
+
+---
 
 ## Reproducibilidad
 
-```bash
-git clone https://github.com/<usuario>/abp_estadistica.git
-cd abp_estadistica
-python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+El notebook es ejecutable de principio a fin sin errores, con **semilla fija (2026)** para reproducibilidad. Se recomienda un entorno virtual ubicado **fuera de carpetas sincronizadas** (OneDrive/Dropbox), que pueden bloquear archivos durante la instalación de paquetes.
+
+```powershell
+# 1. Crear y activar el entorno virtual
+python -m venv .venv
+.venv\Scripts\Activate.ps1          # Windows PowerShell
+
+# 2. Instalar dependencias
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 
-# (Opcional) regenerar el dataset enriquecido desde los datos reales SINCA
-cd data && python enriquecer_dataset.py && cd ..
-
-jupyter lab notebooks/01_analisis_calidad_aire.ipynb   # Kernel -> Restart & Run All
+# 3. Verificar que la pila gráfica carga correctamente
+python -c "import matplotlib; from matplotlib.backends import registry; import matplotlib.pyplot; print('matplotlib', matplotlib.__version__, 'OK')"
 ```
 
-## Variables del dataset
+Después, en VS Code: seleccionar `.venv` como **kernel** del notebook (selector arriba a la derecha) y ejecutar **Run All** desde la primera celda.
 
-| Tipo | Variables |
-|---|---|
-| Numéricas continuas | mp2_5, mp10, temperatura, humedad, presion, viento, radiacion, isoterma_0, precipitacion |
-| Circular | direccion_viento (0–360°, tratada con componentes seno/coseno) |
-| Nominales | estacion, comuna, zona_geografica, tipo_dia, estacion_anio, temporada_critica |
-| Ordinales | calidad_aire_mp25, calidad_aire_mp10 (Bueno→Emergencia), nivel_contaminacion |
-| Binarias | inversion_termica, es_finde, es_festivo, **periodo_gec**, critico_mp25, critico_mp10 |
-| **Nominal (nueva)** | **tipo_estacion** (urbana tráfico/fondo/suburbana) — SINCA/MMA |
-| **Ordinal (nueva)** | **nivel_socioeconomico** (quintil Q1–Q5 comunal) — CASEN |
-| **Continua (nueva)** | **o3** (ozono troposférico) — SINCA, norma 120 µg/m³N |
-| **Discreta (nueva)** | **estaciones_en_episodio** (conteo 0–11) — red MACAM |
+**Entorno validado:** Python 3.12.10 · NumPy 2.5.0 · pandas 3.0.3 · matplotlib 3.11.0 · seaborn 0.13.2 · SciPy 1.18.0.
 
-**Procedencia:** las variables MP2.5, MP10, temperatura, humedad, presión, viento, radiación,
-inversión térmica, día de semana y marcas de fin de semana/festivo son **reales del SINCA**.
-La isoterma 0 °C, precipitación y dirección del viento se derivaron con relaciones físicas
-ancladas a las variables reales (ver `data/enriquecer_dataset.py`). Áreas verdes: INE-SIEDU.
+---
 
-## Metodología estadística
+## Roadmap del proyecto
 
-| Etapa | Técnicas |
-|---|---|
-| Calidad de datos | Faltantes, duplicados, inconsistencias físicas; imputación robusta por mediana de estación |
-| Descriptiva | Tendencia central, dispersión, CV, asimetría, curtosis; histogramas, boxplots |
-| Categóricas | Frecuencias de variables nominales y ordinales; tablas de contingencia |
-| Bivariado | Correlación de Pearson; dirección del viento como variable circular (rosa de los vientos) |
-| Estimación | IC al 95% (t de Student) para tres variables |
-| Pruebas de hipótesis | t de Welch (3) + χ² de independencia (1); tamaños de efecto (d de Cohen, V de Cramér) |
+- **Sumativa 1 (esta entrega):** análisis exploratorio e inferencial (descriptiva, IC 95 %, pruebas de hipótesis).
+- **Sumativa 2 (validación):** bootstrap, tests de permutación y simulación de Monte Carlo.
+- **Sumativa 3 (modelo):** clasificación binaria de episodios críticos (objetivo `mala_calidad_mp25`, ~12 % positivos), evaluado con F1, recall y AUC, con división estratificada por períodos.
 
-## Integrantes del grupo
+---
 
-| Nombre | Rol | Usuario GitHub |
-|---|---|---|
-| _Integrante 1_ | _rol_ | _@usuario_ |
-| _Integrante 2_ | _rol_ | _@usuario_ |
-| _Integrante 3_ | _rol_ | _@usuario_ |
+## Fuentes
 
-**Docente:** _Nombre del docente_
+- Ministerio del Medio Ambiente. *Sistema de Información Nacional de Calidad del Aire (SINCA).* https://sinca.mma.gob.cl
+- Ministerio del Medio Ambiente. *Norma de calidad primaria para MP2,5 (D.S. N.º 12/2011).*
 
 ## Licencia
 
-Proyecto académico con fines educativos (Magíster UNAB).
+Ver [LICENSE](LICENSE).
