@@ -50,3 +50,6 @@ desktop.ini
 build/
 dist/
 *.egg-info/
+
+# Dataset horario crudo (pesado, no usado por el notebook)
+data/calidad_aire_santiago.csv
