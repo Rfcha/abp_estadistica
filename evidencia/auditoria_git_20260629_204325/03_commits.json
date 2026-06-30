@@ -1,0 +1,322 @@
+﻿[
+    {
+        "ShortHash":  "d1f4472",
+        "Hash":  "d1f4472d4effd83e0f1c03a01b7e25f629b3022f",
+        "Date":  "2026-06-29T20:07:26-04:00",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "Actualiza CONTRIBUTING.md"
+    },
+    {
+        "ShortHash":  "262a11c",
+        "Hash":  "262a11c7f861e7155b3cd41031a5599c64a76947",
+        "Date":  "2026-06-29T15:55:58-04:00",
+        "Author":  "sergioandresfernandeza-alt",
+        "Email":  "sergioandresfernandeza@gmail.com",
+        "Subject":  "Merge pull request #7 from Rfcha/feature/2906_1546_SFA"
+    },
+    {
+        "ShortHash":  "a72656c",
+        "Hash":  "a72656c813898a0fa6198b74513032fd1655b1aa",
+        "Date":  "2026-06-29T15:54:10-04:00",
+        "Author":  "sergioandresfernandeza-alt",
+        "Email":  "sergioandresfernandeza@gmail.com",
+        "Subject":  "docs: agrega guia de lectura de graficos SFA"
+    },
+    {
+        "ShortHash":  "4162516",
+        "Hash":  "416251633be86e55078fa5a79c999022667d8b09",
+        "Date":  "2026-06-28T22:36:13-04:00",
+        "Author":  "sergioandresfernandeza-alt",
+        "Email":  "sergioandresfernandeza@gmail.com",
+        "Subject":  "Merge pull request #6 from Rfcha/feature/2806_1157_SFA"
+    },
+    {
+        "ShortHash":  "e8ed91a",
+        "Hash":  "e8ed91a8966cb7b96998b02ad4b107209961a6e7",
+        "Date":  "2026-06-28T22:33:21-04:00",
+        "Author":  "sergioandresfernandeza-alt",
+        "Email":  "sergioandresfernandeza@gmail.com",
+        "Subject":  "docs: agrega lectura de significancia y relevancia practica SFA"
+    },
+    {
+        "ShortHash":  "8ae90ff",
+        "Hash":  "8ae90ff694d404d5c3d4bfae845b358620a5a44f",
+        "Date":  "2026-06-28T12:30:50-04:00",
+        "Author":  "sergioandresfernandeza-alt",
+        "Email":  "sergioandresfernandeza@gmail.com",
+        "Subject":  "Merge pull request #5 from Rfcha/feature/2806_1157_SFA"
+    },
+    {
+        "ShortHash":  "f81a702",
+        "Hash":  "f81a7023b3c22de6caeffc0e8b368d28c9012953",
+        "Date":  "2026-06-28T12:27:18-04:00",
+        "Author":  "sergioandresfernandeza-alt",
+        "Email":  "sergioandresfernandeza@gmail.com",
+        "Subject":  "docs: agrega trazabilidad e interpretacion preliminar SFA"
+    },
+    {
+        "ShortHash":  "8430f36",
+        "Hash":  "8430f36ac85d7d62fc8e5ed107a08286f1cae8f8",
+        "Date":  "2026-06-27T20:36:08-04:00",
+        "Author":  "Pablo Villalobos Gonzalez",
+        "Email":  "p.villalobosgonzalez@uandresbello.edu",
+        "Subject":  "Merge pull request #4 from Rfcha/feature/27_06_19_34_PV"
+    },
+    {
+        "ShortHash":  "f911863",
+        "Hash":  "f911863137e945ddaefe9d900118b3b8c57b524c",
+        "Date":  "2026-06-27T19:34:54-04:00",
+        "Author":  "Pablo Villalobos Gonzalez",
+        "Email":  "p.villalobosgonzalez@uandresbello.edu",
+        "Subject":  "feat: actualizaci├│n de todo el notebook con sus nuevas figuras asociadas"
+    },
+    {
+        "ShortHash":  "58af717",
+        "Hash":  "58af717fe7db2a76b521e4d2a458561621bb456c",
+        "Date":  "2026-06-25T23:01:18-04:00",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "Merge pull request #3 from Rfcha/docs/actualiza-mailmap"
+    },
+    {
+        "ShortHash":  "d934b8a",
+        "Hash":  "d934b8a46878532d622f3bc18e61f70289169236",
+        "Date":  "2026-06-25T23:00:26-04:00",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: correccion mailmap"
+    },
+    {
+        "ShortHash":  "1380ad6",
+        "Hash":  "1380ad63e3277cd1c19046de40ebbb84fae12247",
+        "Date":  "2026-06-25T22:47:47-04:00",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "Eliminar carpeta reports/ del proyecto anterior"
+    },
+    {
+        "ShortHash":  "7cbc7d2",
+        "Hash":  "7cbc7d25da4d30f47a73608b0838a6f0edacc9f2",
+        "Date":  "2026-06-25T22:40:12-04:00",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "Merge feature a main: README de la Sumativa 1"
+    },
+    {
+        "ShortHash":  "41867af",
+        "Hash":  "41867af723e912388710c80b52a037d3fddb9d6d",
+        "Date":  "2026-06-25T22:38:25-04:00",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "Resolver conflictos del pull: README actualizado, eliminar CSV horario"
+    },
+    {
+        "ShortHash":  "1b392ba",
+        "Hash":  "1b392ba29d33a5ba3f809668889d516f77e1a79a",
+        "Date":  "2026-06-25T22:34:05-04:00",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "Excluir dataset horario crudo (70MB, no usado por el notebook); mantener solo el agregado diario"
+    },
+    {
+        "ShortHash":  "2fe336c",
+        "Hash":  "2fe336c1c87880f17726d01536feaddec284d72c",
+        "Date":  "2026-06-25T22:28:27-04:00",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "Sumativa 1: an├ílisis estad├¡stico + informes + entorno reproducible; eliminar figures/ del proyecto anterior"
+    },
+    {
+        "ShortHash":  "24a65b6",
+        "Hash":  "24a65b62685e8e8771ca7d4b736f4e437a050bdd",
+        "Date":  "2026-06-25T19:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "fix: grafico de categorias en escala log con etiquetas; aclarar denominador (episodios criticos = 551 cuadran)"
+    },
+    {
+        "ShortHash":  "d08deb3",
+        "Hash":  "d08deb32ab63016a8302e3b89ab64204bd2688ea",
+        "Date":  "2026-06-25T18:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "style: optimizar notebook a estandar F4 (portada GitHub-safe, paleta UNAB, pruebas en tablas, separadores, figuras limpias)"
+    },
+    {
+        "ShortHash":  "97bdbb8",
+        "Hash":  "97bdbb81ac4914c5fbd02c63f3625d8d99adf13b",
+        "Date":  "2026-06-25T16:30:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: notebook a escala 2022-2025 con evolucion temporal interanual"
+    },
+    {
+        "ShortHash":  "bbe809c",
+        "Hash":  "bbe809cdee9a26695ae798f72f3ba5e0a851d3c8",
+        "Date":  "2026-06-25T16:15:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: pipeline actualizado a 2022-2025; dataset diario 16.071 filas con presion armonizada"
+    },
+    {
+        "ShortHash":  "d292896",
+        "Hash":  "d292896c9d25f868565324e2aff5bb5fe202bde9",
+        "Date":  "2026-06-25T16:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "data: integrar datos reales 2024-2025 SINCA; base unificada 2022-2025 (385.704 filas horarias)"
+    },
+    {
+        "ShortHash":  "1306709",
+        "Hash":  "130670999df1a5f5b57da6a24dc91100a6bbd2c5",
+        "Date":  "2026-06-25T13:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "fix: corregir referencias mp2_5-\u003emp2_5_mean en pruebas; quintiles completos Q1-Q5 con descripcion"
+    },
+    {
+        "ShortHash":  "b86f933",
+        "Hash":  "b86f933354af5bfeb4cc8643f92c2f216c153a5d",
+        "Date":  "2026-06-25T11:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "docs: actualizar README, CHANGELOG, GUIA_GIT y requirements al enfoque diario/estadistico; archivar informe economico"
+    },
+    {
+        "ShortHash":  "9daaf70",
+        "Hash":  "9daaf70bd36ae72d5f38cd95d5c6aa2882862934",
+        "Date":  "2026-06-25T10:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: naming _mean/_max/_sum, agregar mp2_5_max y doble objetivo (critico_mp25_dia + mala_calidad_mp25) segun spec"
+    },
+    {
+        "ShortHash":  "956fb6b",
+        "Hash":  "956fb6b5c6fa22b98b523e3f02ac05f63bc1db8e",
+        "Date":  "2026-06-24T15:30:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: notebook de analisis estadistico a escala diaria; archivar version horaria y economica"
+    },
+    {
+        "ShortHash":  "3e0cd3d",
+        "Hash":  "3e0cd3d4e0d9c22d20f6552d370b930004429098",
+        "Date":  "2026-06-24T15:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: agregacion a escala diaria (8030 filas) por retroalimentacion docente sobre independencia"
+    },
+    {
+        "ShortHash":  "776ecdd",
+        "Hash":  "776ecdd03f1e0c7d1884cc50c5e85abd57922df0",
+        "Date":  "2026-06-24T12:30:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "docs: infografia de las 5 nuevas variables"
+    },
+    {
+        "ShortHash":  "147ae26",
+        "Hash":  "147ae265033cc01f03ce09364535b7482384106d",
+        "Date":  "2026-06-24T12:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: incorporar 5 variables (nominal, ordinal, dicotomica, continua, discreta) con fuentes oficiales y prueba de inequidad ambiental"
+    },
+    {
+        "ShortHash":  "efd32e4",
+        "Hash":  "efd32e4fc8cbf63e32d90acb0a4986a9bfbe81e2",
+        "Date":  "2026-06-24T00:21:00-04:00",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "Merge pull request #1 from Rfcha/docs/2406_0019_RCH_actualiza-readme"
+    },
+    {
+        "ShortHash":  "9142b04",
+        "Hash":  "9142b049806f824ac6f05c085d5b5c7c1db2eea3",
+        "Date":  "2026-06-24T00:20:06-04:00",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: Actualizacion de README"
+    },
+    {
+        "ShortHash":  "5bc2a50",
+        "Hash":  "5bc2a50a82d2e056b62a0a76323acfe765e89879",
+        "Date":  "2026-06-24T00:09:11-04:00",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: regenerar dataset y figuras en entorno local"
+    },
+    {
+        "ShortHash":  "4c5195f",
+        "Hash":  "4c5195f1129e4b9b76fa0fd1df686c76592fba03",
+        "Date":  "2026-06-24T03:15:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "chore: limpiar figuras no usadas y actualizar README/requirements"
+    },
+    {
+        "ShortHash":  "c1dddb3",
+        "Hash":  "c1dddb329c38f4e9f6e066ee672cecbc2f17f449",
+        "Date":  "2026-06-24T03:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "docs: informe de Fase 3 en formato Word (DOCX)"
+    },
+    {
+        "ShortHash":  "210794b",
+        "Hash":  "210794bc35d3007644019ba413efab7a5dbcaa51",
+        "Date":  "2026-06-24T02:30:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: notebook Fase 3 - modelo predictivo logistico y evaluacion economica (VAN/TIR/MonteCarlo)"
+    },
+    {
+        "ShortHash":  "a2ab4c2",
+        "Hash":  "a2ab4c25f43eb455f837ac9dde5ceca221f09b21",
+        "Date":  "2026-06-24T02:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: modelo economico con parametros oficiales (VSL-SNI, FONASA, DEIS)"
+    },
+    {
+        "ShortHash":  "dfb78d2",
+        "Hash":  "dfb78d27ae2c3344c4ddc4c282d3a939f85fac1d",
+        "Date":  "2026-06-24T01:30:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "docs: agregar informe tecnico de avance en PDF (8 paginas)"
+    },
+    {
+        "ShortHash":  "97b27a6",
+        "Hash":  "97b27a6c7ea128e11299500ac144152eb9d9ed4f",
+        "Date":  "2026-06-24T00:30:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: notebook completo - EDA, estimacion IC95, pruebas de hipotesis y sintesis"
+    },
+    {
+        "ShortHash":  "4d887a0",
+        "Hash":  "4d887a01364d5e4efccd5019753da713cded1f14",
+        "Date":  "2026-06-23T21:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "feat: pipeline de enriquecimiento con variables derivadas y categoricas"
+    },
+    {
+        "ShortHash":  "9618c24",
+        "Hash":  "9618c24195e8d849827a3f395dcf8e6d513e41c6",
+        "Date":  "2026-06-23T20:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "data: incorporar datos reales SINCA 2022-2023 y areas verdes SIEDU"
+    },
+    {
+        "ShortHash":  "5c05a86",
+        "Hash":  "5c05a86e2646cbf151b3fcbc06e7e288d1068229",
+        "Date":  "2026-06-22T09:00:00Z",
+        "Author":  "Rodrigo Chinchon Ayala",
+        "Email":  "rodrigo.chinchon@gmail.com",
+        "Subject":  "chore: estructura inicial del proyecto ABP"
+    }
+]

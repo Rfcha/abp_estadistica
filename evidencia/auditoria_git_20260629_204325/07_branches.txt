@@ -1,0 +1,12 @@
+﻿  docs/2406_0019_RCH_actualiza-readme                        9142b049806f824ac6f05c085d5b5c7c1db2eea3 feat: Actualizacion de README
+  docs/actualiza-mailmap                                     d934b8a46878532d622f3bc18e61f70289169236 feat: correccion mailmap
+  feature/2506_2227_RCH_Proyecto_completo_ini                1b392ba29d33a5ba3f809668889d516f77e1a79a Excluir dataset horario crudo (70MB, no usado por el notebook); mantener solo el agregado diario
+* main                                                       d1f4472d4effd83e0f1c03a01b7e25f629b3022f Actualiza CONTRIBUTING.md
+  remotes/origin/HEAD                                        -> origin/main
+  remotes/origin/docs/2406_0019_RCH_actualiza-readme         9142b049806f824ac6f05c085d5b5c7c1db2eea3 feat: Actualizacion de README
+  remotes/origin/docs/actualiza-mailmap                      d934b8a46878532d622f3bc18e61f70289169236 feat: correccion mailmap
+  remotes/origin/feature/2506_2227_RCH_Proyecto_completo_ini 1b392ba29d33a5ba3f809668889d516f77e1a79a Excluir dataset horario crudo (70MB, no usado por el notebook); mantener solo el agregado diario
+  remotes/origin/feature/27_06_19_34_PV                      f911863137e945ddaefe9d900118b3b8c57b524c feat: actualizaci├│n de todo el notebook con sus nuevas figuras asociadas
+  remotes/origin/feature/2806_1157_SFA                       e8ed91a8966cb7b96998b02ad4b107209961a6e7 docs: agrega lectura de significancia y relevancia practica SFA
+  remotes/origin/feature/2906_1546_SFA                       a72656c813898a0fa6198b74513032fd1655b1aa docs: agrega guia de lectura de graficos SFA
+  remotes/origin/main                                        d1f4472d4effd83e0f1c03a01b7e25f629b3022f Actualiza CONTRIBUTING.md

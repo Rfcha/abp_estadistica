@@ -1,0 +1,247 @@
+﻿commit:d1f4472|2026-06-29|Rodrigo Chinchon Ayala|Actualiza CONTRIBUTING.md
+CONTRIBUTING.md
+
+commit:262a11c|2026-06-29|sergioandresfernandeza-alt|Merge pull request #7 from Rfcha/feature/2906_1546_SFA
+commit:a72656c|2026-06-29|sergioandresfernandeza-alt|docs: agrega guia de lectura de graficos SFA
+notebooks/01_analisis_estadistico_diario.ipynb
+
+commit:4162516|2026-06-28|sergioandresfernandeza-alt|Merge pull request #6 from Rfcha/feature/2806_1157_SFA
+commit:e8ed91a|2026-06-28|sergioandresfernandeza-alt|docs: agrega lectura de significancia y relevancia practica SFA
+notebooks/01_analisis_estadistico_diario.ipynb
+
+commit:8ae90ff|2026-06-28|sergioandresfernandeza-alt|Merge pull request #5 from Rfcha/feature/2806_1157_SFA
+commit:f81a702|2026-06-28|sergioandresfernandeza-alt|docs: agrega trazabilidad e interpretacion preliminar SFA
+notebooks/01_analisis_estadistico_diario.ipynb
+
+commit:8430f36|2026-06-27|Pablo Villalobos Gonzalez|Merge pull request #4 from Rfcha/feature/27_06_19_34_PV
+commit:f911863|2026-06-27|Pablo Villalobos Gonzalez|feat: actualizaci├│n de todo el notebook con sus nuevas figuras asociadas
+figures/d1_distribuciones.png
+figures/d2_categoricas.png
+figures/d3_correlacion.png
+figures/d4_bivariado.png
+figures/d5_inequidad.png
+figures/d6_intervalos.png
+figures/d7_evolucion_anual.png
+figures/fig1_distribuciones.png
+figures/fig2_boxplot_zona.png
+figures/fig3_categoricas.png
+figures/fig4_correlacion.png
+figures/fig5_bivariado.png
+figures/fig6_intervalos_confianza.png
+figures/fig6_rosa_vientos.png
+figures/fig7_tipo_dia.png
+figures/fig8_areas_verdes.png
+figures/fig9_intervalos.png
+notebooks/01_analisis_estadistico_diario.ipynb
+
+commit:58af717|2026-06-25|Rodrigo Chinchon Ayala|Merge pull request #3 from Rfcha/docs/actualiza-mailmap
+commit:d934b8a|2026-06-25|Rodrigo Chinchon Ayala|feat: correccion mailmap
+.mailmap
+
+commit:1380ad6|2026-06-25|Rodrigo Chinchon Ayala|Eliminar carpeta reports/ del proyecto anterior
+reports/.gitkeep
+reports/Informe_Tecnico_Sumativa1.pdf
+
+commit:7cbc7d2|2026-06-25|Rodrigo Chinchon Ayala|Merge feature a main: README de la Sumativa 1
+commit:41867af|2026-06-25|Rodrigo Chinchon Ayala|Resolver conflictos del pull: README actualizado, eliminar CSV horario
+commit:1b392ba|2026-06-25|Rodrigo Chinchon Ayala|Excluir dataset horario crudo (70MB, no usado por el notebook); mantener solo el agregado diario
+.gitignore
+data/calidad_aire_santiago.csv
+
+commit:2fe336c|2026-06-25|Rodrigo Chinchon Ayala|Sumativa 1: an├ílisis estad├¡stico + informes + entorno reproducible; eliminar figures/ del proyecto anterior
+.gitignore
+.mailmap
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
+README.md
+SECURITY.md
+figures/d1_distribuciones.png
+figures/d2_categoricas.png
+figures/d3_correlacion.png
+figures/d4_bivariado.png
+figures/d5_inequidad.png
+figures/d6_intervalos.png
+figures/d7_evolucion_anual.png
+figures/f3_costos.png
+figures/f3_flujo_caja.png
+figures/f3_importancia.png
+figures/f3_modelo_roc.png
+figures/f3_montecarlo.png
+figures/f3_sensibilidad.png
+figures/fig10_nuevas_variables.png
+figures/fig1_distribuciones.png
+figures/fig2_boxplot_zona.png
+figures/fig3_categoricas.png
+figures/fig4_correlacion.png
+figures/fig5_bivariado.png
+figures/fig6_rosa_vientos.png
+figures/fig7_tipo_dia.png
+figures/fig8_areas_verdes.png
+figures/fig9_intervalos.png
+figures/infografia_5_variables.png
+figures/tabla_5_variables.png
+notebooks/01_analisis_estadistico_diario.ipynb
+requirements.txt
+
+commit:24a65b6|2026-06-25|Rodrigo Chinchon Ayala|fix: grafico de categorias en escala log con etiquetas; aclarar denominador (episodios criticos = 551 cuadran)
+figures/d2_categoricas.png
+notebooks/01_analisis_estadistico_diario.ipynb
+
+commit:d08deb3|2026-06-25|Rodrigo Chinchon Ayala|style: optimizar notebook a estandar F4 (portada GitHub-safe, paleta UNAB, pruebas en tablas, separadores, figuras limpias)
+data/agregar_diario.py
+figures/d1_distribuciones.png
+figures/d2_categoricas.png
+figures/d3_correlacion.png
+figures/d4_bivariado.png
+figures/d5_inequidad.png
+figures/d6_intervalos.png
+figures/d7_evolucion_anual.png
+notebooks/01_analisis_estadistico_diario.ipynb
+reports/Informe_Fase3_Evaluacion_Economica.docx
+
+commit:97bdbb8|2026-06-25|Rodrigo Chinchon Ayala|feat: notebook a escala 2022-2025 con evolucion temporal interanual
+CHANGELOG.md
+README.md
+figures/d1_distribuciones.png
+figures/d2_categoricas.png
+figures/d3_correlacion.png
+figures/d4_bivariado.png
+figures/d5_inequidad.png
+figures/d6_intervalos.png
+figures/d7_evolucion_anual.png
+figures/tabla_5_variables.png
+notebooks/01_analisis_estadistico_diario.ipynb
+
+commit:bbe809c|2026-06-25|Rodrigo Chinchon Ayala|feat: pipeline actualizado a 2022-2025; dataset diario 16.071 filas con presion armonizada
+data/agregar_diario.py
+data/calidad_aire_diario.csv
+data/calidad_aire_santiago.csv
+data/enriquecer_dataset.py
+
+commit:d292896|2026-06-25|Rodrigo Chinchon Ayala|data: integrar datos reales 2024-2025 SINCA; base unificada 2022-2025 (385.704 filas horarias)
+data/integrar_2022_2025.py
+data/sinca_santiago_2022_2025.csv
+data/sinca_santiago_2024_2025.csv
+
+commit:1306709|2026-06-25|Rodrigo Chinchon Ayala|fix: corregir referencias mp2_5->mp2_5_mean en pruebas; quintiles completos Q1-Q5 con descripcion
+data/agregar_diario.py
+data/calidad_aire_diario.csv
+data/enriquecer_dataset.py
+notebooks/01_analisis_estadistico_diario.ipynb
+
+commit:b86f933|2026-06-25|Rodrigo Chinchon Ayala|docs: actualizar README, CHANGELOG, GUIA_GIT y requirements al enfoque diario/estadistico; archivar informe economico
+CHANGELOG.md
+GUIA_GIT.md
+README.md
+notebooks/_version_horaria_obsoleta/Informe_Fase3_Evaluacion_Economica.docx
+requirements.txt
+
+commit:9daaf70|2026-06-25|Rodrigo Chinchon Ayala|feat: naming _mean/_max/_sum, agregar mp2_5_max y doble objetivo (critico_mp25_dia + mala_calidad_mp25) segun spec
+data/agregar_diario.py
+data/calidad_aire_diario.csv
+notebooks/01_analisis_estadistico_diario.ipynb
+
+commit:956fb6b|2026-06-24|Rodrigo Chinchon Ayala|feat: notebook de analisis estadistico a escala diaria; archivar version horaria y economica
+README.md
+notebooks/01_analisis_estadistico_diario.ipynb
+notebooks/_version_horaria_obsoleta/01_analisis_calidad_aire.ipynb
+notebooks/_version_horaria_obsoleta/02_evaluacion_economica.ipynb
+notebooks/_version_horaria_obsoleta/LEER.md
+
+commit:3e0cd3d|2026-06-24|Rodrigo Chinchon Ayala|feat: agregacion a escala diaria (8030 filas) por retroalimentacion docente sobre independencia
+data/agregar_diario.py
+data/calidad_aire_diario.csv
+
+commit:776ecdd|2026-06-24|Rodrigo Chinchon Ayala|docs: infografia de las 5 nuevas variables
+figures/infografia_5_variables.png
+
+commit:147ae26|2026-06-24|Rodrigo Chinchon Ayala|feat: incorporar 5 variables (nominal, ordinal, dicotomica, continua, discreta) con fuentes oficiales y prueba de inequidad ambiental
+README.md
+data/calidad_aire_santiago.csv
+data/enriquecer_dataset.py
+figures/fig10_nuevas_variables.png
+figures/fig6_rosa_vientos.png
+notebooks/01_analisis_calidad_aire.ipynb
+
+commit:efd32e4|2026-06-24|Rodrigo Chinchon Ayala|Merge pull request #1 from Rfcha/docs/2406_0019_RCH_actualiza-readme
+commit:9142b04|2026-06-24|Rodrigo Chinchon Ayala|feat: Actualizacion de README
+README.md
+
+commit:5bc2a50|2026-06-24|Rodrigo Chinchon Ayala|feat: regenerar dataset y figuras en entorno local
+data/calidad_aire_santiago.csv
+figures/fig1_distribuciones.png
+figures/fig2_boxplot_zona.png
+figures/fig3_categoricas.png
+figures/fig4_correlacion.png
+figures/fig5_bivariado.png
+figures/fig6_rosa_vientos.png
+figures/fig7_tipo_dia.png
+figures/fig8_areas_verdes.png
+figures/fig9_intervalos.png
+
+commit:4c5195f|2026-06-24|Rodrigo Chinchon Ayala|chore: limpiar figuras no usadas y actualizar README/requirements
+README.md
+figures/fig2_boxplots_estacion.png
+figures/fig3_criticos_comuna.png
+figures/fig6_rosa_vientos.png
+figures/fig7_areas_verdes.png
+figures/fig8_rosa_vientos.png
+figures/fig9_meteo_sinoptica.png
+requirements.txt
+
+commit:c1dddb3|2026-06-24|Rodrigo Chinchon Ayala|docs: informe de Fase 3 en formato Word (DOCX)
+CHANGELOG.md
+reports/Informe_Fase3_Evaluacion_Economica.docx
+
+commit:210794b|2026-06-24|Rodrigo Chinchon Ayala|feat: notebook Fase 3 - modelo predictivo logistico y evaluacion economica (VAN/TIR/MonteCarlo)
+figures/f3_costos.png
+figures/f3_flujo_caja.png
+figures/f3_importancia.png
+figures/f3_modelo_roc.png
+figures/f3_montecarlo.png
+figures/f3_sensibilidad.png
+notebooks/02_evaluacion_economica.ipynb
+
+commit:a2ab4c2|2026-06-24|Rodrigo Chinchon Ayala|feat: modelo economico con parametros oficiales (VSL-SNI, FONASA, DEIS)
+data/modelo_economico.py
+
+commit:dfb78d2|2026-06-24|Rodrigo Chinchon Ayala|docs: agregar informe tecnico de avance en PDF (8 paginas)
+README.md
+reports/Informe_Tecnico_Sumativa1.pdf
+
+commit:97b27a6|2026-06-24|Rodrigo Chinchon Ayala|feat: notebook completo - EDA, estimacion IC95, pruebas de hipotesis y sintesis
+figures/fig1_distribuciones.png
+figures/fig2_boxplot_zona.png
+figures/fig2_boxplots_estacion.png
+figures/fig3_categoricas.png
+figures/fig3_criticos_comuna.png
+figures/fig4_correlacion.png
+figures/fig5_bivariado.png
+figures/fig6_intervalos_confianza.png
+figures/fig6_rosa_vientos.png
+figures/fig7_areas_verdes.png
+figures/fig7_tipo_dia.png
+figures/fig8_areas_verdes.png
+figures/fig8_rosa_vientos.png
+figures/fig9_intervalos.png
+figures/fig9_meteo_sinoptica.png
+notebooks/01_analisis_calidad_aire.ipynb
+
+commit:4d887a0|2026-06-23|Rodrigo Chinchon Ayala|feat: pipeline de enriquecimiento con variables derivadas y categoricas
+data/calidad_aire_santiago.csv
+data/enriquecer_dataset.py
+
+commit:9618c24|2026-06-23|Rodrigo Chinchon Ayala|data: incorporar datos reales SINCA 2022-2023 y areas verdes SIEDU
+data/areas_verdes_siedu.csv
+data/sinca_santiago.csv
+
+commit:5c05a86|2026-06-22|Rodrigo Chinchon Ayala|chore: estructura inicial del proyecto ABP
+.gitignore
+CHANGELOG.md
+GUIA_GIT.md
+README.md
+figures/.gitkeep
+reports/.gitkeep
+requirements.txt
