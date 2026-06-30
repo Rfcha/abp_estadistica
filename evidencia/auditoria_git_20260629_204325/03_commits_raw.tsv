@@ -1,0 +1,40 @@
+﻿d1f4472	d1f4472d4effd83e0f1c03a01b7e25f629b3022f	2026-06-29T20:07:26-04:00	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	Actualiza CONTRIBUTING.md
+262a11c	262a11c7f861e7155b3cd41031a5599c64a76947	2026-06-29T15:55:58-04:00	sergioandresfernandeza-alt	sergioandresfernandeza@gmail.com	Merge pull request #7 from Rfcha/feature/2906_1546_SFA
+a72656c	a72656c813898a0fa6198b74513032fd1655b1aa	2026-06-29T15:54:10-04:00	sergioandresfernandeza-alt	sergioandresfernandeza@gmail.com	docs: agrega guia de lectura de graficos SFA
+4162516	416251633be86e55078fa5a79c999022667d8b09	2026-06-28T22:36:13-04:00	sergioandresfernandeza-alt	sergioandresfernandeza@gmail.com	Merge pull request #6 from Rfcha/feature/2806_1157_SFA
+e8ed91a	e8ed91a8966cb7b96998b02ad4b107209961a6e7	2026-06-28T22:33:21-04:00	sergioandresfernandeza-alt	sergioandresfernandeza@gmail.com	docs: agrega lectura de significancia y relevancia practica SFA
+8ae90ff	8ae90ff694d404d5c3d4bfae845b358620a5a44f	2026-06-28T12:30:50-04:00	sergioandresfernandeza-alt	sergioandresfernandeza@gmail.com	Merge pull request #5 from Rfcha/feature/2806_1157_SFA
+f81a702	f81a7023b3c22de6caeffc0e8b368d28c9012953	2026-06-28T12:27:18-04:00	sergioandresfernandeza-alt	sergioandresfernandeza@gmail.com	docs: agrega trazabilidad e interpretacion preliminar SFA
+8430f36	8430f36ac85d7d62fc8e5ed107a08286f1cae8f8	2026-06-27T20:36:08-04:00	Pablo Villalobos Gonzalez	p.villalobosgonzalez@uandresbello.edu	Merge pull request #4 from Rfcha/feature/27_06_19_34_PV
+f911863	f911863137e945ddaefe9d900118b3b8c57b524c	2026-06-27T19:34:54-04:00	Pablo Villalobos Gonzalez	p.villalobosgonzalez@uandresbello.edu	feat: actualizaci├│n de todo el notebook con sus nuevas figuras asociadas
+58af717	58af717fe7db2a76b521e4d2a458561621bb456c	2026-06-25T23:01:18-04:00	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	Merge pull request #3 from Rfcha/docs/actualiza-mailmap
+d934b8a	d934b8a46878532d622f3bc18e61f70289169236	2026-06-25T23:00:26-04:00	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: correccion mailmap
+1380ad6	1380ad63e3277cd1c19046de40ebbb84fae12247	2026-06-25T22:47:47-04:00	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	Eliminar carpeta reports/ del proyecto anterior
+7cbc7d2	7cbc7d25da4d30f47a73608b0838a6f0edacc9f2	2026-06-25T22:40:12-04:00	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	Merge feature a main: README de la Sumativa 1
+41867af	41867af723e912388710c80b52a037d3fddb9d6d	2026-06-25T22:38:25-04:00	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	Resolver conflictos del pull: README actualizado, eliminar CSV horario
+1b392ba	1b392ba29d33a5ba3f809668889d516f77e1a79a	2026-06-25T22:34:05-04:00	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	Excluir dataset horario crudo (70MB, no usado por el notebook); mantener solo el agregado diario
+2fe336c	2fe336c1c87880f17726d01536feaddec284d72c	2026-06-25T22:28:27-04:00	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	Sumativa 1: an├ílisis estad├¡stico + informes + entorno reproducible; eliminar figures/ del proyecto anterior
+24a65b6	24a65b62685e8e8771ca7d4b736f4e437a050bdd	2026-06-25T19:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	fix: grafico de categorias en escala log con etiquetas; aclarar denominador (episodios criticos = 551 cuadran)
+d08deb3	d08deb32ab63016a8302e3b89ab64204bd2688ea	2026-06-25T18:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	style: optimizar notebook a estandar F4 (portada GitHub-safe, paleta UNAB, pruebas en tablas, separadores, figuras limpias)
+97bdbb8	97bdbb81ac4914c5fbd02c63f3625d8d99adf13b	2026-06-25T16:30:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: notebook a escala 2022-2025 con evolucion temporal interanual
+bbe809c	bbe809cdee9a26695ae798f72f3ba5e0a851d3c8	2026-06-25T16:15:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: pipeline actualizado a 2022-2025; dataset diario 16.071 filas con presion armonizada
+d292896	d292896c9d25f868565324e2aff5bb5fe202bde9	2026-06-25T16:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	data: integrar datos reales 2024-2025 SINCA; base unificada 2022-2025 (385.704 filas horarias)
+1306709	130670999df1a5f5b57da6a24dc91100a6bbd2c5	2026-06-25T13:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	fix: corregir referencias mp2_5->mp2_5_mean en pruebas; quintiles completos Q1-Q5 con descripcion
+b86f933	b86f933354af5bfeb4cc8643f92c2f216c153a5d	2026-06-25T11:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	docs: actualizar README, CHANGELOG, GUIA_GIT y requirements al enfoque diario/estadistico; archivar informe economico
+9daaf70	9daaf70bd36ae72d5f38cd95d5c6aa2882862934	2026-06-25T10:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: naming _mean/_max/_sum, agregar mp2_5_max y doble objetivo (critico_mp25_dia + mala_calidad_mp25) segun spec
+956fb6b	956fb6b5c6fa22b98b523e3f02ac05f63bc1db8e	2026-06-24T15:30:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: notebook de analisis estadistico a escala diaria; archivar version horaria y economica
+3e0cd3d	3e0cd3d4e0d9c22d20f6552d370b930004429098	2026-06-24T15:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: agregacion a escala diaria (8030 filas) por retroalimentacion docente sobre independencia
+776ecdd	776ecdd03f1e0c7d1884cc50c5e85abd57922df0	2026-06-24T12:30:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	docs: infografia de las 5 nuevas variables
+147ae26	147ae265033cc01f03ce09364535b7482384106d	2026-06-24T12:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: incorporar 5 variables (nominal, ordinal, dicotomica, continua, discreta) con fuentes oficiales y prueba de inequidad ambiental
+efd32e4	efd32e4fc8cbf63e32d90acb0a4986a9bfbe81e2	2026-06-24T00:21:00-04:00	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	Merge pull request #1 from Rfcha/docs/2406_0019_RCH_actualiza-readme
+9142b04	9142b049806f824ac6f05c085d5b5c7c1db2eea3	2026-06-24T00:20:06-04:00	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: Actualizacion de README
+5bc2a50	5bc2a50a82d2e056b62a0a76323acfe765e89879	2026-06-24T00:09:11-04:00	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: regenerar dataset y figuras en entorno local
+4c5195f	4c5195f1129e4b9b76fa0fd1df686c76592fba03	2026-06-24T03:15:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	chore: limpiar figuras no usadas y actualizar README/requirements
+c1dddb3	c1dddb329c38f4e9f6e066ee672cecbc2f17f449	2026-06-24T03:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	docs: informe de Fase 3 en formato Word (DOCX)
+210794b	210794bc35d3007644019ba413efab7a5dbcaa51	2026-06-24T02:30:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: notebook Fase 3 - modelo predictivo logistico y evaluacion economica (VAN/TIR/MonteCarlo)
+a2ab4c2	a2ab4c25f43eb455f837ac9dde5ceca221f09b21	2026-06-24T02:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: modelo economico con parametros oficiales (VSL-SNI, FONASA, DEIS)
+dfb78d2	dfb78d27ae2c3344c4ddc4c282d3a939f85fac1d	2026-06-24T01:30:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	docs: agregar informe tecnico de avance en PDF (8 paginas)
+97b27a6	97b27a6c7ea128e11299500ac144152eb9d9ed4f	2026-06-24T00:30:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: notebook completo - EDA, estimacion IC95, pruebas de hipotesis y sintesis
+4d887a0	4d887a01364d5e4efccd5019753da713cded1f14	2026-06-23T21:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	feat: pipeline de enriquecimiento con variables derivadas y categoricas
+9618c24	9618c24195e8d849827a3f395dcf8e6d513e41c6	2026-06-23T20:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	data: incorporar datos reales SINCA 2022-2023 y areas verdes SIEDU
+5c05a86	5c05a86e2646cbf151b3fcbc06e7e288d1068229	2026-06-22T09:00:00Z	Rodrigo Chinchon Ayala	rodrigo.chinchon@gmail.com	chore: estructura inicial del proyecto ABP

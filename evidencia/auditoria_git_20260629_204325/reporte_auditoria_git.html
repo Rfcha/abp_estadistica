@@ -1,0 +1,217 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auditoria Git - main - 20260629_204325</title>
+<style>:root{--bg:#0b1220;--panel:#111a2e;--panel2:#16213a;--text:#e8eefc;--muted:#9fb0cf;--line:#26395f;--blue:#38bdf8;--green:#34d399;--red:#fb7185;--yellow:#fbbf24;--white:#ffffff;}
+*{box-sizing:border-box} body{margin:0;background:linear-gradient(135deg,#07101f 0%,#0b1220 45%,#101827 100%);color:var(--text);font-family:Segoe UI,Roboto,Arial,sans-serif;line-height:1.45;}
+.header{padding:34px 42px 24px;border-bottom:1px solid var(--line);background:radial-gradient(circle at top left,rgba(56,189,248,.22),transparent 34%),linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0));}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.08em;background:rgba(255,255,255,.04)}
+h1{font-size:34px;line-height:1.15;margin:16px 0 8px;font-weight:900;letter-spacing:-.03em}.subtitle{color:var(--muted);font-size:15px;max-width:1050px}.meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px;max-width:1180px}.meta div{background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:12px;padding:10px 12px;color:var(--muted);overflow-wrap:anywhere}.meta b{color:var(--text)}
+.container{padding:24px 42px 46px}.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.kpi{background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035));border:1px solid var(--line);border-radius:18px;padding:18px;min-height:118px;box-shadow:0 16px 40px rgba(0,0,0,.18)}.kpi-title{font-size:12px;color:var(--muted);text-transform:uppercase;font-weight:800;letter-spacing:.08em}.kpi-value{font-size:31px;font-weight:900;margin:8px 0 4px;letter-spacing:-.03em}.kpi-hint{font-size:13px;color:var(--muted)}.kpi.green{border-color:rgba(52,211,153,.55)}.kpi.green .kpi-value{color:var(--green)}.kpi.red{border-color:rgba(251,113,133,.65)}.kpi.red .kpi-value{color:var(--red)}.kpi.blue .kpi-value{color:var(--blue)}.kpi.yellow .kpi-value{color:var(--yellow)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{background:rgba(17,26,46,.92);border:1px solid var(--line);border-radius:18px;padding:18px;margin:16px 0;box-shadow:0 16px 42px rgba(0,0,0,.16)}.panel h2{margin:0 0 12px;font-size:18px;letter-spacing:-.02em}.table-wrap{overflow:auto;border-radius:12px;border:1px solid var(--line)}table{width:100%;border-collapse:collapse;min-width:720px;background:rgba(255,255,255,.02)}th,td{padding:10px 12px;border-bottom:1px solid rgba(38,57,95,.75);text-align:left;vertical-align:top;font-size:13px}th{background:rgba(56,189,248,.10);color:#dff6ff;font-size:12px;text-transform:uppercase;letter-spacing:.06em}td{color:#d8e2f5}tr:hover td{background:rgba(255,255,255,.035)}pre{white-space:pre-wrap;word-break:break-word;margin:0;padding:14px;border-radius:12px;background:#07101f;border:1px solid var(--line);color:#d8e2f5;font-size:12.5px;max-height:420px;overflow:auto}.empty,.note{color:var(--muted);font-size:13px;padding:8px 0}.note{padding-top:10px}a{color:var(--blue);text-decoration:none}.footer{padding:20px 42px 36px;color:var(--muted);border-top:1px solid var(--line);font-size:12px}@media(max-width:1050px){.kpis{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.meta{grid-template-columns:1fr}}@media(max-width:650px){.header,.container,.footer{padding-left:20px;padding-right:20px}.kpis{grid-template-columns:1fr}h1{font-size:27px}}</style>
+</head>
+<body>
+<header class="header">
+  <div class="badge">Auditoria Git Profesional</div>
+  <h1>Reporte ejecutivo de commits, merges, PRs y estado del repositorio</h1>
+  <div class="subtitle">Evidencia generada automaticamente para trazabilidad tecnica, revision de cambios, control de integraciones y respaldo de actividad del proyecto.</div>
+  <div class="meta">
+    <div><b>Repositorio:</b> D:/LM_IA_LAB/04_PROJECTS/abp_estadistica</div>
+    <div><b>Remote:</b> https://github.com/Rfcha/abp_estadistica.git</div>
+    <div><b>Rama:</b> main / <b>HEAD:</b> d1f4472</div>
+    <div><b>Fecha auditoria:</b> 2026-06-29 20:43:28</div>
+  </div>
+</header>
+<main class="container">
+  <section class="kpis"><div class='kpi red'><div class='kpi-title'>Estado local</div><div class='kpi-value'>Con cambios locales</div><div class='kpi-hint'>1 archivo(s) con cambios</div></div>
+<div class='kpi blue'><div class='kpi-title'>Sincronizacion</div><div class='kpi-value'>Sin upstream configurado</div><div class='kpi-hint'>Upstream: </div></div>
+<div class='kpi blue'><div class='kpi-title'>Commits</div><div class='kpi-value'>40</div><div class='kpi-hint'>Ultimos 500 o rango indicado</div></div>
+<div class='kpi green'><div class='kpi-title'>Autores</div><div class='kpi-value'>3</div><div class='kpi-hint'>Contribuidores unicos</div></div>
+<div class='kpi yellow'><div class='kpi-title'>Merges</div><div class='kpi-value'>8</div><div class='kpi-hint'>Integraciones detectadas</div></div>
+<div class='kpi yellow'><div class='kpi-title'>Fixes / conflictos</div><div class='kpi-value'>11</div><div class='kpi-hint'>Por palabras clave en commits</div></div>
+<div class='kpi blue'><div class='kpi-title'>PRs</div><div class='kpi-value'>7</div><div class='kpi-hint'>Via GitHub CLI si disponible</div></div>
+<div class='kpi blue'><div class='kpi-title'>Issues</div><div class='kpi-value'>0</div><div class='kpi-hint'>Via GitHub CLI si disponible</div></div>
+<div class='kpi green'><div class='kpi-title'>.mailmap</div><div class='kpi-value'>Aplicado</div><div class='kpi-hint'>Autores agrupados con identidad canonica</div></div></section>
+  <div class="grid">
+    <section class='panel'>
+  <h2>Autores normalizados por .mailmap</h2>
+  <div class='table-wrap'><table><thead><tr><th>Autor</th><th>Commits</th></tr></thead><tbody><tr><td>Rodrigo Chinchon Ayala</td><td>32</td></tr>
+<tr><td>sergioandresfernandeza-alt</td><td>6</td></tr>
+<tr><td>Pablo Villalobos Gonzalez</td><td>2</td></tr></tbody></table></div>
+  
+</section>
+    <section class='panel'>
+  <h2>Archivos mas modificados</h2>
+  <div class='table-wrap'><table><thead><tr><th>Archivo</th><th>Cambios</th></tr></thead><tbody><tr><td>notebooks/01_analisis_estadistico_diario.ipynb</td><td>11</td></tr>
+<tr><td>README.md</td><td>9</td></tr>
+<tr><td>figures/fig6_rosa_vientos.png</td><td>6</td></tr>
+<tr><td>CHANGELOG.md</td><td>5</td></tr>
+<tr><td>data/agregar_diario.py</td><td>5</td></tr>
+<tr><td>figures/d2_categoricas.png</td><td>5</td></tr>
+<tr><td>data/calidad_aire_santiago.csv</td><td>5</td></tr>
+<tr><td>figures/fig8_areas_verdes.png</td><td>4</td></tr>
+<tr><td>figures/fig1_distribuciones.png</td><td>4</td></tr>
+<tr><td>data/calidad_aire_diario.csv</td><td>4</td></tr>
+<tr><td>figures/d3_correlacion.png</td><td>4</td></tr>
+<tr><td>figures/d7_evolucion_anual.png</td><td>4</td></tr>
+<tr><td>data/enriquecer_dataset.py</td><td>4</td></tr>
+<tr><td>figures/d6_intervalos.png</td><td>4</td></tr>
+<tr><td>figures/d5_inequidad.png</td><td>4</td></tr>
+<tr><td>figures/fig5_bivariado.png</td><td>4</td></tr>
+<tr><td>figures/fig7_tipo_dia.png</td><td>4</td></tr>
+<tr><td>requirements.txt</td><td>4</td></tr>
+<tr><td>figures/d4_bivariado.png</td><td>4</td></tr>
+<tr><td>figures/fig4_correlacion.png</td><td>4</td></tr></tbody></table></div>
+  <div class='note'>Mostrando 20 de 50 registros. Evidencia completa en CSV/JSON.</div>
+</section>
+  </div>
+  <section class='panel'>
+  <h2>Autores por email normalizado .mailmap</h2>
+  <div class='table-wrap'><table><thead><tr><th>EmailNormalizado</th><th>AutorNormalizado</th><th>Commits</th></tr></thead><tbody><tr><td>rodrigo.chinchon@gmail.com</td><td>Rodrigo Chinchon Ayala</td><td>32</td></tr>
+<tr><td>sergioandresfernandeza@gmail.com</td><td>sergioandresfernandeza-alt</td><td>6</td></tr>
+<tr><td>p.villalobosgonzalez@uandresbello.edu</td><td>Pablo Villalobos Gonzalez</td><td>2</td></tr></tbody></table></div>
+  
+</section>
+  <section class='panel'>
+  <h2>Ultimos commits analizados</h2>
+  <div class='table-wrap'><table><thead><tr><th>ShortHash</th><th>Date</th><th>Author</th><th>Subject</th></tr></thead><tbody><tr><td>d1f4472</td><td>2026-06-29T20:07:26-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Actualiza CONTRIBUTING.md</td></tr>
+<tr><td>262a11c</td><td>2026-06-29T15:55:58-04:00</td><td>sergioandresfernandeza-alt</td><td>Merge pull request #7 from Rfcha/feature/2906_1546_SFA</td></tr>
+<tr><td>a72656c</td><td>2026-06-29T15:54:10-04:00</td><td>sergioandresfernandeza-alt</td><td>docs: agrega guia de lectura de graficos SFA</td></tr>
+<tr><td>4162516</td><td>2026-06-28T22:36:13-04:00</td><td>sergioandresfernandeza-alt</td><td>Merge pull request #6 from Rfcha/feature/2806_1157_SFA</td></tr>
+<tr><td>e8ed91a</td><td>2026-06-28T22:33:21-04:00</td><td>sergioandresfernandeza-alt</td><td>docs: agrega lectura de significancia y relevancia practica SFA</td></tr>
+<tr><td>8ae90ff</td><td>2026-06-28T12:30:50-04:00</td><td>sergioandresfernandeza-alt</td><td>Merge pull request #5 from Rfcha/feature/2806_1157_SFA</td></tr>
+<tr><td>f81a702</td><td>2026-06-28T12:27:18-04:00</td><td>sergioandresfernandeza-alt</td><td>docs: agrega trazabilidad e interpretacion preliminar SFA</td></tr>
+<tr><td>8430f36</td><td>2026-06-27T20:36:08-04:00</td><td>Pablo Villalobos Gonzalez</td><td>Merge pull request #4 from Rfcha/feature/27_06_19_34_PV</td></tr>
+<tr><td>f911863</td><td>2026-06-27T19:34:54-04:00</td><td>Pablo Villalobos Gonzalez</td><td>feat: actualizaci├│n de todo el notebook con sus nuevas figuras asociadas</td></tr>
+<tr><td>58af717</td><td>2026-06-25T23:01:18-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Merge pull request #3 from Rfcha/docs/actualiza-mailmap</td></tr>
+<tr><td>d934b8a</td><td>2026-06-25T23:00:26-04:00</td><td>Rodrigo Chinchon Ayala</td><td>feat: correccion mailmap</td></tr>
+<tr><td>1380ad6</td><td>2026-06-25T22:47:47-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Eliminar carpeta reports/ del proyecto anterior</td></tr>
+<tr><td>7cbc7d2</td><td>2026-06-25T22:40:12-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Merge feature a main: README de la Sumativa 1</td></tr>
+<tr><td>41867af</td><td>2026-06-25T22:38:25-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Resolver conflictos del pull: README actualizado, eliminar CSV horario</td></tr>
+<tr><td>1b392ba</td><td>2026-06-25T22:34:05-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Excluir dataset horario crudo (70MB, no usado por el notebook); mantener solo el agregado diario</td></tr>
+<tr><td>2fe336c</td><td>2026-06-25T22:28:27-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Sumativa 1: an├&#237;lisis estad├&#161;stico + informes + entorno reproducible; eliminar figures/ del proyecto anterior</td></tr>
+<tr><td>24a65b6</td><td>2026-06-25T19:00:00Z</td><td>Rodrigo Chinchon Ayala</td><td>fix: grafico de categorias en escala log con etiquetas; aclarar denominador (episodios criticos = 551 cuadran)</td></tr>
+<tr><td>d08deb3</td><td>2026-06-25T18:00:00Z</td><td>Rodrigo Chinchon Ayala</td><td>style: optimizar notebook a estandar F4 (portada GitHub-safe, paleta UNAB, pruebas en tablas, separadores, figuras limpias)</td></tr>
+<tr><td>97bdbb8</td><td>2026-06-25T16:30:00Z</td><td>Rodrigo Chinchon Ayala</td><td>feat: notebook a escala 2022-2025 con evolucion temporal interanual</td></tr>
+<tr><td>bbe809c</td><td>2026-06-25T16:15:00Z</td><td>Rodrigo Chinchon Ayala</td><td>feat: pipeline actualizado a 2022-2025; dataset diario 16.071 filas con presion armonizada</td></tr>
+<tr><td>d292896</td><td>2026-06-25T16:00:00Z</td><td>Rodrigo Chinchon Ayala</td><td>data: integrar datos reales 2024-2025 SINCA; base unificada 2022-2025 (385.704 filas horarias)</td></tr>
+<tr><td>1306709</td><td>2026-06-25T13:00:00Z</td><td>Rodrigo Chinchon Ayala</td><td>fix: corregir referencias mp2_5-&gt;mp2_5_mean en pruebas; quintiles completos Q1-Q5 con descripcion</td></tr>
+<tr><td>b86f933</td><td>2026-06-25T11:00:00Z</td><td>Rodrigo Chinchon Ayala</td><td>docs: actualizar README, CHANGELOG, GUIA_GIT y requirements al enfoque diario/estadistico; archivar informe economico</td></tr>
+<tr><td>9daaf70</td><td>2026-06-25T10:00:00Z</td><td>Rodrigo Chinchon Ayala</td><td>feat: naming _mean/_max/_sum, agregar mp2_5_max y doble objetivo (critico_mp25_dia + mala_calidad_mp25) segun spec</td></tr>
+<tr><td>956fb6b</td><td>2026-06-24T15:30:00Z</td><td>Rodrigo Chinchon Ayala</td><td>feat: notebook de analisis estadistico a escala diaria; archivar version horaria y economica</td></tr>
+<tr><td>3e0cd3d</td><td>2026-06-24T15:00:00Z</td><td>Rodrigo Chinchon Ayala</td><td>feat: agregacion a escala diaria (8030 filas) por retroalimentacion docente sobre independencia</td></tr>
+<tr><td>776ecdd</td><td>2026-06-24T12:30:00Z</td><td>Rodrigo Chinchon Ayala</td><td>docs: infografia de las 5 nuevas variables</td></tr>
+<tr><td>147ae26</td><td>2026-06-24T12:00:00Z</td><td>Rodrigo Chinchon Ayala</td><td>feat: incorporar 5 variables (nominal, ordinal, dicotomica, continua, discreta) con fuentes oficiales y prueba de inequidad ambiental</td></tr>
+<tr><td>efd32e4</td><td>2026-06-24T00:21:00-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Merge pull request #1 from Rfcha/docs/2406_0019_RCH_actualiza-readme</td></tr>
+<tr><td>9142b04</td><td>2026-06-24T00:20:06-04:00</td><td>Rodrigo Chinchon Ayala</td><td>feat: Actualizacion de README</td></tr></tbody></table></div>
+  
+</section>
+  <div class="grid">
+    <section class='panel'>
+  <h2>Merges detectados</h2>
+  <div class='table-wrap'><table><thead><tr><th>Hash</th><th>Fecha</th><th>Autor</th><th>Mensaje</th></tr></thead><tbody><tr><td>262a11c</td><td>2026-06-29T15:55:58-04:00</td><td>sergioandresfernandeza-alt</td><td>Merge pull request #7 from Rfcha/feature/2906_1546_SFA</td></tr>
+<tr><td>4162516</td><td>2026-06-28T22:36:13-04:00</td><td>sergioandresfernandeza-alt</td><td>Merge pull request #6 from Rfcha/feature/2806_1157_SFA</td></tr>
+<tr><td>8ae90ff</td><td>2026-06-28T12:30:50-04:00</td><td>sergioandresfernandeza-alt</td><td>Merge pull request #5 from Rfcha/feature/2806_1157_SFA</td></tr>
+<tr><td>8430f36</td><td>2026-06-27T20:36:08-04:00</td><td>Pablo Villalobos Gonzalez</td><td>Merge pull request #4 from Rfcha/feature/27_06_19_34_PV</td></tr>
+<tr><td>58af717</td><td>2026-06-25T23:01:18-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Merge pull request #3 from Rfcha/docs/actualiza-mailmap</td></tr>
+<tr><td>7cbc7d2</td><td>2026-06-25T22:40:12-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Merge feature a main: README de la Sumativa 1</td></tr>
+<tr><td>41867af</td><td>2026-06-25T22:38:25-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Resolver conflictos del pull: README actualizado, eliminar CSV horario</td></tr>
+<tr><td>efd32e4</td><td>2026-06-24T00:21:00-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Merge pull request #1 from Rfcha/docs/2406_0019_RCH_actualiza-readme</td></tr></tbody></table></div>
+  
+</section>
+    <section class='panel'>
+  <h2>Fixes, errores, conflictos o correcciones</h2>
+  <div class='table-wrap'><table><thead><tr><th>ShortHash</th><th>Date</th><th>Author</th><th>Subject</th></tr></thead><tbody><tr><td>262a11c</td><td>2026-06-29T15:55:58-04:00</td><td>sergioandresfernandeza-alt</td><td>Merge pull request #7 from Rfcha/feature/2906_1546_SFA</td></tr>
+<tr><td>4162516</td><td>2026-06-28T22:36:13-04:00</td><td>sergioandresfernandeza-alt</td><td>Merge pull request #6 from Rfcha/feature/2806_1157_SFA</td></tr>
+<tr><td>8ae90ff</td><td>2026-06-28T12:30:50-04:00</td><td>sergioandresfernandeza-alt</td><td>Merge pull request #5 from Rfcha/feature/2806_1157_SFA</td></tr>
+<tr><td>8430f36</td><td>2026-06-27T20:36:08-04:00</td><td>Pablo Villalobos Gonzalez</td><td>Merge pull request #4 from Rfcha/feature/27_06_19_34_PV</td></tr>
+<tr><td>58af717</td><td>2026-06-25T23:01:18-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Merge pull request #3 from Rfcha/docs/actualiza-mailmap</td></tr>
+<tr><td>d934b8a</td><td>2026-06-25T23:00:26-04:00</td><td>Rodrigo Chinchon Ayala</td><td>feat: correccion mailmap</td></tr>
+<tr><td>7cbc7d2</td><td>2026-06-25T22:40:12-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Merge feature a main: README de la Sumativa 1</td></tr>
+<tr><td>41867af</td><td>2026-06-25T22:38:25-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Resolver conflictos del pull: README actualizado, eliminar CSV horario</td></tr>
+<tr><td>24a65b6</td><td>2026-06-25T19:00:00Z</td><td>Rodrigo Chinchon Ayala</td><td>fix: grafico de categorias en escala log con etiquetas; aclarar denominador (episodios criticos = 551 cuadran)</td></tr>
+<tr><td>1306709</td><td>2026-06-25T13:00:00Z</td><td>Rodrigo Chinchon Ayala</td><td>fix: corregir referencias mp2_5-&gt;mp2_5_mean en pruebas; quintiles completos Q1-Q5 con descripcion</td></tr>
+<tr><td>efd32e4</td><td>2026-06-24T00:21:00-04:00</td><td>Rodrigo Chinchon Ayala</td><td>Merge pull request #1 from Rfcha/docs/2406_0019_RCH_actualiza-readme</td></tr></tbody></table></div>
+  
+</section>
+  </div>
+  <div class="grid">
+    <section class='panel'>
+  <h2>Pull Requests GitHub</h2>
+  <div class='table-wrap'><table><thead><tr><th>number</th><th>title</th><th>state</th><th>baseRefName</th><th>headRefName</th><th>mergedAt</th><th>url</th></tr></thead><tbody><tr><td>7</td><td>Guia de lectura de graficos </td><td>MERGED</td><td>main</td><td>feature/2906_1546_SFA</td><td>2026-06-29T19:55:58Z</td><td><a href='https://github.com/Rfcha/abp_estadistica/pull/7' target='_blank'>Abrir</a></td></tr>
+<tr><td>6</td><td>Trazabilidad e interpretaci├│n de resultados</td><td>MERGED</td><td>main</td><td>feature/2806_1157_SFA</td><td>2026-06-29T02:36:14Z</td><td><a href='https://github.com/Rfcha/abp_estadistica/pull/6' target='_blank'>Abrir</a></td></tr>
+<tr><td>5</td><td>Aporte SFA: trazabilidad e interpretaci├│n preliminar</td><td>MERGED</td><td>main</td><td>feature/2806_1157_SFA</td><td>2026-06-28T16:30:50Z</td><td><a href='https://github.com/Rfcha/abp_estadistica/pull/5' target='_blank'>Abrir</a></td></tr>
+<tr><td>4</td><td>feat: actualizaci├│n de todo el notebook con sus nuevas figuras asociadas</td><td>MERGED</td><td>main</td><td>feature/27_06_19_34_PV</td><td>2026-06-28T00:36:08Z</td><td><a href='https://github.com/Rfcha/abp_estadistica/pull/4' target='_blank'>Abrir</a></td></tr>
+<tr><td>3</td><td>feat: correccion mailmap</td><td>MERGED</td><td>main</td><td>docs/actualiza-mailmap</td><td>2026-06-26T03:01:18Z</td><td><a href='https://github.com/Rfcha/abp_estadistica/pull/3' target='_blank'>Abrir</a></td></tr>
+<tr><td>2</td><td>Feature/2506 2227 rch proyecto completo ini</td><td>MERGED</td><td>main</td><td>feature/2506_2227_RCH_Proyecto_completo_ini</td><td>2026-06-26T02:40:49Z</td><td><a href='https://github.com/Rfcha/abp_estadistica/pull/2' target='_blank'>Abrir</a></td></tr>
+<tr><td>1</td><td>feat: Actualizacion de README</td><td>MERGED</td><td>main</td><td>docs/2406_0019_RCH_actualiza-readme</td><td>2026-06-24T04:21:01Z</td><td><a href='https://github.com/Rfcha/abp_estadistica/pull/1' target='_blank'>Abrir</a></td></tr></tbody></table></div>
+  
+</section>
+    <section class='panel'><h2>Issues GitHub</h2><div class='empty'>Sin datos disponibles.</div></section>
+  </div>
+  <div class="grid">
+    <section class='panel'>
+  <h2>Estado Git corto</h2>
+  <pre>## main
+?? evidencia/</pre>
+</section>
+    <section class='panel'>
+  <h2>Diff actual --stat</h2>
+  <pre>Sin datos.</pre>
+</section>
+  </div>
+  <div class="grid">
+    <section class='panel'>
+  <h2>Ramas locales/remotas</h2>
+  <pre>  docs/2406_0019_RCH_actualiza-readme                        9142b049806f824ac6f05c085d5b5c7c1db2eea3 feat: Actualizacion de README
+  docs/actualiza-mailmap                                     d934b8a46878532d622f3bc18e61f70289169236 feat: correccion mailmap
+  feature/2506_2227_RCH_Proyecto_completo_ini                1b392ba29d33a5ba3f809668889d516f77e1a79a Excluir dataset horario crudo (70MB, no usado por el notebook); mantener solo el agregado diario
+* main                                                       d1f4472d4effd83e0f1c03a01b7e25f629b3022f Actualiza CONTRIBUTING.md
+  remotes/origin/HEAD                                        -&gt; origin/main
+  remotes/origin/docs/2406_0019_RCH_actualiza-readme         9142b049806f824ac6f05c085d5b5c7c1db2eea3 feat: Actualizacion de README
+  remotes/origin/docs/actualiza-mailmap                      d934b8a46878532d622f3bc18e61f70289169236 feat: correccion mailmap
+  remotes/origin/feature/2506_2227_RCH_Proyecto_completo_ini 1b392ba29d33a5ba3f809668889d516f77e1a79a Excluir dataset horario crudo (70MB, no usado por el notebook); mantener solo el agregado diario
+  remotes/origin/feature/27_06_19_34_PV                      f911863137e945ddaefe9d900118b3b8c57b524c feat: actualizaci├│n de todo el notebook con sus nuevas figuras asociadas
+  remotes/origin/feature/2806_1157_SFA                       e8ed91a8966cb7b96998b02ad4b107209961a6e7 docs: agrega lectura de significancia y relevancia practica SFA
+  remotes/origin/feature/2906_1546_SFA                       a72656c813898a0fa6198b74513032fd1655b1aa docs: agrega guia de lectura de graficos SFA
+  remotes/origin/main                                        d1f4472d4effd83e0f1c03a01b7e25f629b3022f Actualiza CONTRIBUTING.md</pre>
+</section>
+    <section class='panel'>
+  <h2>Remotos configurados</h2>
+  <pre>origin	https://github.com/Rfcha/abp_estadistica.git (fetch)
+origin	https://github.com/Rfcha/abp_estadistica.git (push)</pre>
+</section>
+  </div>
+  <section class='panel'>
+  <h2>Tags</h2>
+  <pre>Sin datos.</pre>
+</section>
+  <section class='panel'>
+  <h2>Archivo .mailmap aplicado</h2>
+  <pre># === .mailmap - Consolidacion de identidades Grupo 3 (Proyecto ABP) ===
+# Formato: Nombre-Canonico &lt;email-canonico&gt; [Nombre-Viejo] &lt;email-viejo&gt;
+
+# --- Rodrigo Chinchon Ayala (cuenta GitHub: Rfcha) ---
+# Identidad canonica: rodrigo.chinchon@gmail.com
+Rodrigo Chinchon Ayala &lt;rodrigo.chinchon@gmail.com&gt;
+Rodrigo Chinchon Ayala &lt;rodrigo.chinchon@gmail.com&gt; Grupo 3 &lt;grupo3@mcdi500.cl&gt;
+Rodrigo Chinchon Ayala &lt;rodrigo.chinchon@gmail.com&gt; Rfcha &lt;58430829+Rfcha@users.noreply.github.com&gt;
+Rodrigo Chinchon Ayala &lt;rodrigo.chinchon@gmail.com&gt; &lt;58430829+Rfcha@users.noreply.github.com&gt;
+Rodrigo Chinchon Ayala &lt;rodrigo.chinchon@gmail.com&gt; Equipo ABP MCDI501 &lt;abp@unab.cl&gt;
+
+# --- Pablo Villalobos Gonzalez (cuenta GitHub: PAVG2026) ---
+# Mapeo por email: agrupa TODAS las variantes de nombre con email institucional.
+Pablo Villalobos Gonzalez &lt;p.villalobosgonzalez@uandresbello.edu&gt;
+Pablo Villalobos Gonzalez &lt;p.villalobosgonzalez@uandresbello.edu&gt; &lt;p.villalobosgonzalez@uandresbello&gt;
+
+# --- Sergio Andres Fernandez (cuenta GitHub: sergioandresfernandeza-alt) ---  
+Sergio Fernandez &lt;sergioandresfernandez@gmail.com&gt; sergioandresfernandeza-alt &lt;sergioandresfernandez@gmail.com&gt;</pre>
+</section>
+</main>
+<footer class="footer">
+  Reporte generado en: D:\LM_IA_LAB\04_PROJECTS\abp_estadistica\evidencia\auditoria_git_20260629_204325. Archivos CSV/JSON/TXT quedan como evidencia auditable junto al HTML.
+</footer>
+</body>
+</html>
