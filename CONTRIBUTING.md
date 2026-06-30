@@ -1,4 +1,4 @@
-# Guía de Contribución — abp_cienciadatos
+# Guía de Contribución — abp_estadistica
 
 Este documento define el flujo de trabajo colaborativo del proyecto para que **todos los cambios queden registrados, versionados y trazables** mediante commits y pull requests.
 
@@ -23,8 +23,8 @@ git config --global user.email "tu-correo@ejemplo.com"
 ### 1. Clonar el repositorio (solo la primera vez)
 
 ```bash
-git clone https://github.com/Rfcha/abp_cienciadatos.git
-cd abp_cienciadatos
+git clone https://github.com/Rfcha/abp_estadistica.git
+cd abp_estadistica
 ```
 
 ### 2. Actualizar `main` antes de empezar
