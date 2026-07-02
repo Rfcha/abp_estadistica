@@ -2,27 +2,42 @@
 # Proyecto MCDI501 — Análisis Estadístico de la Calidad del Aire en Santiago
 # Grupo 3 · Magíster en Ciencia de Datos e IA · Universidad Andrés Bello
 # ----------------------------------------------------------------------------
-# Versiones EXACTAS del entorno con el que se ejecutó y validó el notebook
-# 01_analisis_estadistico_diario.ipynb (Python 3.12.10).
+# Entorno validado desde el notebook ejecutado:
+#   01_analisis_estadistico_diario.ipynb
+#   Python 3.12.10 · Kernel .venv
 #
-# Si alguna versión exacta presenta conflictos en otra máquina, las
-# alternativas estables indicadas como comentario están probadas y son
-# compatibles entre sí.
+# Nota:
+# - Las primeras versiones son las exactas usadas en la salida HTML entregada.
+# - Las alternativas comentadas son rangos estables para reinstalación si alguna
+#   versión exacta no está disponible en otro equipo.
 # ============================================================================
 
-numpy==2.5.0           # alternativa estable: numpy==2.3.5
-pandas==3.0.3          # alternativa estable: pandas==2.3.3
-matplotlib==3.11.0     # (sin cambios respecto a la alternativa estable)
-seaborn==0.13.2        # (sin cambios)
-scipy==1.18.0          # alternativa estable: scipy==1.16.3
+# Núcleo científico
+numpy==2.5.0
+pandas==3.0.3
+scipy==1.18.0
 
-# Necesario para ejecutar el notebook en VS Code / Jupyter
+# Visualización
+matplotlib==3.11.0
+seaborn==0.13.2
+
+# Ejecución y render de notebook
 ipykernel==6.29.5
+ipython>=8.0
+jupyter>=1.1.1
+nbconvert>=7.16
 
 # ----------------------------------------------------------------------------
-# Instalación recomendada (entorno virtual, fuera de carpetas sincronizadas):
+# Alternativas estables si el equipo no resuelve alguna versión exacta:
+#   numpy==2.3.5
+#   pandas==2.3.3
+#   scipy==1.16.3
+#   matplotlib==3.11.0
+#   seaborn==0.13.2
+#
+# Instalación recomendada:
 #   python -m venv .venv
-#   .venv\Scripts\Activate.ps1      (Windows PowerShell)
+#   .venv\Scripts\Activate.ps1
 #   python -m pip install --upgrade pip
 #   pip install -r requirements.txt
 # ----------------------------------------------------------------------------

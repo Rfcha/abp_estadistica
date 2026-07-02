@@ -1,65 +1,93 @@
 # Análisis Estadístico de la Calidad del Aire en Santiago
 
-**Inequidad ambiental y episodios críticos de material particulado**
+**Inequidad ambiental, meteorología y episodios críticos de material particulado**
 
 Proyecto del curso **MCDI501 — Estadística Computacional para la Toma de Decisiones**, Magíster en Ciencia de Datos e Inteligencia Artificial, Universidad Andrés Bello.
 
 | | |
 |---|---|
 | **Grupo** | Grupo 3 |
-| **Integrantes** | Rodrigo Chinchón Ayala · Sergio Fernández Almonacid · Pablo Villalobos González |
+| **Integrantes** | Rodrigo Chinchón Ayala · Pablo Villalobos González · Sergio Fernández Almonacid |
 | **Docente** | Jean Paul Maidana González |
-| **Dataset** | Red SINCA (Ministerio del Medio Ambiente), Santiago RM |
-| **Escala** | Estación-día · 2022–2025 · 16.071 observaciones · 11 estaciones · 36 variables |
+| **Dataset** | Red SINCA — Ministerio del Medio Ambiente, Santiago RM |
+| **Escala de análisis** | Estación-día · 2022–2025 · 11 estaciones · 36 variables |
+| **Notebook principal** | `notebooks/01_analisis_estadistico_diario.ipynb` |
+| **Salida HTML** | `outputs/01_analisis_estadistico_diario.html` |
+| **Repositorio** | `https://github.com/Rfcha/abp_estadistica` |
 
 ---
 
-## Objetivo
+## 1. Objetivo
 
-Caracterizar estadísticamente la contaminación por material particulado (MP2.5 y MP10) en Santiago y evaluar, mediante inferencia estadística rigurosa, si la exposición se distribuye de forma desigual entre **zonas geográficas**, **niveles socioeconómicos** y **temporadas**, como base técnica para una eventual gestión sanitaria proactiva.
+Caracterizar estadísticamente la contaminación por **MP2.5** y **MP10** en Santiago de Chile, evaluando si la exposición presenta diferencias relevantes entre **zonas geográficas**, **niveles socioeconómicos** y **condiciones meteorológicas**, con énfasis en episodios críticos y toma de decisiones basada en evidencia.
 
-## Pregunta movilizadora
+## 2. Pregunta movilizadora
 
 > ¿Qué evidencia estadística sustenta que la contaminación por material particulado en Santiago presenta diferencias significativas entre zonas, niveles socioeconómicos y temporadas?
 
 ---
 
-## Hallazgos principales
+## 3. Resumen ejecutivo de hallazgos
 
-El análisis se realiza a **escala estación-día**, garantizando observaciones independientes y, por tanto, la validez de la inferencia estadística (a diferencia de la escala horaria, donde la autocorrelación invalida los supuestos).
+El análisis se ejecutó a **escala estación-día**, reduciendo la dependencia horaria y haciendo más defendible la inferencia estadística aplicada en esta fase.
 
-- **Inequidad ambiental:** el quintil socioeconómico de menor ingreso (Q1) promedia **29,40 µg/m³** de MP2.5 frente a **16,61 µg/m³** del de mayor ingreso (Q5): una diferencia de **+12,8 µg/m³ (77 % mayor)**, con efecto grande (*d* de Cohen = 0,97; *p* = 2,1×10⁻¹⁸⁰).
-- **Desigualdad territorial:** el Poniente está significativamente más expuesto que el Oriente (*d* = −0,76; *p* = 6,0×10⁻¹⁷⁶).
-- **Mecanismo físico:** los días con mayor proporción de inversión térmica concentran más MP2.5 (*d* = 0,85), confirmando el motor de los episodios críticos invernales.
-- **Magnitud del fenómeno:** el **95,25 %** de los días-estación se clasifican como «Bueno»; **551 días (4,75 %)** superan la norma diaria, constituyendo los episodios críticos.
+- **MP2.5 como contaminante prioritario:** media diaria de **24,94 µg/m³**; **551 días-estación sobre norma** equivalente a **4,75 %** de los días válidos.
+- **MP10:** media diaria de **56,6 µg/m³**; **66 días-estación sobre norma** equivalente a **0,57 %** de los días válidos.
+- **Inequidad ambiental Q1 vs Q5:** Q1 promedia **29,40 µg/m³** frente a **16,61 µg/m³** en Q5; diferencia de **+12,8 µg/m³** (**77 % mayor**), con **d de Cohen = 0,97**.
+- **Desigualdad territorial Oriente vs Poniente:** Oriente promedia **16,61 µg/m³** y Poniente **26,33 µg/m³**; diferencia de **9,72 µg/m³** y **d de Cohen = -0,76**.
+- **Inversión térmica:** los días con alta inversión térmica promedian **32,15 µg/m³** versus **18,95 µg/m³** en baja inversión; **d de Cohen = 1,05**.
+- **Riesgo operativo territorial:** Poniente presenta **7,62 %** de días sobre norma; Oriente registra **0,00 %** en la muestra analizada.
+- **Correlaciones relevantes:** MP2.5 se correlaciona fuertemente con MP10 (**r = 0,901**) y negativamente con temperatura (**r = -0,621**).
 
-Todas las conclusiones se sustentan en pruebas con **tamaño de efecto reportado**, no solo en significancia estadística.
+Todas las conclusiones reportan **p-valor, tamaño de efecto y decisión estadística**, evitando depender solo de la significancia estadística.
 
 ---
 
-## Metodología
+## 4. Metodología
 
 | Etapa | Procedimiento |
 |---|---|
-| **Calidad de datos** | Auditoría de faltantes (MP2.5: 27,8 %), duplicados (0) e inconsistencias físicas (0); criterio de cobertura ≥75 % de horas/día |
-| **Descriptiva** | Tendencia central, dispersión, CV %, asimetría, curtosis; frecuencias de categóricas; correlación de Pearson |
-| **Estimación** | Intervalos de confianza al 95 % (*t* de Student) sobre MP2.5, MP10 y temperatura |
-| **Inferencia** | 4 pruebas de hipótesis: 3× *t* de Welch (con verificación de supuestos vía Levene) + 1× χ² de independencia |
+| **Configuración reproducible** | Python 3.12.10, semilla fija 2026, versiones registradas y paleta visual institucional |
+| **Carga y tipado** | Lectura de `data/calidad_aire_diario.csv`, tipado de variables categóricas ordenadas y preparación de escala estación-día |
+| **Depuración** | Transformación de variables binarias a etiquetas interpretables, eliminación de registros sin MP2.5 válido e inventario estadístico de variables |
+| **Calidad de datos** | Auditoría de faltantes, duplicados e inconsistencias físicas; criterio de cobertura diaria ≥75 % |
+| **EDA** | Estadística descriptiva, frecuencias oficiales, correlaciones Pearson/Spearman, inequidad ambiental y evolución temporal 2022–2025 |
+| **Estimación** | Intervalos de confianza al 95 % con distribución *t* de Student e IC Wilson para proporciones sobre norma |
+| **Inferencia** | 5 pruebas: 3× *t* de Welch, 1× χ² de independencia y 1× prueba Z de proporciones |
 
 ---
 
-## Estructura del repositorio
+## 5. Resultados inferenciales consolidados
+
+| Prueba | Estadístico | p-valor | Efecto | Decisión |
+|---|---:|---:|---:|---|
+| t Welch — Oriente vs Poniente | t = -29,7 | 6,0e-176 | d = -0,76 | Rechaza H0 |
+| t Welch — Q1 vs Q5 | t = 30,4 | 2,1e-180 | d = 0,97 | Rechaza H0 |
+| t Welch — Inversión térmica | t = 55,5 | 0,0e+00 | d = 1,05 | Rechaza H0 |
+| χ² — Zona vs nivel de contaminación | χ² = 308,2 | 7,45e-62 | V = 0,115 | Rechaza H0 |
+| Z — Proporción días sobre norma | z = 10,87 | 0,0e+00 | Δ = 7,62 pp | Rechaza H0 |
+
+**Conclusión:** las 5 pruebas rechazan H0 con α = 0,05. La evidencia respalda diferencias territoriales, inequidad socioambiental y un mecanismo físico consistente asociado a inversión térmica.
+
+---
+
+## 6. Estructura del repositorio
 
 ```text
 abp_estadistica/
 ├── data/
-│   └── calidad_aire_diario.csv        # dataset estación-día (2022–2025)
+│   └── calidad_aire_diario.csv
 ├── notebooks/
-│   └── 01_analisis_estadistico_diario.ipynb   # análisis completo
-├── figures/                            # SALIDA regenerable (no versionada): D1–D7 al ejecutar
-├── requirements.txt                    # dependencias con versiones fijadas
+│   └── 01_analisis_estadistico_diario.ipynb
+├── outputs/
+│   └── 01_analisis_estadistico_diario.html
+├── figures/
+│   └── *.png
 ├── README.md
-├── changelog.md
+├── requirements.txt
+├── GUIA_GIT.md
+├── CHANGELOG.md
+├── .mailmap
 ├── LICENSE
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
@@ -68,42 +96,68 @@ abp_estadistica/
 
 ---
 
-## Reproducibilidad
+## 7. Reproducibilidad
 
-El notebook es ejecutable de principio a fin sin errores, con **semilla fija (2026)** para reproducibilidad. Se recomienda un entorno virtual ubicado **fuera de carpetas sincronizadas** (OneDrive/Dropbox), que pueden bloquear archivos durante la instalación de paquetes.
+El notebook fue validado con **Python 3.12.10** y kernel `.venv`. Se recomienda crear el entorno virtual fuera de carpetas sincronizadas como OneDrive o Dropbox para evitar bloqueos de archivos durante la instalación.
+
+### Windows PowerShell
 
 ```powershell
-# 1. Crear y activar el entorno virtual
 python -m venv .venv
-.venv\Scripts\Activate.ps1          # Windows PowerShell
-
-# 2. Instalar dependencias
+.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 pip install -r requirements.txt
-
-# 3. Verificar que la pila gráfica carga correctamente
-python -c "import matplotlib; from matplotlib.backends import registry; import matplotlib.pyplot; print('matplotlib', matplotlib.__version__, 'OK')"
+python -m ipykernel install --user --name abp_estadistica --display-name "ABP Estadística"
 ```
 
-Después, en VS Code: seleccionar `.venv` como **kernel** del notebook (selector arriba a la derecha) y ejecutar **Run All** desde la primera celda.
+### Ejecutar notebook y generar HTML
 
-**Entorno validado:** Python 3.12.10 · NumPy 2.5.0 · pandas 3.0.3 · matplotlib 3.11.0 · seaborn 0.13.2 · SciPy 1.18.0.
+```powershell
+jupyter nbconvert --to notebook --execute --inplace notebooks/01_analisis_estadistico_diario.ipynb
+jupyter nbconvert --to html notebooks/01_analisis_estadistico_diario.ipynb --output-dir outputs
+```
+
+### Verificación rápida
+
+```powershell
+python -c "import numpy, pandas, matplotlib, seaborn, scipy; print('Entorno OK')"
+```
 
 ---
 
-## Roadmap del proyecto
+## 8. Entorno validado
 
-- **Sumativa 1 (esta entrega):** análisis exploratorio e inferencial (descriptiva, IC 95 %, pruebas de hipótesis).
-- **Sumativa 2 (validación):** bootstrap, tests de permutación y simulación de Monte Carlo.
-- **Sumativa 3 (modelo):** clasificación binaria de episodios críticos (objetivo `mala_calidad_mp25`, ~12 % positivos), evaluado con F1, recall y AUC, con división estratificada por períodos.
+| Componente | Versión |
+|---|---:|
+| Python | 3.12.10 |
+| NumPy | 2.5.0 |
+| pandas | 3.0.3 |
+| matplotlib | 3.11.0 |
+| seaborn | 0.13.2 |
+| SciPy | 1.18.0 |
+| ipykernel | 6.29.5 |
+| IPython | requerido para `display(HTML(...))` |
 
 ---
 
-## Fuentes
+## 9. Roadmap
 
-- Ministerio del Medio Ambiente. *Sistema de Información Nacional de Calidad del Aire (SINCA).* https://sinca.mma.gob.cl
-- Ministerio del Medio Ambiente. *Norma de calidad primaria para MP2,5 (D.S. N.º 12/2011).*
+- **Sumativa 1:** análisis exploratorio, estimación e inferencia estadística a escala estación-día.
+- **Formativa 2:** profundización de estimación robusta e intervalos de confianza.
+- **Sumativa 2:** validación mediante bootstrap, tests de permutación y simulación Monte Carlo.
+- **Sumativa 3:** modelo de clasificación binaria para episodios críticos (`mala_calidad_mp25`), priorizando recall, F1 y AUC.
 
-## Licencia
+---
+
+## 10. Fuentes
+
+- Ministerio del Medio Ambiente — Sistema de Información Nacional de Calidad del Aire, SINCA.
+- Ministerio del Medio Ambiente — D.S. N°12/2011, norma primaria MP2.5.
+- INE, MINVU y CNDU — Sistema de Indicadores y Estándares de Desarrollo Urbano, SIEDU.
+- Ministerio de Desarrollo Social — CASEN.
+- Montgomery & Runger (2018), *Applied Statistics and Probability for Engineers*.
+- Virtanen et al. (2020), SciPy 1.0, *Nature Methods*.
+
+## 11. Licencia
 
 Ver [LICENSE](LICENSE).
