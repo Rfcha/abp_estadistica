@@ -89,20 +89,34 @@ Gracias al volumen de la muestra efectiva ($n = 11.603$), se lograron estimacion
 ## 7\. Estructura del repositorio
 
 ```text
-abp\_estadistica/
+abp_estadistica/
+│
 ├── data/
-│   └── calidad\_aire\_diario.csv
+│   └── calidad_aire_diario.csv
+│
 ├── notebooks/
-│   └── 01\_analisis\_estadistico\_diario.ipynb
+│   └── 01_analisis_estadistico_diario.ipynb
+│
 ├── figures/
-│   └── \*.png
+│   └── *.png
+│
+├── reports/
+│   ├── 01_analisis_estadistico_diario_limpio.html
+│   ├── Sumativa1_Informe_Tecnico_Final.pdf
+│   └── Sumativa1_Informe_Tecnico_Final_Latex.zip
+│
+├── evidencia/
+│
+├── .git/
+│
+├── .gitignore
 ├── README.md
 ├── requirements.txt
-├── GUIA\_GIT.md
+├── GUIA_GIT.md
 ├── CHANGELOG.md
 ├── .mailmap
 ├── LICENSE
-├── CODE\_OF\_CONDUCT.md
+├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
 └── SECURITY.md
 
