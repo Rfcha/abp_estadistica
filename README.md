@@ -11,9 +11,8 @@ Proyecto del curso **MCDI501 — Estadística Computacional para la Toma de Deci
 |**Docente**|Jean Paul Maidana González|
 |**Dataset**|Red SINCA — Ministerio del Medio Ambiente, Santiago RM|
 |**Escala de análisis**|Estación-día · 2022–2025 · 16.071 observaciones iniciales · 11 estaciones · 46 variables|
-|**Notebook principal**|`notebooks/01\_analisis\_estadistico\_diario.ipynb`|
-|**Salida HTML**|`outputs/01\_analisis\_estadistico\_diario.html`|
-|**Repositorio**|`https://github.com/Rfcha/abp\_estadistica`|
+|**Notebook principal**|`notebooks/01_analisis_estadistico_diario.ipynb`|
+|**Repositorio**|`https://github.com/Rfcha/abp_estadistica`|
 
 \---
 
@@ -120,9 +119,9 @@ abp_estadistica/
 ├── CONTRIBUTING.md
 └── SECURITY.md
 
----
+\---
 
-## 8. Reproducibilidad
+## 8\. Reproducibilidad
 
 El desarrollo técnico fue validado integralmente con Python 3.12.10 y el kernel .venv. Se recomienda encarecidamente inicializar el entorno virtual fuera de carpetas compartidas o sincronizadas de manera activa (como OneDrive o Dropbox) para prevenir bloqueos en la lectura o escritura de archivos durante la instalación de dependencias.
 
@@ -143,8 +142,9 @@ Verificación rápida del entorno
 
 python -c "import numpy, pandas, matplotlib, seaborn, scipy; print('Entorno OK')"
 
+\---
 
-## 9. Entorno validado (Versiones de la Pila Científica)
+## 9\. Entorno validado (Versiones de la Pila Científica)
 
 Componente             Versión
 Python                  3.12.10   
@@ -155,21 +155,25 @@ seaborn                 0.13.2
 SciPy                   1.18.0
 ipykernel               6.29.5
 
-## 10. Roadmap del Proyecto
+\---
+
+## 10\. Roadmap del Proyecto
 
 \[x] Sumativa 1: Análisis exploratorio formal, estimación puntual, cálculo de intervalos de confianza robustos e inferencia estadística a escala estación-día. 
 \[ ] Formativa 2: Profundización en técnicas de estimación robusta, análisis de sesgos e intervalos de confianza avanzados.
 \[ ] Sumativa 2: Validación y remuestreo de métricas mediante metodologías de Bootstrap, tests de permutación y simulación estocástica de Monte Carlo.
 \[ ] Sumativa 3: Diseño, entrenamiento y evaluación de un modelo de clasificación predictivo binario para la anticipación de episodios críticos (mala\_calidad\_mp25), optimizando métricas operacionales de negocio con foco estricto en Recall, F1-Score y AUC-ROC.
 
-## 11. Fuentes
+\---
 
-\*\* Ministerio del Medio Ambiente — Sistema de Información Nacional de Calidad del Aire (SINCA). Gobierno de Chile.  
-\*\* Ministerio del Medio Ambiente — D.S. N°12/2011, norma primaria de calidad ambiental para material particulado fino respirable MP2.5.  
-\*\* INE, MINVU y CNDU — Sistema de Indicadores y Estándares de Desarrollo Urbano (SIEDU).
-\*\* Ministerio de Desarrollo Social — Encuesta de Caracterización Socioeconómica Nacional (CASEN).
-\*\* McKinney, W. (2010). Data structures for statistical computing in Python.  
-\*\* Montgomery, D. C., \& Runger, G. C. (2018). Applied Statistics and Probability for Engineers.
-\*\* Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2.ª ed.). 
-\*\* Virtanen et al. (2020). SciPy 1.0: Fundamental algorithms for scientific computing in Python. Nature Methods.  
+## 11\. Fuentes
+
+* ** Ministerio del Medio Ambiente — Sistema de Información Nacional de Calidad del Aire (SINCA). Gobierno de Chile.  
+* ** Ministerio del Medio Ambiente — D.S. N°12/2011, norma primaria de calidad ambiental para material particulado fino respirable MP2.5.  
+* ** INE, MINVU y CNDU — Sistema de Indicadores y Estándares de Desarrollo Urbano (SIEDU).
+* ** Ministerio de Desarrollo Social — Encuesta de Caracterización Socioeconómica Nacional (CASEN).
+* ** McKinney, W. (2010). Data structures for statistical computing in Python.  
+* ** Montgomery, D. C., \& Runger, G. C. (2018). Applied Statistics and Probability for Engineers.
+* ** Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2.ª ed.). 
+* ** Virtanen et al. (2020). SciPy 1.0: Fundamental algorithms for scientific computing in Python. Nature Methods.  
 
