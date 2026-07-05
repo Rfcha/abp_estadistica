@@ -1,0 +1,7 @@
+﻿criterio,cumplimiento,evidencia,puntaje_rubrica,puntaje_total_referencial
+Bootstrap no paramétrico,OK,s2_bootstrap_parametros.csv + figuras,18,87
+Permutación,OK,s2_test_permutacion.csv + figura,15,87
+Estabilidad de correlaciones,OK,s2_correlaciones_bootstrap.csv,6,87
+Monte Carlo,OK,s2_montecarlo_resultados.csv + convergencia,24,87
+Robustez,OK,s2_analisis_robustez.csv,15,87
+Preparación S3,OK,s2_reporte_resultados_validados_para_s3.csv,9,87

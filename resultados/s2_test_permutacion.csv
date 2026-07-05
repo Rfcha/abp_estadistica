@@ -1,0 +1,2 @@
+﻿prueba_validada_s1,variable,grupo,grupo_1,grupo_2,n_grupo_1,n_grupo_2,diferencia_observada,p_parametrico_welch,p_permutacion,n_permutaciones,conclusion
+MP2.5: Invierno vs Resto del año,mp2_5_mean,temporada_critica,Invierno,Resto del año,3915,7688,22.31645656995759,0.0,0.0,10000,concordante

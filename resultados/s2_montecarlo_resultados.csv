@@ -1,0 +1,2 @@
+escenario,n_iteraciones,media_s1,sd_s1,media_simulada,p50_simulado,p95_simulado,prob_mp25_mayor_50,prob_mp25_mayor_80,prob_mp25_mayor_110,mu_lognormal,sigma_lognormal
+MP2.5 diario simulado con parámetros S1,10000,24.93820218908903,13.990544011181656,24.568114025818602,21.477467445032318,50.049400384895186,0.0505,0.0065,0.001,3.079584976873303,0.5230982227819337
