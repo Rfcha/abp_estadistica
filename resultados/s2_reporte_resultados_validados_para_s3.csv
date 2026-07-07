@@ -8,8 +8,8 @@ Correlación validada,mp2_5_mean vs temperatura_mean,"r=-0.6206; IC [-0.6307, -0
 Correlación validada,mp2_5_mean vs viento_mean,"r=0.1846; IC [0.1591, 0.2106]",robusta,Priorizar si es robusta; cautela si incluye cero.
 Correlación validada,mp2_5_mean vs prop_inversion,"r=0.5194; IC [0.5013, 0.5373]",robusta,Priorizar si es robusta; cautela si incluye cero.
 Prueba de hipótesis validada,mp2_5_mean entre Invierno y Resto del año,p paramétrico=0.000000; p permutación=0.000000,concordante,Evidencia inferencial para comunicación de resultados.
-Simulación Monte Carlo,Excedencia MP2.5 > 50,Probabilidad=0.0505,validado con convergencia visual,Base para escenarios predictivos y riesgo.
+Simulación Monte Carlo,Excedencia MP2.5 > 50,Probabilidad=0.0627,validado con convergencia visual,Base para escenarios predictivos y riesgo.
 Robustez,Media MP2.5,Remoción outliers IQR; variación=-2.75%,confiable,Reportar con cautela si es sensible.
 Robustez,Media MP10,Remoción outliers IQR; variación=-2.96%,confiable,Reportar con cautela si es sensible.
 Robustez,IC media MP2.5,Jackknife; variación=0.00%,confiable,Reportar con cautela si es sensible.
-Robustez,P(MP2.5 > 50),Normal truncada alternativa; variación=-17.23%,sensible / cautela,Reportar con cautela si es sensible.
+Robustez,P(MP2.5 > 50),Normal truncada alternativa; variación=-41.79%,sensible / cautela,Reportar con cautela si es sensible.
