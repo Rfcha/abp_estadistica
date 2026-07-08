@@ -13,3 +13,8 @@ Robustez,Media MP2.5,Remoción outliers IQR; variación=-2.75%,confiable,Reporta
 Robustez,Media MP10,Remoción outliers IQR; variación=-2.96%,confiable,Reportar con cautela si es sensible.
 Robustez,IC media MP2.5,Jackknife; variación=0.00%,confiable,Reportar con cautela si es sensible.
 Robustez,P(MP2.5 > 50),Normal truncada alternativa; variación=-17.23%,sensible / cautela,Reportar con cautela si es sensible.
+Decisión metodológica S3,Temperatura y radiación,Bootstrap específico media vs máxima exportado en CSV.,decisión documentada,Usar la versión con mejor estabilidad y reportar por separado si los errores estándar difieren.
+Decisión metodológica S3,Oriente vs Poniente,validado en notebook,decisión documentada,"Mantener un único estadístico validado en notebook, informe y repositorio."
+Decisión metodológica S3,Colinealidad MP2.5-MP10,r = 0.9011,decisión documentada,"No incorporar MP2.5 y MP10 simultáneamente en el mismo modelo sin VIF, PCA o regularización."
+Decisión metodológica S3,Cobertura horaria insuficiente,estrategia documentada para S3,decisión documentada,Incorporar columna/indicador de cobertura; imputar numéricas con mediana por mes/temporada y reportar sensibilidad con casos completos.
+Cierre retroalimentación docente,Bootstrap temperatura/radiación media vs máxima,Archivo s2_bootstrap_temperatura_radiacion_media_max.csv generado,validado,Seleccionar variables atmosféricas estables y evitar duplicidad de variables derivadas.

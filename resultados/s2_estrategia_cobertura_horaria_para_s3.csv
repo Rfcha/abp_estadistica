@@ -1,0 +1,2 @@
+﻿columna_cobertura,criterio_insuficiencia,proporcion_insuficiente,decision_s3,estado
+no disponible en dataset actual,"referencia retroalimentación: 27,8% días sin cobertura suficiente",0.278,Incorporar columna/indicador de cobertura; imputar numéricas con mediana por mes/temporada y reportar sensibilidad con casos completos.,estrategia documentada para S3

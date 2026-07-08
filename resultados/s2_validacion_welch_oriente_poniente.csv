@@ -1,0 +1,2 @@
+﻿columna_zona,variable,grupo_1,grupo_2,media_oriente,media_poniente,diferencia_medias,t_welch,p_welch,n_oriente,n_poniente,estado
+zona_geografica,mp2_5_mean,Oriente,Poniente,16.6142602739726,26.326016581129092,-9.711756307156492,-29.731719001991916,6.011425725170916e-176,1460,5066,validado en notebook
