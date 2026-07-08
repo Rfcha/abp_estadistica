@@ -2,4 +2,4 @@
 Media MP2.5,24.93820218908903,24.252266014157126,Remoción outliers IQR,-2.750543803161619,"Límites IQR: [-13.72, 61.93]",confiable
 Media MP10,56.64379810181192,54.96941010989011,Remoción outliers IQR,-2.9559952687357742,"Límites IQR: [-8.23, 119.64]",confiable
 IC media MP2.5,24.93820218908903,24.93820218908903,Jackknife,0.0,Error estándar jackknife: 0.1299,confiable
-P(MP2.5 > 50),0.0627,0.0365,Normal truncada alternativa,-41.786283891547065,Contraste de supuesto distribucional lognormal vs normal truncada,sensible / cautela
+P(MP2.5 > 50),0.0505,0.0418,Normal truncada alternativa,-17.22772277227724,Contraste de supuesto distribucional lognormal vs normal truncada,sensible / cautela
