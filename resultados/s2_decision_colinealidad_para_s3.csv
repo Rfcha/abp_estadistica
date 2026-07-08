@@ -1,0 +1,2 @@
+﻿par_variables,correlacion_observada,umbral_alerta,nivel_riesgo,decision_s3,justificacion
+mp2_5_mean vs mp10_mean,0.9011171101295327,0.8,alto,"No incorporar MP2.5 y MP10 simultáneamente en el mismo modelo sin VIF, PCA o regularización.",La Formativa 2 exige interpretar VIF y documentar multicolinealidad antes del modelamiento.

@@ -5,3 +5,4 @@ Estabilidad de correlaciones,OK,s2_correlaciones_bootstrap.csv,6,87
 Monte Carlo,OK,s2_montecarlo_resultados.csv + convergencia,24,87
 Robustez,OK,s2_analisis_robustez.csv,15,87
 Preparación S3,OK,s2_reporte_resultados_validados_para_s3.csv,9,87
+Cierre de retroalimentación docente,REFUERZO,s2_matriz_decisiones_para_s3.csv + controles específicos,0,87

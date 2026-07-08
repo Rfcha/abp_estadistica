@@ -1,0 +1,5 @@
+﻿tema,evidencia_s2,decision_s3,riesgo_si_no_se_controla
+Temperatura y radiación,Bootstrap específico media vs máxima exportado en CSV.,Usar la versión con mejor estabilidad y reportar por separado si los errores estándar difieren.,Duplicar señales derivadas artificialmente o interpretar como independiente una variable calculada.
+Oriente vs Poniente,validado en notebook,"Mantener un único estadístico validado en notebook, informe y repositorio.",Inconsistencia entre documentos y pérdida de trazabilidad.
+Colinealidad MP2.5-MP10,r = 0.9011,"No incorporar MP2.5 y MP10 simultáneamente en el mismo modelo sin VIF, PCA o regularización.","Coeficientes inestables, VIF alto e interpretación predictiva débil."
+Cobertura horaria insuficiente,estrategia documentada para S3,Incorporar columna/indicador de cobertura; imputar numéricas con mediana por mes/temporada y reportar sensibilidad con casos completos.,Sesgo por eliminación de casos y reducción innecesaria de muestra.
