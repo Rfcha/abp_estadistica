@@ -1,0 +1,11 @@
+﻿archivo,uso
+s3_trazabilidad_reporte_s2.csv,Auditoría formal del archivo puente y continuidad S2→S3.
+s3_decisiones_metodologicas_importadas_desde_s2.csv,"Decisiones de selección, cautela y control heredadas de S2."
+s3_metricas_9_combinaciones.csv,Tabla principal de comparación de modelos.
+s3_decision_modelo_final.csv,Justificación de la selección final.
+s3_coeficientes_or_ic_tradicional.csv,Interpretación de coeficientes y odds ratios.
+s3_bootstrap_coeficientes_or.csv,"Estabilidad, IC bootstrap y contraste Wald."
+s3_decision_imputacion.csv,Comparación sistemática y recomendación de imputación.
+s3_diagnostico_subgrupos.csv,Limitaciones y desempeño territorial.
+s3_conclusiones_accionables.csv,Cierre integrado del informe.
+s3_guion_presentacion_10_min.csv,Plan de exposición grupal.

@@ -1,0 +1,2 @@
+﻿modelo_final,estrategia_final,score_decision,recall,f1,f2,pr_auc,roc_auc,umbral,n_train,n_test,regla
+M3_Integrado_Sin_Fuga,mediana,0.8801671031301568,0.9748953974895398,0.6996996996996997,0.8423716558206796,0.8912526289259336,0.9884698868161577,0.05,12848,3223,"mejor score; dentro de 0,02 se prioriza retención"
