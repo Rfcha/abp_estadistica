@@ -1,0 +1,7 @@
+﻿minutos,responsable,contenido,evidencia
+0:00–1:20,Rodrigo Chinchón,"Problema, pregunta movilizadora y progresión S1→S2→S3.",Hallazgos S1/S2 y objetivo mala_calidad_mp25.
+1:20–3:20,Pablo Villalobos,"Faltantes, tres estrategias e imputación por regresión.",Retención + validación por enmascaramiento.
+3:20–5:40,Sergio Fernández,"Tres modelos logísticos, split temporal, desbalance y métricas.",Tabla 9 combinaciones + ROC/PR.
+5:40–7:30,Rodrigo Chinchón,"Coeficientes, odds ratios, VIF y modelo final.",IC Wald + decisión fundamentada.
+7:30–9:00,Pablo Villalobos,"Bootstrap, parámetros estables/inestables e impacto de imputación.",IC bootstrap vs Wald.
+9:00–10:00,Sergio Fernández,"Conclusiones accionables, limitaciones y próximos pasos.","Calibración, subgrupos y gobierno del modelo."

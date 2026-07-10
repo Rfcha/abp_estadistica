@@ -1,0 +1,26 @@
+﻿variable,VIF,nivel
+zona_geografica_Oriente,inf,alto
+nivel_socioeconomico_Q5 (alto),inf,alto
+temporada_critica_Resto del año,68.81419600620809,alto
+invierno,26.004483041563464,alto
+mes_cos,25.07445715708556,alto
+temperatura_mean,16.518310964919802,alto
+radiacion_mean,13.486868484737313,alto
+mes_sin,11.15682884496754,alto
+estacion_anio_Verano,10.13527991975028,alto
+zona_geografica_Poniente,7.912204175958009,revisar
+estacion_anio_Primavera,7.744616261004507,revisar
+periodo_gec,7.43479264886646,revisar
+estacion_anio_Otoño,5.830136059297535,revisar
+zona_geografica_Sur,4.426172650119974,controlado
+nivel_socioeconomico_Q4 (medio-alto),3.944583412440436,controlado
+humedad_mean,3.6590780335582527,controlado
+prop_inversion,3.5222881920601568,controlado
+viento_mean,3.115631421342114,controlado
+mp10_mean,2.8071350335973033,controlado
+nivel_socioeconomico_Q2 (medio-bajo),2.112347557364188,controlado
+zona_geografica_Norte,1.8577755420376592,controlado
+presion_mean,1.754138362353003,controlado
+nivel_socioeconomico_Q3 (medio),1.6976388400564,controlado
+es_finde,1.0663172323844528,controlado
+es_festivo,1.0272007039779785,controlado
