@@ -1,7 +1,7 @@
 ﻿tema,hallazgo,implicancia
-Trazabilidad S2→S3,19 evidencias importadas desde s2_reporte_resultados_validados_para_s3.csv,4 decisiones metodológicas y 1 resultados sensibles incorporados explícitamente al diseño y comunicación.
-Modelo final,M3_Integrado_Sin_Fuga + mediana,Recall 0.975; F1 0.700; PR-AUC 0.891; umbral 0.05.
-Faltantes,Estrategia recomendada: regresion,No imputar el target; mantener casos completos como sensibilidad y monitorear deriva de faltantes.
-Estabilidad,13 parámetros marcados inestables,No convertir en recomendaciones causales los parámetros cuyo IC bootstrap cruza cero o cambia de signo.
-Desbalance,Umbral optimizado con F2 y class_weight balanceado,Priorizar detección de episodios; revisar costo operativo de falsas alarmas.
-Gobierno del modelo,Validación temporal y diagnóstico por subgrupos,"Reentrenar por ventana temporal, vigilar calibración y métricas por zona/NSE."
+Trazabilidad,19 evidencias importadas desde S2,"La selección, cautelas y control de colinealidad quedan auditables."
+Modelo final,M2_Forward_AIC_BIC + completos,Test: Recall=0.937; F2=0.846; PR-AUC=0.865; ROC-AUC=0.981.
+Imputación,Estrategia recomendada: regresion,Casos completos se conserva como sensibilidad al sesgo de exclusión.
+Inferencia,0 parámetros inestables,Los parámetros inestables no deben convertirse en recomendaciones causales.
+Operación,Umbral F2=0.660; umbral costo=0.255,La política de alertas debe explicitar el costo relativo de errores.
+Gobierno,"Validación temporal, calibración y subgrupos","Monitorear deriva, sensores, cobertura, Recall y calibración por periodo y zona."

@@ -1,7 +1,7 @@
-﻿criterio,puntos,estado,evidencia,puntos_cubiertos_referenciales
-Imputación y manejo de faltantes,21,OK,"auditoría S1/S3; completos, mediana y regresión; masking; decisión",21
-Tres modelos de regresión logística,30,OK,"M1, M2, M3 × tres estrategias; OR, IC, métricas y selección",30
-Estabilidad y bootstrap,30,OK,1000 remuestras exitosas; IC bootstrap; inestabilidad; comparación Wald,30
-Impacto de imputación,9,OK,"retención, MAE/RMSE, métricas, coeficientes y amplitud de IC",9
-Informe final integrado,9,PREPARADO,reporte puente S2 cargado y auditado; narrativa S1→S2→S3; CSV/PNG y conclusiones accionables,9
-Presentación del proyecto,9,GUION LISTO,guion 10 minutos y participación equilibrada,9
+﻿criterio,puntos,estado,evidencia,puntos_referenciales
+Imputación y manejo de faltantes,21,CUBIERTO,"MCAR/MAR/MNAR; OLS; completos, mediana y regresión; NRMSE; decisión.",21
+Tres modelos de regresión logística,30,CUBIERTO,"S1/S2, forward AIC/BIC, backward parsimonioso; CV y test bloqueado.",30
+Estabilidad y bootstrap,30,CUBIERTO,"10,000 remuestras; convergencia; IC; Wald; signo.",30
+Impacto de imputación,9,CUBIERTO,"Retención, distribución, NRMSE, desempeño, coeficientes e IC.",9
+Informe final integrado,9,PREPARADO,"Matriz armonizada de 46 variables, mismo filtro de 11.603 registros y narrativa S1→S2→S3.",9
+Presentación del proyecto,9,GUION LISTO,10 minutos y participación equilibrada.,9

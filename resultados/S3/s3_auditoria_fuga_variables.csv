@@ -1,0 +1,8 @@
+﻿variable,motivo_exclusion
+mp2_5_mean,derivada directa o proxy prohibido de MP2.5
+mp2_5_max,derivada directa o proxy prohibido de MP2.5
+calidad_aire_mp25,derivada directa o proxy prohibido de MP2.5
+nivel_contaminacion,derivada directa o proxy prohibido de MP2.5
+estaciones_en_episodio,derivada directa o proxy prohibido de MP2.5
+critico_mp25_dia,derivada directa o proxy prohibido de MP2.5
+mala_calidad_mp25,variable objetivo

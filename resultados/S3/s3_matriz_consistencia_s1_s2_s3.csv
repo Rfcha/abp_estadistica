@@ -1,0 +1,6 @@
+﻿fase,etapa,filas,variables,hilo conductor,estado
+S1,Base enriquecida previa al filtro,16071,46,36 originales + 10 físicas derivadas,Referencia
+S1,Matriz descriptiva e inferencial,11603,46,Solo MP2.5 diario disponible,Referencia
+S2,Validación y remuestreo,11603,46,Misma matriz inferencial de S1,Referencia
+S3,Matriz armonizada recibida,11603,46,Mismo filtro y mismas 46 variables,Consistente
+S3,Matriz de trabajo para modelamiento,11603,51,46 armonizadas + 5 var. temp. S3,Extensión documentada

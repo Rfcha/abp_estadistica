@@ -1,2 +1,2 @@
-﻿archivo,filas,columnas,fecha_min,fecha_max,duplicados_exactos
-calidad_aire_diario.csv,16071,36,2022-01-01,2025-12-31,0
+﻿archivo,fecha mínima,fecha máxima,fechas inválidas excluidas,duplicados exactos,variables físicas incorporadas
+calidad_aire_diario.csv,2022-01-01,2025-12-31,0,0,10
