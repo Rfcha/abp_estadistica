@@ -1,7 +1,7 @@
 ﻿minutos,responsable,contenido,evidencia
-0:00–1:20,Rodrigo Chinchón,"Problema, pregunta movilizadora y progresión S1→S2→S3.",Hallazgos S1/S2 y objetivo mala_calidad_mp25.
-1:20–3:20,Pablo Villalobos,"Faltantes, tres estrategias e imputación por regresión.",Retención + validación por enmascaramiento.
-3:20–5:40,Sergio Fernández,"Tres modelos logísticos, split temporal, desbalance y métricas.",Tabla 9 combinaciones + ROC/PR.
-5:40–7:30,Rodrigo Chinchón,"Coeficientes, odds ratios, VIF y modelo final.",IC Wald + decisión fundamentada.
-7:30–9:00,Pablo Villalobos,"Bootstrap, parámetros estables/inestables e impacto de imputación.",IC bootstrap vs Wald.
-9:00–10:00,Sergio Fernández,"Conclusiones accionables, limitaciones y próximos pasos.","Calibración, subgrupos y gobierno del modelo."
+0:00–1:20,Rodrigo Chinchón,"Problema, objetivo, horizonte y progresión S1→S2→S3.",Pregunta movilizadora y reporte puente S2.
+1:20–3:10,Pablo Villalobos,"Faltantes, MCAR/MAR/MNAR, OLS y tres estrategias.","NRMSE, encogimiento y retención."
+3:10–5:20,Sergio Fernández,"Tres modelos oficiales, AIC/BIC y validación temporal.",Trayectorias y nueve combinaciones.
+5:20–7:10,Rodrigo Chinchón,"Test final, umbral, ROC/PR y matriz de confusión.",Métricas futuras y costo de errores.
+7:10–8:50,Pablo Villalobos,"Odds ratios, VIF, residuos, influencia y bootstrap.","Wald, 10.000 remuestras y convergencia."
+8:50–10:00,Sergio Fernández,"Conclusiones, limitaciones, subgrupos y gobierno.",Calibración y recomendaciones.

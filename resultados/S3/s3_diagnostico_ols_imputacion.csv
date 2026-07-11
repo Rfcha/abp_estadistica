@@ -1,0 +1,2 @@
+﻿variable_imputada,predictores,n_observado,r2,r2_ajustado,rmse_residual,media_residuo,asimetria_residuo,p_jarque_bera,p_breusch_pagan
+mp10_mean,"mes_cos, radiacion_mean, prop_inversion, temperatura_mean, presion_mean",8438,0.625545217295632,0.6253231734254325,12.335999399758606,3.78327376537447e-14,-0.021371962236927958,0.4918587846323148,5.63346965256582e-63

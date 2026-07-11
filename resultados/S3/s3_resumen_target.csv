@@ -1,2 +1,2 @@
-﻿fuente_target,filas_originales,filas_sin_target_excluidas,filas_modelables,clase_positiva_n,prevalencia_positiva
-columna original mala_calidad_mp25,16071,0,16071,1393,0.0866778669653413
+﻿fuente_target,horizonte,filas_originales,filas_sin_target_excluidas,filas_modelables,positivos,prevalencia,filas esperadas S1/S2,estado continuidad
+"columna original mala_calidad_mp25, validada sobre MP2.5 disponible",nowcasting_contemporaneo,16071,4468,11603,1393,0.12005515814875463,11603,Consistente

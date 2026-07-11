@@ -1,0 +1,2 @@
+﻿variable,faltantes_dev_%,faltantes_val_%,auc_prediccion_ausencia,lectura,advertencia
+mp10_mean,0.011849745230477545,0.5982053838484547,0.4511868940153795,Sin evidencia predictiva relevante; MCAR sigue siendo plausible,MNAR no puede descartarse
