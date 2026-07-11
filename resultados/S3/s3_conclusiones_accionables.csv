@@ -1,7 +1,9 @@
 ﻿tema,hallazgo,implicancia
-Trazabilidad,19 evidencias importadas desde S2,"La selección, cautelas y control de colinealidad quedan auditables."
-Modelo final,M2_Forward_AIC_BIC + completos,Test: Recall=0.937; F2=0.846; PR-AUC=0.865; ROC-AUC=0.981.
-Imputación,Estrategia recomendada: regresion,Casos completos se conserva como sensibilidad al sesgo de exclusión.
-Inferencia,0 parámetros inestables,Los parámetros inestables no deben convertirse en recomendaciones causales.
-Operación,Umbral F2=0.660; umbral costo=0.255,La política de alertas debe explicitar el costo relativo de errores.
-Gobierno,"Validación temporal, calibración y subgrupos","Monitorear deriva, sensores, cobertura, Recall y calibración por periodo y zona."
+Trazabilidad,19 evidencias importadas desde S2,"La selección, cautelas y continuidad 46 variables / 11.603 registros quedan auditables."
+Horizonte,nowcasting contemporáneo estación-día,"MP10 del mismo día se interpreta como proxy predictivo, no como antecedente causal ni pronóstico de días futuros."
+Modelo final,M2_Forward_AIC_BIC + completos,Forma lineal en el logit. Test: Recall=0.937; F2=0.846; PR-AUC=0.865; ROC-AUC=0.981.
+Imputación,Principal: completos; contingencia: regresion,La recomendación principal coincide con el modelo final; la contingencia se activa si disminuye la cobertura.
+Forma funcional,se conserva forma lineal,"La curvatura se evaluó antes del test mediante Box–Tidwell, BIC, Brier y no inferioridad predictiva."
+Inferencia,0 parámetros inestables; covarianza HC3,"Se comparan IC Wald, robustos y bootstrap; los efectos no se presentan como causales."
+Operación,Umbral F2=0.660; umbral costo=0.255,La política de alertas debe explicitar el costo relativo de falsos negativos y falsas alarmas.
+Gobierno,"validación temporal, calibración y subgrupos","Monitorear deriva, cobertura, Recall, calibración y desempeño por periodo y territorio."

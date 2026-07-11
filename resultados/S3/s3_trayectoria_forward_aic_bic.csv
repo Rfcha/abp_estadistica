@@ -1,4 +1,5 @@
-﻿paso,accion,variable,n_variables,AIC,BIC,mejora_BIC
-1,incorporar,mp10_mean,1,514.6087552428276,528.6899934371435,inf
-2,incorporar,temporada_critica,2,460.03118476917496,481.1530420606489,47.536951376494585
-3,incorporar,viento_mean,3,423.1578956906645,451.32037207929636,29.832669981352524
+﻿paso,accion,variable,n_variables,AIC,BIC,mejora_BIC,regla
+1,incorporar,mp10_mean,1,514.6087552537012,528.6899934480172,inf,mejor BIC disponible
+2,incorporar,temporada_critica,2,460.03118478128084,481.1530420727547,47.53695137526245,mejor BIC disponible
+3,incorporar,viento_mean,3,423.1578957028809,451.3203720915128,29.832669981241906,mejor BIC disponible
+4,rechazar incorporación,humedad_mean,3,420.0761871992923,455.27928268508214,-3.9589105935693283,mejora BIC < 2

@@ -1,0 +1,4 @@
+﻿parametro,coef_min,coef_max,or_min,or_max,estrategias_ic_cruza_cero,n_estrategias,rango_coeficiente,signo_consistente,conclusion
+mp10_mean,8.024247763820984,8.218383632677334,3054.1230116188262,3708.5032319618326,0,3,0.1941358688563497,True,dirección estable entre estrategias
+temporada_critica_Resto del año,-8.445154289888091,-8.345349057447132,0.00021493943012241851,0.00023749854580203296,0,3,0.09980523244095885,True,dirección estable entre estrategias
+viento_mean,0.5522090693829298,0.5854886105389464,1.7370861262844663,1.7958682514560058,0,3,0.03327954115601661,True,dirección estable entre estrategias

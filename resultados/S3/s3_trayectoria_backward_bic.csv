@@ -1,2 +1,5 @@
-﻿paso,accion,variable,n_variables,AIC,BIC,delta_BIC,regla
-0,modelo_completo,—,19,,,0.0,inicio
+﻿paso,accion,variable,n_variables,AIC,BIC,delta_BIC,regla,aceptada
+0,modelo completo,—,19,6502.401633012538,6826.270111481805,0.0,inicio del procedimiento backward,True
+1,eliminar,comuna,18,4879.799311213666,5133.261598711353,-1693.0085127704515,mejora BIC,True
+2,eliminar,radiacion_mean,17,4325.179242846552,4571.600911247081,-561.6606874642721,mejora BIC,True
+3,rechazar eliminación,mes_sin,17,4765.275094018167,5004.6561433215375,433.0552320744564,mejor eliminación rechazada: ΔBIC=433.055; la complejidad adicional conserva respaldo estadístico,False

@@ -2,19 +2,26 @@
 s3_consistencia_estructura_s1_s2.csv,36 columnas físicas versus 46 armonizadas.
 s3_matriz_consistencia_s1_s2_s3.csv,Hilo conductor completo entre las tres fases.
 s3_trazabilidad_reporte_s2.csv,Continuidad formal S2→S3.
+s3_matriz_evidencia_s1_s2_por_predictor.csv,"Trazabilidad explícita de cada predictor entre S1, S2 y S3."
 s3_auditoria_fuga_variables.csv,Control de predictores prohibidos.
 s3_diagnostico_mecanismo_faltantes.csv,MCAR/MAR/MNAR.
-s3_diagnostico_ols_imputacion.csv,Regresión lineal de imputación.
+s3_diagnostico_ols_imputacion.csv,"OLS, normalidad, heterocedasticidad y HC3."
 s3_validacion_imputacion_global.csv,NRMSE y encogimiento.
-s3_trayectoria_forward_aic_bic.csv,Modelo stepwise.
-s3_trayectoria_backward_bic.csv,Modelo parsimonioso.
+s3_resumen_seleccion_tres_modelos.csv,Ejecución verificable de los tres modelos.
+s3_trayectoria_forward_aic_bic.csv,Modelo forward.
+s3_trayectoria_backward_bic.csv,Backward y mejor eliminación rechazada.
 s3_metricas_9_combinaciones_validacion.csv,Selección sin test.
-s3_metricas_modelo_final_train_test.csv,Evaluación final.
-s3_coeficientes_or_ic_wald.csv,Inferencia y odds ratios.
-s3_residuos_influencia.csv,Diagnóstico del modelo.
-s3_bootstrap_coeficientes_or.csv,Estabilidad y comparación Wald.
+s3_linealidad_logit_pretest.csv,Box–Tidwell antes de abrir prueba.
+s3_sensibilidad_forma_funcional.csv,Comparación lineal versus cuadrática.
+s3_decision_forma_funcional.csv,Forma final congelada sin test.
+s3_metricas_modelo_final_train_test.csv,Evaluación final única.
+s3_coeficientes_or_ic_wald.csv,"OR, Wald y covarianza robusta."
+s3_residuos_influencia.csv,"Dispersión, residuos e influencia."
+s3_bootstrap_coeficientes_or.csv,"Estabilidad, Wald y robustos."
 s3_bootstrap_convergencia.csv,Suficiencia de remuestras.
-s3_impacto_imputacion_metricas.csv,Comparación de faltantes.
+s3_impacto_imputacion_metricas.csv,Desempeño de tres estrategias.
+s3_estabilidad_ic_por_imputacion.csv,Signos e IC entre estrategias.
+s3_decision_imputacion.csv,Estrategia principal y contingencia.
 s3_diagnostico_subgrupos.csv,Equidad operacional.
 s3_conclusiones_accionables.csv,Cierre del informe.
 s3_guion_presentacion_10_min.csv,Presentación grupal.

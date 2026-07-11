@@ -1,2 +1,2 @@
-﻿n,pearson_abs_gt_2_n,pearson_abs_gt_2_%,pearson_abs_gt_3_n,pearson_abs_gt_3_%,leverage_gt_2p_n_n,leverage_gt_2p_n_%,cooks_gt_4_n_n,cooks_gt_4_n_%,max_cooks,max_abs_dfbeta
-9435,65,0.688924218335983,55,0.5829358770535241,1521,16.120826709062,190,2.01377848436672,0.4264263381328076,1.2637358941987884
+﻿n,n_parametros,dispersion_pearson,pearson_abs_gt_2_n,pearson_abs_gt_2_%,pearson_abs_gt_3_n,pearson_abs_gt_3_%,leverage_gt_2p_n_n,leverage_gt_2p_n_%,cooks_gt_4_n_n,cooks_gt_4_n_%,max_cooks,max_abs_dfbeta
+9435,4,163.67651361909174,65,0.688924218335983,55,0.5829358770535241,1521,16.120826709062005,190,2.0137784843667195,0.4264263381328076,1.2637358941987884
