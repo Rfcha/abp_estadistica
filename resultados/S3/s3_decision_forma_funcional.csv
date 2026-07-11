@@ -1,0 +1,2 @@
+﻿modelo_base,modelo_final,estrategia_final,variables_con_curvatura,terminos_cuadraticos_incorporados,decision,test_utilizado
+M2_Forward_AIC_BIC,M2_Forward_AIC_BIC,completos,ninguna,ninguno,se conserva forma lineal,False

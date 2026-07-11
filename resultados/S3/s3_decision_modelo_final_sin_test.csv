@@ -1,2 +1,2 @@
-﻿modelo_final,estrategia_final,cv_pr_auc,cv_roc_auc,val_recall,val_f2,val_brier,n_features,retencion_dev,regla,test_utilizado_en_seleccion
-M2_Forward_AIC_BIC,completos,0.9914412942845782,0.9979805550241871,0.9372197309417041,0.873015873015873,0.10749184331963589,3,0.9998815025476953,"PR-AUC dentro de 0,01 del mejor; Recall mínimo; F2; Brier; parsimonia; retención",False
+﻿modelo_base_oficial,modelo_final,estrategia_final,forma_funcional,cv_pr_auc,val_recall,val_f2,val_brier,n_features,regla,test_utilizado_en_seleccion
+M2_Forward_AIC_BIC,M2_Forward_AIC_BIC,completos,lineal en el logit,0.9914412942845782,0.9372197309417041,0.873015873015873,0.10749184331963589,3,nueve combinaciones oficiales + sensibilidad de forma funcional con no inferioridad y BIC/Brier,False

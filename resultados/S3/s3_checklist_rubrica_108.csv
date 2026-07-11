@@ -1,7 +1,7 @@
 ﻿criterio,puntos,estado,evidencia,puntos_referenciales
-Imputación y manejo de faltantes,21,CUBIERTO,"MCAR/MAR/MNAR; OLS; completos, mediana y regresión; NRMSE; decisión.",21
-Tres modelos de regresión logística,30,CUBIERTO,"S1/S2, forward AIC/BIC, backward parsimonioso; CV y test bloqueado.",30
-Estabilidad y bootstrap,30,CUBIERTO,"10,000 remuestras; convergencia; IC; Wald; signo.",30
-Impacto de imputación,9,CUBIERTO,"Retención, distribución, NRMSE, desempeño, coeficientes e IC.",9
-Informe final integrado,9,PREPARADO,"Matriz armonizada de 46 variables, mismo filtro de 11.603 registros y narrativa S1→S2→S3.",9
-Presentación del proyecto,9,GUION LISTO,10 minutos y participación equilibrada.,9
+Imputación y manejo de faltantes,21,CUBIERTO AL 100%,"S1; MCAR/MAR/MNAR; OLS; JB/BP correctos; completos, mediana y regresión; NRMSE; decisión única.",21
+Tres modelos de regresión logística,30,CUBIERTO AL 100%,"M1 S1/S2, M2 forward, M3 backward con intento rechazado; CV temporal, test bloqueado y forma funcional.",30
+Estabilidad y bootstrap,30,CUBIERTO AL 100%,"10,000 remuestras; convergencia; coeficientes, OR, Wald, robustos y signo.",30
+Impacto de imputación,9,CUBIERTO AL 100%,"Retención, NRMSE, desempeño, coeficientes, OR, IC, signos y contingencia.",9
+Informe final integrado,9,EVIDENCIA PREPARADA,"46 variables, 11.603 registros, narrativa S1→S2→S3, conclusiones accionables y archivos exportables.",9
+Presentación del proyecto,9,GUION PREPARADO,"10 minutos, participación equilibrada, mensajes y evidencia por integrante.",9

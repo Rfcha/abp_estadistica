@@ -1,2 +1,2 @@
-﻿estrategia_recomendada,estrategia_modelo_final,criterio,coincide_con_modelo_final
-regresion,completos,PR-AUC equivalente; NRMSE; encogimiento; retención; F2,False
+﻿estrategia_principal,estrategia_modelo_final,estrategia_contingencia,justificacion_principal,regla_contingencia,coincide_con_modelo_final
+completos,completos,regresion,"Casos completos conserva 99.99% de desarrollo y 99.40% de validación, con desempeño equivalente; se evita introducir valores modelados.",Usar regresion si la cobertura futura disminuye o si casos completos deja de retener al menos 99%.,True

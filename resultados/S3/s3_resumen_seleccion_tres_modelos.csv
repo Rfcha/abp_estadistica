@@ -1,0 +1,4 @@
+﻿modelo,metodo,n_inicial,n_final,n_eliminadas,resultado
+M1_Dominio_S1_S2,evidencia S1/S2 y fundamento físico,17,17,0,conjunto definido por dominio
+M2_Forward_AIC_BIC,incorporación forward por BIC,0,3,0,variables incorporadas progresivamente
+M3_Backward_BIC,eliminación backward por BIC,19,17,2,mejor eliminación rechazada: ΔBIC=433.055; la complejidad adicional conserva respaldo estadístico
