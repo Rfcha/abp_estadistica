@@ -1,7 +1,7 @@
-﻿criterio,puntos,estado,evidencia,puntos_referenciales
-Imputación y manejo de faltantes,21,CUBIERTO AL 100%,"S1; MCAR/MAR/MNAR; OLS; JB/BP correctos; completos, mediana y regresión; NRMSE; decisión única.",21
-Tres modelos de regresión logística,30,CUBIERTO AL 100%,"M1 S1/S2, M2 forward, M3 backward con intento rechazado; CV temporal, test bloqueado y forma funcional.",30
-Estabilidad y bootstrap,30,CUBIERTO AL 100%,"10,000 remuestras; convergencia; coeficientes, OR, Wald, robustos y signo.",30
-Impacto de imputación,9,CUBIERTO AL 100%,"Retención, NRMSE, desempeño, coeficientes, OR, IC, signos y contingencia.",9
-Informe final integrado,9,EVIDENCIA PREPARADA,"46 variables, 11.603 registros, narrativa S1→S2→S3, conclusiones accionables y archivos exportables.",9
-Presentación del proyecto,9,GUION PREPARADO,"10 minutos, participación equilibrada, mensajes y evidencia por integrante.",9
+﻿criterio,puntos_maximos,cumple,evidencia,estado,puntos_obtenidos
+Imputación y manejo de faltantes,21,True,Análisis S1; cobertura por fila; mediana agrupada validada; regresión; casos completos; NRMSE y decisión.,CUMPLIDO,21
+Tres modelos de regresión logística,30,True,"M1 S1/S2, M2 forward y M3 backward BIC estricto; CV temporal, test bloqueado y control de fuga.",CUMPLIDO,30
+Estabilidad y bootstrap,30,True,"10,000 remuestras sin fallos; coeficientes, OR, Wald, sandwich y auditoría GLM.",CUMPLIDO,30
+Impacto de imputación,9,True,"Retención, NRMSE, desempeño, coeficientes, OR, IC, signos y contingencia.",CUMPLIDO,9
+Informe final integrado,9,False,"Narrativa S1→S2→S3, resultado sensible, resultados priorizados y conclusiones ejecutivas.",EVIDENCIA PREPARADA,0
+Presentación del proyecto,9,False,"10 minutos, participación equilibrada y evidencia definida por integrante.",GUION PREPARADO,0

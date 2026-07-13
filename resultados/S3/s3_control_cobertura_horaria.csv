@@ -1,0 +1,2 @@
+﻿fuente,criterio,filas_modelables,filas_con_cobertura,emparejamiento_%,proporcion_baja_cobertura_observada,referencia_s2,diferencia_pp_vs_s2,indicador_s3,estado,accion
+registros horarios reales de MP2.5,cobertura < 75% o horas válidas < 18,11603,11603,100.0,1.0,0.278,72.2,baja_cobertura_horaria,CUMPLIDO · calculado por fila,indicador incorporado al pool; mediana por mes/temporada y sensibilidad con casos completos

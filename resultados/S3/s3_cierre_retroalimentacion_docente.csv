@@ -1,0 +1,9 @@
+﻿observación docente,estado,evidencia
+Correlación MP2.5–MP10 y control de colinealidad,CUMPLIDA,MP2.5 bloqueado; MP10 solo en nowcasting; VIF calculado.
+Evitar fuga de MP2.5,CUMPLIDA,Auditoría automática e intersección de predictores prohibidos.
+Aplicar cobertura horaria e indicador,CUMPLIDA,Cobertura calculada por fila; 100.00% disponible; fuente=registros horarios reales de MP2.5.
+Comparar tres estrategias de faltantes,CUMPLIDA,"Casos completos, mediana agrupada validada y regresión; comparación de métricas, coeficientes e IC."
+"Declarar sensible P(MP2.5 > 50)=0,0505",CUMPLIDA,Probabilidad=0.0505
+"Informar variación −17,23% bajo alternativa",CUMPLIDA,Normal truncada alternativa; variación=-17.23%
+Reducir interpretaciones repetidas,CUMPLIDA,"Interpretaciones concentradas en decisiones, resultados y cautelas."
+Conclusiones ejecutivas y directas,CUMPLIDA,Síntesis automática priorizada en seis decisiones.

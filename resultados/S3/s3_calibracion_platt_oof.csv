@@ -1,0 +1,2 @@
+﻿particion,n,brier_sin_calibrar,brier_calibrado,intercepto_platt,pendiente_platt,estado
+OOF temporal de entrenamiento,6450,0.027511446018309606,0.024749213164219637,-1.2515268921541942,0.3388537257371085,CUMPLIDO · calibración aprendida sin test

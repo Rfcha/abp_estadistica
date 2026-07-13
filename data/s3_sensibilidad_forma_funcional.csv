@@ -1,0 +1,2 @@
+﻿forma,modelo,n_features,BIC_dev,cv_pr_auc,val_recall,val_f2,val_brier,seleccionada,delta_BIC_vs_lineal,delta_Brier_vs_lineal
+lineal en el logit,M2_Forward_AIC_BIC,3,451.3198980736081,0.9914412942845782,0.9372197309417041,0.873015873015873,0.10749184331963589,True,0.0,0.0

@@ -1,0 +1,7 @@
+﻿estrategia,particion,n_disponible,n_utilizado,retencion,prevalencia
+completos,desarrollo,8439,8438,0.9998815025476953,0.11021569092201944
+completos,validacion,1003,997,0.9940179461615155,0.22367101303911735
+mediana,desarrollo,8439,8439,1.0,0.11020263064344117
+mediana,validacion,1003,1003,1.0,0.22333000997008973
+regresion,desarrollo,8439,8439,1.0,0.11020263064344117
+regresion,validacion,1003,1003,1.0,0.22333000997008973

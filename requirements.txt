@@ -2,14 +2,18 @@
 # Proyecto MCDI501 — Análisis Estadístico de la Calidad del Aire en Santiago
 # Grupo 3 · Magíster en Ciencia de Datos e IA · Universidad Andrés Bello
 # ----------------------------------------------------------------------------
-# Entorno validado desde el notebook ejecutado:
+# Entorno de referencia:
 #   01_analisis_estadistico_diario.ipynb
+#   02_validacion_simulacion_remuestreo.ipynb
+#   03_Modelamiento_predictivo_binario_mala_calidad_mp25.ipynb
 #   Python 3.12.10 · Kernel .venv
 #
-# Nota:
-# - Las primeras versiones son las exactas usadas en la salida HTML entregada.
-# - Las alternativas comentadas son rangos estables para reinstalación si alguna
-#   versión exacta no está disponible en otro equipo.
+# Trazabilidad de versiones:
+# - Las versiones exactas del núcleo científico y visualización corresponden
+#   al entorno declarado en el proyecto y en las salidas HTML previas.
+# - La salida HTML de Sumativa 3 no serializa las versiones exactas de
+#   scikit-learn ni statsmodels. Para no inventarlas, se fijan rangos
+#   compatibles con las API realmente utilizadas por el notebook ejecutado.
 # ============================================================================
 
 # Núcleo científico
@@ -21,23 +25,35 @@ scipy==1.18.0
 matplotlib==3.11.0
 seaborn==0.13.2
 
-# Ejecución y render de notebook
+# Modelamiento predictivo e inferencia — Sumativa 3
+# APIs utilizadas: Pipeline, ColumnTransformer, OneHotEncoder, StandardScaler,
+# LogisticRegression, BayesianRidge, SimpleImputer, IterativeImputer,
+# métricas de clasificación, calibration_curve y GLM Binomial.
+scikit-learn>=1.7,<2.0
+statsmodels>=0.14.5,<0.15
+
+# Ejecución, kernel y render de notebooks
 ipykernel==6.29.5
 ipython>=8.0
 jupyter>=1.1.1
 nbconvert>=7.16
 
 # ----------------------------------------------------------------------------
-# Alternativas estables si el equipo no resuelve alguna versión exacta:
-#   numpy==2.3.5
-#   pandas==2.3.3
-#   scipy==1.16.3
-#   matplotlib==3.11.0
-#   seaborn==0.13.2
-#
-# Instalación recomendada:
+# Instalación recomendada en Windows PowerShell:
 #   python -m venv .venv
-#   .venv\Scripts\Activate.ps1
+#   .\.venv\Scripts\Activate.ps1
 #   python -m pip install --upgrade pip
 #   pip install -r requirements.txt
+#
+# Verificación mínima:
+#   python -c "import numpy, pandas, scipy, matplotlib, seaborn, sklearn, statsmodels; print('Entorno OK')"
+#
+# Ejecución oficial S3:
+#   Remove-Item Env:S3_FAST -ErrorAction SilentlyContinue
+#   jupyter nbconvert --to notebook --execute --inplace notebooks/03_Modelamiento_predictivo_binario_mala_calidad_mp25.ipynb
+#
+# Verificación rápida S3:
+#   $env:S3_FAST = "1"
+#   jupyter nbconvert --to notebook --execute --inplace notebooks/03_Modelamiento_predictivo_binario_mala_calidad_mp25.ipynb
+#   Remove-Item Env:S3_FAST
 # ----------------------------------------------------------------------------
