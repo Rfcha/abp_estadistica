@@ -76,7 +76,7 @@ La prevalencia S3 de **12,01%** corresponde a la etiqueta original `mala_calidad
 |**Calidad S1/S2**|Faltantes de **27,80% en MP2.5** y **27,58% en MP10** asociados al criterio de cobertura diaria; cero duplicados exactos y cero inconsistencias físicas reportadas. No se imputó la variable objetivo.|
 |**EDA e inferencia S1**|Descriptivos, distribución, correlaciones, evolución temporal, IC al 95%, tres Welch, chi-cuadrado y prueba Z.|
 |**Validación S2**|10.000 remuestras bootstrap, IC percentil/BCa, 10.000 permutaciones, estabilidad de correlaciones, Monte Carlo y sensibilidad.|
-|**Diseño S3**|Objetivo `mala_calidad_mp25`, auditoría de fuga, lista blanca, separación temporal 70/30 y cinco bloques de validación expansiva.|
+|**Diseño S3**|Objetivo `mala_calidad_mp25`, auditoría de fuga, lista blanca, separación 70/30 sobre el horizonte temporal y cinco bloques de validación expansiva.|
 |**Comparación S3**|Tres modelos × tres estrategias de faltantes, selección AIC/BIC, linealidad del logit y calibración Platt OOF.|
 |**Inferencia y estabilidad S3**|GLM binomial no ponderado, OR, covarianza agrupada por fecha, VIF, residuos, influencia, sensibilidad L2 y 10.000 bootstrap.|
 |**Operación S3**|Umbral F2 con Recall mínimo, escenario de costos FN/FP, análisis por subgrupos y reglas de monitoreo.|
@@ -265,16 +265,16 @@ La auditoría final confirmó una intersección vacía entre variables prohibida
 
 El control técnico se ejecutó y el indicador ingresó al pool de selección, pero al quedar constante no aportó información discriminante y no fue seleccionado en el modelo final. La divergencia respecto de S2 debe tratarse como **limitación de calidad o definición de cobertura**, no como evidencia de que toda la serie tenga idéntica calidad operacional.
 
-### 8.5 Separación temporal y bloqueo del test
+### 8.5 Separación temporal y bloqueo de la prueba futura
 
 |Partición|n|Fecha mínima|Fecha máxima|Prevalencia|
 |-|-:|-|-|-:|
 |Desarrollo|8.439|2022-01-01|2024-03-27|0,110|
 |Validación|1.003|2024-03-28|2024-10-18|0,223|
-|Entrenamiento total 70%|9.442|2022-01-01|2024-10-18|0,122|
-|Prueba futura 30%|2.161|2024-10-19|2025-12-31|0,111|
+|Entrenamiento temporal — primer 70% del horizonte|9.442|2022-01-01|2024-10-18|0,122|
+|Bloque futuro reservado — último 30% del horizonte|2.161|2024-10-19|2025-12-31|0,111|
 
-La imputación, selección stepwise, AIC/BIC, forma funcional, modelo, estrategia y umbral se decidieron sin observar la prueba. El modelo final abrió el bloque futuro una sola vez.
+El corte **70/30 se definió sobre el horizonte temporal**, no sobre la cantidad final de filas. Por diferencias de cobertura y por la exclusión de registros sin objetivo válido, los tamaños efectivos no reproducen una proporción exacta de 70/30 en observaciones. La imputación, la selección stepwise, los criterios AIC/BIC, la forma funcional, el modelo, la estrategia de faltantes y el umbral se decidieron sin observar el bloque futuro. El modelo final abrió esta prueba una sola vez.
 
 ### 8.6 Mecanismo de faltantes y estrategias comparadas
 
@@ -338,6 +338,8 @@ El umbral de validación **0,640** corresponde a probabilidades previas a la cal
 |-|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|
 |Entrenamiento|9.435|1.153|0,260|0,817|0,983|0,969|0,892|0,944|0,992|0,910|0,035|
 |Prueba futura|2.155|237|0,260|0,608|0,937|0,925|0,738|0,845|0,979|0,823|0,044|
+
+Los tamaños finales de **9.435** registros de entrenamiento y **2.155** de prueba corresponden a la estrategia de **casos completos**. Respecto de las particiones temporales iniciales de 9.442 y 2.161 filas, se excluyeron respectivamente **7** y **6** registros por ausencia de `mp10_mean`; la variable objetivo no fue imputada.
 
 |Clase real|Predicción buena|Predicción mala|
 |-|-:|-:|
@@ -528,7 +530,7 @@ abp_estadistica/
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── README.md
-├── requirements.txt
+├── requirements.txt              # Dependencias directas validadas
 └── SECURITY.md
 ```
 
@@ -585,26 +587,29 @@ jupyter nbconvert --to html notebooks/03_Modelamiento_predictivo_binario_mala_ca
 ### 10.5 Verificar el entorno
 
 ```powershell
-python -c "import numpy, pandas, matplotlib, seaborn, scipy, sklearn, statsmodels; print('Entorno OK')"
+python -c "import sys, numpy, pandas, scipy, matplotlib, seaborn, sklearn, statsmodels; print(f'Python={sys.version.split()[0]} | NumPy={numpy.__version__} | pandas={pandas.__version__} | SciPy={scipy.__version__} | matplotlib={matplotlib.__version__} | seaborn={seaborn.__version__} | scikit-learn={sklearn.__version__} | statsmodels={statsmodels.__version__}')"
 ```
+
+La salida esperada debe coincidir con las versiones validadas de la sección 11. `pip freeze` puede utilizarse como evidencia de auditoría del entorno completo, pero no debe copiarse íntegramente al README porque incluye numerosas dependencias transitivas.
 
 ---
 
 ## 11. Entorno validado y dependencias
 
-|Componente|Versión|
+|Componente|Versión validada|
 |-|-:|
 |Python|3.12.10|
 |NumPy|2.5.0|
 |pandas|3.0.3|
+|SciPy|1.18.0|
 |matplotlib|3.11.0|
 |seaborn|0.13.2|
-|SciPy|1.18.0|
+|scikit-learn|1.9.0|
+|statsmodels|0.14.6|
 |ipykernel|6.29.5|
-|scikit-learn|Rango compatible declarado en `requirements.txt`: `>=1.7,<2.0`|
-|statsmodels|Rango compatible declarado en `requirements.txt`: `>=0.14.5,<0.15`|
+|notebook|7.6.0|
 
-> La salida HTML registra Python 3.12.10 y la lógica ejecutada, pero no serializa la versión exacta de `scikit-learn` ni `statsmodels`. Por transparencia, `requirements.txt` declara rangos compatibles con las API utilizadas en vez de inventar versiones exactas.
+> Las versiones principales fueron verificadas en el entorno virtual `.venv` utilizado para ejecutar el proyecto, mediante `pip freeze`. El archivo `requirements.txt` conserva únicamente las **dependencias directas y relevantes** del análisis; las dependencias transitivas se resuelven automáticamente durante la instalación y no se duplican en esta documentación.
 
 ---
 
