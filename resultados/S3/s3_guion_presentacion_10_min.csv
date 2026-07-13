@@ -1,7 +1,7 @@
 ﻿minutos,responsable,contenido,evidencia
 0:00–1:20,Rodrigo Chinchón,"Problema, objetivo, nowcasting y progresión S1→S2→S3.","Pregunta movilizadora, 46 variables y reporte puente S2."
-1:20–3:10,Pablo Villalobos,"Faltantes, MCAR/MAR/MNAR, OLS y tres estrategias.","Jarque–Bera, Breusch–Pagan, NRMSE, encogimiento y retención."
+1:20–3:10,Pablo Villalobos,"Cobertura, MCAR/MAR/MNAR y tres estrategias de faltantes.","Indicador de cobertura, mediana por mes/temporada, NRMSE y retención."
 3:10–5:20,Sergio Fernández,"Tres modelos oficiales, AIC/BIC, backward y forma funcional.","Trayectorias, nueve combinaciones y sensibilidad cuadrática."
 5:20–7:10,Rodrigo Chinchón,"Test final, umbral, ROC/PR, calibración y matriz de confusión.",Métricas futuras y costo de errores.
 7:10–8:50,Pablo Villalobos,"OR correctos, VIF, residuos, covarianza robusta y bootstrap.","Wald, IC robustos, 10.000 remuestras y convergencia."
-8:50–10:00,Sergio Fernández,"Decisión única de imputación, limitaciones, subgrupos y gobierno.","Estrategia principal/contingencia, calibración y recomendaciones."
+8:50–10:00,Sergio Fernández,"Decisión de imputación, resultado sensible de S2, limitaciones y monitoreo.","P=0,0505 con sensibilidad −17,23%, cobertura y recomendaciones."

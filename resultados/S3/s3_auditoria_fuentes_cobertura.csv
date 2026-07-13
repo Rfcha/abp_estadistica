@@ -1,0 +1,4 @@
+﻿archivo,ruta_completa,estado,periodo,registros_utilizados
+sinca_santiago.csv,D:\LM_IA_LAB\04_PROJECTS\abp_estadistica\data\sinca_santiago.csv,Válida e incorporada,2022-01-01 → 2023-12-31,192720
+sinca_santiago_2022_2025.csv,D:\LM_IA_LAB\04_PROJECTS\abp_estadistica\data\sinca_santiago_2022_2025.csv,Válida e incorporada,2022-01-01 → 2025-12-31,385704
+sinca_santiago_2024_2025.csv,D:\LM_IA_LAB\04_PROJECTS\abp_estadistica\data\sinca_santiago_2024_2025.csv,Válida e incorporada,2024-01-01 → 2025-12-31,192984

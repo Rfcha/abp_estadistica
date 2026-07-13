@@ -1,0 +1,12 @@
+﻿control,cumple,evidencia,estado
+Cobertura horaria e indicador aplicados por fila,True,100.00% de filas con cobertura; indicador=baja_cobertura_horaria; fuente=registros horarios reales de MP2.5,CUMPLIDO
+Mediana por mes/temporada aplicada realmente,True,prueba funcional con mes/temporada como contexto auxiliar fuera del modelo,CUMPLIDO
+Sin fuga de MP2.5,True,intersección vacía entre predictores y variables bloqueadas,CUMPLIDO
+Tres modelos oficiales ejecutados,True,"M1_Dominio_S1_S2, M2_Forward_AIC_BIC, M3_Backward_BIC",CUMPLIDO
+Tres estrategias de faltantes ejecutadas,True,"completos, mediana, regresion",CUMPLIDO
+Bootstrap oficial completo y sin fallos,True,"10,000 de 10,000 remuestras; fallos=0",CUMPLIDO
+IC robustos finitos,True,cluster por fecha,CUMPLIDO
+GLM sin advertencias no controladas,True,modelo inferencial final vigente validado=True; 0 rechazos exploratorios controlados; avisos capturados,CUMPLIDO
+Impacto de imputación comparado integralmente,True,"métricas, coeficientes, OR, IC, signos y decisión coherente",CUMPLIDO
+Resultado sensible declarado,True,Probabilidad=0.0505,CUMPLIDO
+Variación bajo alternativa declarada,True,Normal truncada alternativa; variación=-17.23%,CUMPLIDO

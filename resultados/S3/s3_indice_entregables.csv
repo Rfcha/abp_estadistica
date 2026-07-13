@@ -2,6 +2,11 @@
 s3_consistencia_estructura_s1_s2.csv,36 columnas físicas versus 46 armonizadas.
 s3_matriz_consistencia_s1_s2_s3.csv,Hilo conductor completo entre las tres fases.
 s3_trazabilidad_reporte_s2.csv,Continuidad formal S2→S3.
+s3_control_cobertura_horaria.csv,"Cobertura observada por estación-fecha, referencia S2 e indicador aplicado."
+s3_auditoria_fuentes_cobertura.csv,Trazabilidad de archivos horarios usados para reconstruir cobertura.
+s3_validacion_imputador_mediana_agrupada.csv,Prueba funcional de mes/temporada como contexto auxiliar.
+s3_calibracion_platt_oof.csv,Calibración probabilística aprendida sin utilizar el test.
+s3_sensibilidad_penalizada_inferencia.csv,Control de cuasiseparación y estabilidad de signo.
 s3_matriz_evidencia_s1_s2_por_predictor.csv,"Trazabilidad explícita de cada predictor entre S1, S2 y S3."
 s3_auditoria_fuga_variables.csv,Control de predictores prohibidos.
 s3_diagnostico_mecanismo_faltantes.csv,MCAR/MAR/MNAR.
