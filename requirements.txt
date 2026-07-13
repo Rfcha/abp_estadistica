@@ -2,18 +2,16 @@
 # Proyecto MCDI501 — Análisis Estadístico de la Calidad del Aire en Santiago
 # Grupo 3 · Magíster en Ciencia de Datos e IA · Universidad Andrés Bello
 # ----------------------------------------------------------------------------
-# Entorno de referencia:
-#   01_analisis_estadistico_diario.ipynb
-#   02_validacion_simulacion_remuestreo.ipynb
-#   03_Modelamiento_predictivo_binario_mala_calidad_mp25.ipynb
-#   Python 3.12.10 · Kernel .venv
+# Dependencias directas del proyecto
+# Python validado: 3.12.10 · Kernel: .venv
 #
-# Trazabilidad de versiones:
-# - Las versiones exactas del núcleo científico y visualización corresponden
-#   al entorno declarado en el proyecto y en las salidas HTML previas.
-# - La salida HTML de Sumativa 3 no serializa las versiones exactas de
-#   scikit-learn ni statsmodels. Para no inventarlas, se fijan rangos
-#   compatibles con las API realmente utilizadas por el notebook ejecutado.
+# Criterio de trazabilidad:
+# - Las versiones exactas del núcleo científico, visualización y modelamiento
+#   fueron verificadas en el entorno activo mediante `pip freeze`.
+# - Este archivo contiene solo dependencias directas y relevantes. Las
+#   dependencias transitivas son resueltas automáticamente por pip.
+# - nbconvert se limita a la rama 7.x utilizada por el flujo de ejecución y
+#   renderizado, evitando cambios incompatibles de una versión mayor futura.
 # ============================================================================
 
 # Núcleo científico
@@ -29,14 +27,13 @@ seaborn==0.13.2
 # APIs utilizadas: Pipeline, ColumnTransformer, OneHotEncoder, StandardScaler,
 # LogisticRegression, BayesianRidge, SimpleImputer, IterativeImputer,
 # métricas de clasificación, calibration_curve y GLM Binomial.
-scikit-learn>=1.7,<2.0
-statsmodels>=0.14.5,<0.15
+scikit-learn==1.9.0
+statsmodels==0.14.6
 
-# Ejecución, kernel y render de notebooks
+# Ejecución, kernel y renderizado de notebooks
 ipykernel==6.29.5
-ipython>=8.0
-jupyter>=1.1.1
-nbconvert>=7.16
+notebook==7.6.0
+nbconvert>=7.16,<8.0
 
 # ----------------------------------------------------------------------------
 # Instalación recomendada en Windows PowerShell:
@@ -45,8 +42,8 @@ nbconvert>=7.16
 #   python -m pip install --upgrade pip
 #   pip install -r requirements.txt
 #
-# Verificación mínima:
-#   python -c "import numpy, pandas, scipy, matplotlib, seaborn, sklearn, statsmodels; print('Entorno OK')"
+# Verificación de versiones principales:
+#   python -c "import sys, numpy, pandas, scipy, matplotlib, seaborn, sklearn, statsmodels; print(f'Python={sys.version.split()[0]} | NumPy={numpy.__version__} | pandas={pandas.__version__} | SciPy={scipy.__version__} | matplotlib={matplotlib.__version__} | seaborn={seaborn.__version__} | scikit-learn={sklearn.__version__} | statsmodels={statsmodels.__version__}')"
 #
 # Ejecución oficial S3:
 #   Remove-Item Env:S3_FAST -ErrorAction SilentlyContinue
